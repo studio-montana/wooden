@@ -1,0 +1,870 @@
+/**
+ASSETS
+Author: S. Chandonay - C. Tissot
+Author URI: https://www.seb-c.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License, version 2, as
+published by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
+
+@CHARSET "UTF-8";
+
+/**
+ * FW Page
+ */
+.fw-page{
+	padding: 0 24px 0 0;
+}
+.fw-page-title{
+	
+}
+
+/**
+ * FW Section
+ */
+.fw-section{
+	padding: 12px;
+	margin: 12px 0;
+	background: #ffffff;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	-moz-box-shadow:    0 1px 1px 0 rgba(0,0,0,.1);
+	box-shadow: 		0 1px 1px 0 rgba(0,0,0,.1);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.postbox .fw-section{ /* inside postbox */
+	padding: 12px 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow:    none;
+	box-shadow:         none;
+}
+.fw-section-title{
+	margin: 0 0 24px 0;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.fw-section-info{
+	margin: 12px 0;
+	font-size: 12px;
+	font-style: italic;
+}
+.fw-section-info code{
+	font-size: 12px;
+	color: #0073aa;
+	letter-spacing: 0.06em;
+}
+
+/**
+ * FW Box
+ */
+.fw-box{
+	padding: 12px;
+	margin: 0 0 12px 0; 
+}
+.fw-section .fw-box:last-child{
+	margin-bottom: 0;
+}
+.fw-box-title{
+	margin: 0 0 12px 0;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.fw-box-content ul,
+.fw-box-content ul ul{
+	list-style: square;
+	list-style-position: inside;
+}
+.fw-box-content ul ul{
+	margin-top: 6px;
+	margin-left: 24px;
+}
+
+/**
+ * FW Message
+ */
+.fw-notice{
+	padding: 12px;
+	margin: 12px 0;
+	background: #ffffff;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.fw-notice-box{
+	padding: 12px;
+	margin: 12px 0;
+	background: #ffffff;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	-moz-box-shadow:    0 1px 1px 0 rgba(0,0,0,.1);
+	box-shadow: 		0 1px 1px 0 rgba(0,0,0,.1);
+}
+.fw-notice-box.fw-error{
+	border-left: 6px solid #d84a43;
+}
+.fw-notice-box.fw-warning{
+	border-left: 6px solid #f4e542;
+}
+.fw-notice-box.fw-success{
+	border-left: 6px solid #00C3AA;
+}
+
+/**
+ * FW Description
+ */
+.fw-description{
+	font-size: 12px;
+	font-style: italic;
+	color: #999;
+}
+.fw-description.before{
+	margin-bottom: 3px;
+}
+.fw-description.after{
+	margin-bottom: 3px;
+}
+
+/**
+ * FW Form
+ */
+.fw-form{
+	position: relative;
+}
+.fw-form hr{
+	margin: 24px 0;
+	border: none;
+	border-top: 1px solid #efefef;
+}
+
+/**
+ * FW Field
+ */
+.fw-field{
+	margin-bottom: 6px;
+}
+.fw-field label{
+	color: #777;
+}
+.fw-field .info,
+.fw-field .description{
+	margin-left: 6px;
+	font-size: 10px;
+	font-style: italic;
+	color: #999;
+}
+.fw-field .description:before{
+	content: ">";
+	margin-right: 3px;
+}
+.fw-field label {
+	display: inline-block;
+	margin: 0 6px 0 3px;
+	color: #999;
+}
+.fw-field input[type='text'],
+.fw-field input[type='number'],
+.fw-field input[type='email'],
+.fw-field input[type='password'],
+.fw-field input[type='url'],
+.fw-field select,
+.fw-field textarea {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left: 0;
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+    box-shadow: none;
+    background: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #000;
+    width: 100%;
+    height: auto;
+	-webkit-transition: background .1s;
+    -moz-transition: background .1s;
+    transition: background .1s;
+	border: 1px solid #ddd;
+}
+.fw-field input[type='number']{
+	width: auto;
+}
+.fw-field select {
+    height: 29px;
+}
+.fw-field input[type='text']:focus,
+.fw-field input[type='number']:focus,
+.fw-field input[type='email']:focus,
+.fw-field input[type='password']:focus,
+.fw-field select:focus,
+.fw-field textarea:focus,
+.fw-field select:focus {
+	background-color: #f6f6f6;
+}
+.fw-row-submit{
+	margin: 24px auto;
+}
+/* label sided */
+.fw-field.label-sided:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.fw-field.label-sided label{
+	display: inline-block;
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 6px 0 0 0;
+}
+.fw-field.label-sided-quarter label{
+	max-width: 25%;
+}
+.fw-field.label-sided-third label{
+	max-width: 33.333333%;
+}
+.fw-field.label-sided-half label{
+	max-width: 50%;
+}
+.fw-field.label-sided-quarter input,
+.fw-field.label-sided-quarter select,
+.fw-field.label-sided-quarter textarea{
+	display: inline-block;
+	float: left;
+	margin: 0;
+}
+.fw-field.label-sided-quarter input,
+.fw-field.label-sided-quarter select,
+.fw-field.label-sided-quarter textarea{
+	max-width: 75%;
+}
+.fw-field.label-sided-third input,
+.fw-field.label-sided-third select,
+.fw-field.label-sided-third textarea{
+	max-width: 66.666666%;
+}
+.fw-field.label-sided-half input,
+.fw-field.label-sided-half select,
+.fw-field.label-sided-half textarea{
+	max-width: 50%;
+}
+.fw-field.fw-field-submit{
+	margin: 12px 0 0 0;
+}
+
+/**
+ * FW Multi-items-manager
+ */
+.fw-multi-items .items{
+	
+}
+.fw-multi-items .item{
+	position: relative;
+	display: block;
+	margin: 0 0 6px 0;
+	padding: 6px;
+	border-right: 32px solid #00C3AA;
+	min-height: 20px;
+	line-height: 20px;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.fw-multi-items .item .delete{
+	position: absolute;
+	top: 50%;
+	right: -21px;
+	margin: -7px 0 0 0;
+	font-size: 14px;
+	color: #fff;
+	opacity: 0.2;
+}
+.fw-multi-items .item input[type='text'],
+.fw-multi-items .item input[type='email'],
+.fw-multi-items .item input[type='date'],
+.fw-multi-items .item input[type='tel'],
+.fw-multi-items .item input[type='number'],
+.fw-multi-items .item select{
+	max-width: none;
+    width: auto;
+    min-width: 200px;
+}
+.fw-multi-items .item input[type='number']{
+	width: 70px;
+}
+
+/**
+ * FW Loading
+ */
+.fw-loading{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 99;
+}
+.fw-wait > .fw-loading{
+	background: transparent;
+}
+.fw-loading .fw-loading-dots{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 22px;
+	line-height: 0.4;
+	margin: -6px 0 0 -12px;
+}
+.fw-loading .fw-loading-dots.position-top{
+	top: 12px;
+	margin-top: 0;
+}
+.fw-loading .fw-loading-dots.position-left{
+	left: 0;
+	margin-left: 0;
+}
+
+/**
+ * FW Loading Dots
+ */
+.fw-loading-dots {
+  color: rgb(50,50,50);
+  font-size: 120%;
+}
+.fw-loading-dots::before,
+.fw-loading-dots::after {
+  content: '.';
+  animation: fw-loading-dots-blink 1s infinite 1s both;
+}
+.fw-loading-dots::after {
+  animation-delay: .3s;
+}
+@keyframes fw-loading-dots-blink {
+  0% {
+    color: rgba(50,50,50,0);
+  }
+  20% {
+    color: rgba(50,50,50,1);
+  }
+  100% {
+    color: rgba(50,50,50,0);
+  }
+}
+
+/**
+ * FW Button
+ */
+.fw-btn{
+	display: inline-block;
+	display: inline-flex;
+	cursor: pointer;
+    color: #00C3AA;
+    background: #efefef;
+    border: 1px solid #eee;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+    padding: 0 12px;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+    text-shadow: none;
+    overflow: hidden;
+    transition: all 0.3s; 
+	-moz-transition: all 0.3s; 
+	-webkit-transition: all 0.3s;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+/* cancel */
+.fw-btn.cancel{
+    color: #878d94;
+}
+/* delete */
+.fw-btn.delete{
+    color: #FF5964;
+}
+/* icon (no before/after on input) */
+.fw-btn:before,
+.fw-btn:after {
+    display: none;
+    /* font-family: 'FontAwesome'; */
+    /* only for fa v.5 */
+    font-family: 'Font Awesome\ 5 Free';
+    font-size: inherit;
+    font-weight: 900;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    font-size: 12px;
+}
+.fw-btn:before {
+	content: "";
+}
+.fw-btn.check:before,
+.fw-btn.checked:before {
+	display: inline-block;
+	content: "\f00c"; /* always check */
+    margin-right: 6px;
+}
+.fw-btn.cancel:before {
+	display: inline-block;
+	content: "\f112";
+    margin-right: 6px;
+}
+.fw-btn.delete:before {
+	display: inline-block;
+    content: "\f00d";
+    margin-right: 6px;
+}
+.fw-btn.notify:before {
+	display: inline-block;
+    content: "\f0a2";
+    margin-right: 6px;
+}
+.fw-btn.library:before {
+	display: inline-block;
+	content: "\f016";
+    margin-right: 6px;
+}
+.fw-btn.upload:before {
+	display: inline-block;
+    content: "\f093";
+    margin-right: 6px;
+}
+.fw-btn.download:before {
+	display: inline-block;
+    content: "\f019";
+    margin-right: 6px;
+}
+.fw-btn.save:before {
+	display: inline-block;
+    content: "\f0c7";
+    margin-right: 6px;
+}
+.fw-btn.edit:before {
+	display: inline-block;
+    content: "\f044";
+    margin-right: 6px;
+}
+.fw-btn.add:before {
+	display: inline-block;
+    content: "\f067";
+    margin-right: 6px;
+}
+.fw-btn.key:before {
+	display: inline-block;
+    content: "\f084";
+    margin-right: 6px;
+}
+.fw-btn.next:before {
+	display: inline-block;
+    display: none;
+}
+.fw-btn.next:after {
+	display: inline-block;
+    content: "\f0da";
+    margin-left: 6px;
+}
+.fw-btn.prev:before {
+	display: inline-block;
+    content: "\f0d9";
+    margin-right: 6px;
+}
+.fw-btn.no-icon:before,
+.fw-btn.no-icon:after {
+    display: none !important;
+}
+.fw-btn.just-icon:before,
+.fw-btn.just-icon:after {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+/* hover */
+.fw-btn:hover,
+.fw-btn:focus,
+.fw-btn:active,
+.fw-btn.checked {
+	outline: none;
+	background: #00C3AA;
+	color: #fff;
+}
+.fw-btn.cancel:hover,
+.fw-btn.cancel:focus,
+.fw-btn.cancel:active{
+	outline: none;
+	color: #fff;
+    background-color: #878d94;
+}
+.fw-btn.delete:hover,
+.fw-btn.delete:focus,
+.fw-btn.delete:active{
+	outline: none;
+	color: #fff;
+    background-color: #FF5964;
+}
+
+/**
+ * FW Button link
+ */
+.fw-btn.link{
+    border: none;
+    padding: 0 6px;
+    height: auto;
+    line-height: normal;
+    background: none;
+}
+/* hover */
+.fw-btn.link:hover,
+.fw-btn.link:focus,
+.fw-btn.link:active {
+	color: #00C3AA;
+    background: #e5e5e5;
+}
+.fw-btn.link.cancel:hover,
+.fw-btn.link.cancel:focus,
+.fw-btn.link.cancel:active{
+	color: #878d94;
+    background: #e5e5e5;
+}
+.fw-btn.link.delete:hover,
+.fw-btn.link.delete:focus,
+.fw-btn.link.delete:active{
+	color: #FF5964;
+    background: #e5e5e5;
+}
+
+/**
+ * FW Button primary
+ */
+.fw-btn.primary{
+    background-color: #00C3AA;
+    color: #fff;
+    padding: 0 24px;
+    height: 36px;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+/* cancel */
+.fw-btn.primary.cancel{
+    background-color: #878d94;
+    color: #fff;
+}
+/* delete */
+.fw-btn.primary.delete{
+    background-color: #FF5964;
+    color: #fff;
+}
+/* icon (no before/after on input) */
+.fw-btn.primary:before,
+.fw-btn.primary:after {
+    font-size: 14px;
+    line-height: 36px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 24px;
+    background-color: #00a188;
+    background-color: #008066;
+    text-align: center;
+    margin: 0 !important;
+    transition: all 0.3s; 
+	-moz-transition: all 0.3s; 
+	-webkit-transition: all 0.3s;
+}
+.fw-btn.primary.cancel:before,
+.fw-btn.primary.cancel:after {
+    background-color: #656b72;
+    background-color: #434950;
+}
+.fw-btn.primary.delete:before,
+.fw-btn.primary.delete:after {
+    background-color: #dd3742;
+    background-color: #bb1520;
+}
+.fw-btn.primary:before {
+    left: -24px;
+    right: auto;
+}
+.fw-btn.primary:after {
+    left: auto;
+    right: -24px;
+}
+/* hover */
+.fw-btn.primary:hover,
+.fw-btn.primary:focus,
+.fw-btn.primary:active {
+	outline: none;
+    background-color: #00a188;
+}
+.fw-btn.primary.cancel:hover,
+.fw-btn.primary.cancel:focus,
+.fw-btn.primary.cancel:active {
+	outline: none;
+    background-color: #656b72;
+}
+.fw-btn.primary.delete:hover,
+.fw-btn.primary.delete:focus,
+.fw-btn.primary.delete:active {
+	outline: none;
+    background-color: #dd3742;
+}
+.fw-btn.primary:hover:before,
+.fw-btn.primary:focus:before,
+.fw-btn.primary:active:before {
+	outline: none;
+    left: 0px;
+}
+.fw-btn.primary.next:hover:after,
+.fw-btn.primary.next:focus:after,
+.fw-btn.primary.next:active:after {
+	outline: none;
+    right: 0px;
+}
+.fw-btn.primary:hover,
+.fw-btn.primary:focus,
+.fw-btn.primary:active {
+	outline: none;
+    padding: 0 12px 0 36px;
+}
+.fw-btn.primary.next:hover,
+.fw-btn.primary.next:focus,
+.fw-btn.primary.next:active {
+	outline: none;
+    padding: 0 36px 0 12px;
+}
+
+/**
+ * FW Modal Box
+ */
+.fw-modalbox{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	z-index: 9999;
+}
+.fw-modalbox.style-light{
+	background: #ffffff;
+	background: rgba(255,255,255,0.85);
+}
+.fw-modalbox.style-dark{
+	background: #000000;
+	background-color: rgba(0,0,0,0.8);
+}
+body.wp-admin .fw-modalbox{
+	top: 32px;
+}
+.fw-modalbox.confirmbox{
+	z-index: 99999;
+}
+.fw-modalbox.messagebox{
+	background: transparent;
+	z-index: 99999;
+}
+.fw-modalbox .fw-modalbox-wrapper{
+	overflow-x: scroll;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+	-ms-transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    /* flex container */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+}
+.fw-modalbox .fw-modalbox-wrapper .fw-modalbox-content-wrapper{
+	position: relative;
+    margin: auto;
+    min-width: 200px;
+    min-height: 50px;
+    padding: 24px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.fw-modalbox.style-light .fw-modalbox-wrapper .fw-modalbox-content-wrapper{
+    background: #fff;
+	-moz-box-shadow: 0px 0px 5px 0px #777777;
+	-webkit-box-shadow: 0px 0px 5px 0px #777777;
+	-o-box-shadow: 0px 0px 5px 0px #777777;
+	box-shadow: 0px 0px 5px 0px #777777;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#777777, Direction=NaN, Strength=5);
+}
+.fw-modalbox.style-dark .fw-modalbox-wrapper .fw-modalbox-content-wrapper{
+    background: #151515;
+}
+.fw-modalbox.fullscreen > .fw-modalbox-wrapper > .fw-modalbox-content-wrapper{
+	position: absolute;
+    top: 24px;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    overflow: scroll;
+}
+.fw-modalbox.fullscreen > .fw-modalbox-wrapper > .fw-modalbox-content-wrapper .fw-modalbox-content{
+	height: 100%;
+}
+.fw-modalbox .fw-modalbox-wrapper .fw-modalbox-content-wrapper .fw-modalbox-close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #999;
+	font-size: 18px;
+	cursor: pointer;
+	z-index: 10;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	line-height: 26px;
+	-webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.fw-modalbox .fw-modalbox-wrapper .fw-modalbox-content-wrapper .fw-modalbox-close:hover{
+	color: #333;
+}
+.fw-modalbox.style-dark .fw-modalbox-wrapper .fw-modalbox-content-wrapper .fw-modalbox-close:hover{
+	color: #fff;
+}
+.fw-modalbox iframe{
+	border: none;
+}
+
+/**
+ * FW Wait
+ */
+.fw-wait{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #ffffff;
+	background: rgba(255,255,255,0.7);
+	padding: 0;
+	z-index: 9000;
+	color: #b0b0b0;
+}
+body.admin-bar .fw-wait{
+	top: 32px;
+}
+.fw-wait.local{
+	position: absolute;
+}
+body.admin-bar .fw-wait.local{
+	top: 0;
+}
+
+
+/**
+ * FW Sortable
+ */
+.fw-sortable{
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.fw-sortable .fw-sortable-item{
+	padding: 6px;
+	margin: 0 0 6px 0;
+	position: relative;
+	font-size: 12px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #f9f9f9;
+	border-left: 32px solid #00C3AA;
+	cursor: move;
+}
+.fw-sortable .fw-sortable-item:before{
+	/* font icon */
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-family: 'Font Awesome 5 Free';
+	font-style: normal;
+	font-weight: 900;
+	content: "\f0c9";
+	/* other */
+	position: absolute;
+	top: 50%;
+	left: -21px;
+	margin: -7px 0 0 0;
+	display: inline-block;
+	font-size: 14px;
+	color: #fff;
+	opacity: 0.2;
+}
+.fw-sortable .fw-sortable-item.has-icon:before{
+	content : "";
+	display: none;
+}
+.fw-sortable .fw-sortable-item.has-icon .item-icon{
+	position: absolute;
+	top: 50%;
+	left: -21px;
+	margin: -7px 0 0 0;
+	font-size: 14px;
+	color: #fff;
+	opacity: 0.2;
+}
+.fw-sortable .fw-sortable-item:hover,
+.fw-sortable .fw-sortable-item:focus,
+.fw-sortable .fw-sortable-item:active{
+	border-top-color: #c9c9c9;
+	border-bottom-color: #c9c9c9;
+}
+.fw-sortable .sortable-placeholder{
+	height: 20px;
+	margin: 0 0 3px 0;
+	background: #fff;
+	position: relative;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}

@@ -1,0 +1,61 @@
+/*
+Theme Name: Wooden
+Author: Sébastien Chandonay & Cyril Tissot (Studio Montana)
+Author URI: http://www.seb-c.com
+Description: Root Wordpress theme
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wooden
+*/
+
+/*******************************************/
+/* Gutenberg alignment supports            */
+/*******************************************/
+.entry-content *.alignwide{
+  margin-left: -50px;
+  margin-right: -50px;
+}
+.entry-content *.alignfull{
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/*******************************************/
+/* General                                 */
+/*******************************************/
+body {
+	background-color: #fff;
+}
+body, button, input, select, textarea, p{
+	color: #000;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+a {
+	color: #000000;
+}
+.hentry,
+.site-header .inner,
+.site-footer .inner {
+	max-width: 1248px;
+	width: 100%;
+	padding: 0 24px;
+	margin: 0 auto;
+}
+.site-header {
+	margin-bottom: 60px;
+}
+.site-footer {
+	margin-top: 60px;
+}
+.screen-reader-text {
+	position: fixed;
+	left: -50000px;
+}
+.site-title {
+	font-weight: bold;
+	font-size: 2em;
+}
