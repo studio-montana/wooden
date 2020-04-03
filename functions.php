@@ -147,8 +147,8 @@ function wooden_scripts() {
 		wp_enqueue_script('comment-reply' );
 	}
 	// CSS
-	wp_enqueue_style('wooden-style-commons', get_stylesheet_directory_uri() . '/css/commons.css', array(), WOODEN_WEBCACHE_VERSION);
-	wp_enqueue_style('wooden-style-base', get_stylesheet_directory_uri() . '/css/normalize.css', array('wooden-style-commons'), WOODEN_WEBCACHE_VERSION);
+	wp_enqueue_style('wooden-style-commons', get_template_directory_uri() . '/css/commons.css', array(), WOODEN_WEBCACHE_VERSION);
+	wp_enqueue_style('wooden-style-base', get_template_directory_uri() . '/css/normalize.css', array('wooden-style-commons'), WOODEN_WEBCACHE_VERSION);
 	wp_enqueue_style('wooden-style', get_stylesheet_uri(), array('wooden-style-base'), apply_filters('wooden_style_version', WOODEN_WEBCACHE_VERSION));
 }
 add_action('wp_enqueue_scripts', 'wooden_scripts');
@@ -158,9 +158,8 @@ add_action('wp_enqueue_scripts', 'wooden_scripts');
  */
 function wooden_admin_scripts() {
 	wp_enqueue_media();
-	wp_enqueue_style('wooden-style-commons', get_stylesheet_directory_uri() . '/css/commons.css', array(), WOODEN_WEBCACHE_VERSION);
+	wp_enqueue_style('wooden-style-commons', get_template_directory_uri() . '/css/commons.css', array(), WOODEN_WEBCACHE_VERSION);
 	wp_enqueue_script('wooden-commons', get_template_directory_uri() . '/js/commons.js', array('jquery'), WOODEN_WEBCACHE_VERSION, true);
-	wp_enqueue_script('wooden-utils', get_template_directory_uri() . '/js/utils.js', array('jquery'), WOODEN_WEBCACHE_VERSION, true);
 }
 add_action('admin_enqueue_scripts', 'wooden_admin_scripts');
 
@@ -198,6 +197,14 @@ function wooden_get_current_lang() {
 	}
 	// inconnu
 	return "";
+}
+
+/**
+ * Retrieve Wooden template's tools directory path
+ * @return string
+ */
+function wooden_get_tools_directory () {
+	return get_template_directory().'/core/tools/';
 }
 
 /**

@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+/**
+ * BREADCRUMB Tool
+ * @package WordPress
+ * @subpackage Woodkit
+ * @since Woodkit 1.0
+ * @author Sébastien Chandonay www.seb-c.com / Cyril Tissot www.cyriltissot.com
+ */
+
+#breadcrumb-breadcrumbs-manager .breadcrumb-item{
+	position: relative;
+	padding-right: 38px;
+	padding-left: 12px;
+	margin-top: 3px;
+}
+
+#breadcrumb-breadcrumbs-manager .breadcrumb-item .breadcrumbs-select{
+	min-width: 200px;
+}
+
+#breadcrumb-breadcrumbs-manager .breadcrumb-item .delete-breadcrumb-item{
+	position: absolute;
+	top: 1px;
+	right: 0;
+	height: 27px;
+}
+
+#breadcrumb-breadcrumbs-manager .breadcrumb-item .following{
+	position: absolute;
+	top: 6px;
+	left: 0;
+	height: 27px;
+}
+
+#add-breadcrumb-item{
+	margin-top: 3px;
+	width: 100%;
+	text-align: center;
+}
+
+/**
+ * Tool Options
+ */
+.breadcrumb-post-types .breadcrumb-customize-items{
+	padding: 24px 0 0 90px;
+}

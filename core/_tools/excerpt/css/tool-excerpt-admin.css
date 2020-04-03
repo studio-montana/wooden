@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+/**
+ * EXCERPT Tool
+ * @package WordPress
+ * @subpackage Woodkit
+ * @since Woodkit 1.0
+ * @author Sébastien Chandonay www.seb-c.com / Cyril Tissot www.cyriltissot.com
+ */
+
+#tool-excerpt-general .wp-editor-tools:after{
+	display: none;
+}
