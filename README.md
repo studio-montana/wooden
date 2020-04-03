@@ -1,2 +1,2 @@
 # wooden
-Root Wordpress Theme (Gutenberg support)
+Thème racine pour Wordpress - prise en charge de Woodkit v2 & Gutenberg
