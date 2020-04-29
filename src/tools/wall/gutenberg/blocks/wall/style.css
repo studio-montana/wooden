@@ -1,0 +1,192 @@
+/**
+ * The following styles get applied both on the front of your site and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ *
+ */
+
+/************************************************/
+/** applied both on the front and in the editor */
+/************************************************/
+.wp-block-wkg-wall {
+  overflow: hidden;
+}
+.wp-block-wkg-wall .wall {
+  /* NOTE : do not change/override these following system foundations :
+  - marginTop/marginLeft are negavite depending on items gutters
+  - width is calc(100% + items gutters) depending on items gutters
+  */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+/* filters */
+.wp-block-wkg-wall .wall-filters {
+  display: block;
+  margin: 0;
+  padding: 3px 0;
+  list-style: none;
+  text-align: center;
+}
+.wp-block-wkg-wall .wall-filters li {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0 12px;
+  cursor: pointer;
+}
+.wp-block-wkg-wall .wall-filters li.active {
+  color: #555555;
+  font-weight: bold;
+}
+.wp-block-wkg-wall .wall-filters li:before {
+  content: '';
+  display: none;
+}
+/* item */
+.wp-block-wkg-wall .wall-item,
+.wp-block-wkg-wall .masonry-grid-li {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+  width: 100%;
+  position: relative;
+}
+.wp-block-wkg-wall .wall-item:before,
+.wp-block-wkg-wall .wall-item:after,
+.wp-block-wkg-wall .masonry-grid-li:before,
+.wp-block-wkg-wall .masonry-grid-li:after {
+  content: '';
+  display: none;
+}
+/* item content */
+.wp-block-wkg-wall .wall-item-inner {
+  /* NOTE : do not change/override these following system foundations :
+  - marginTop/marginLeft are negavite depending on items gutters
+  - position is absolute in GRID mode
+  - position is relative in MASONRY mode
+  */
+}
+.wp-block-wkg-wall .wall-item-inner > img,
+.wp-block-wkg-wall .wall-item-inner .wall-item-link > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+/* item content mask */
+.wp-block-wkg-wall .wall-item-inner .mask {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: #000000;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #ffffff;
+  -webkit-transition: opacity 400ms linear;
+  -moz-transition: opacity 400ms linear;
+  -o-transition: opacity 400ms linear;
+  -ms-transition: opacity 400ms linear;
+  transition: opacity 400ms linear;
+}
+.wp-block-wkg-wall .wall-item-inner:hover .mask,
+.wp-block-wkg-wall .wall-item-inner:focus .mask,
+.wp-block-wkg-wall .wall-item-inner:active .mask{
+  opacity: 1;
+}
+/* responsive */
+@media (max-width: 1200px) {
+  .wp-block-wkg-wall .wall.columns-6 > li {
+    max-width: 25% !important;
+    width: 25% !important;
+  }
+}
+@media (max-width: 1000px) {
+  .wp-block-wkg-wall .wall.columns-5 > li {
+    max-width: 25% !important;
+    width: 25% !important;
+  }
+}
+@media (max-width: 900px) {
+  .wp-block-wkg-wall .wall.columns-6 > li,
+  .wp-block-wkg-wall .wall.columns-5 > li {
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+  }
+  .wp-block-wkg-wall .wall.columns-4 > li,
+  .wp-block-wkg-wall .wall.columns-3 > li {
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+}
+@media (max-width: 700px) {
+  .wp-block-wkg-wall .wall.columns-6 > li,
+  .wp-block-wkg-wall .wall.columns-5 > li {
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+}
+@media (max-width: 500px) {
+  .wp-block-wkg-wall .wall[class*="columns-"] > li {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .wp-block-wkg-wall .wall.grid .wall-item-content {
+    padding-bottom: 100% !important;
+  }
+}
+/******************************/
+/** applied on the front only */
+/******************************/
+.wkg-front.wp-block-wkg-wall{
+}
+/*******************************/
+/** applied in the editor only */
+/*******************************/
+[data-align='full'] .wkg-editor.wp-block-wkg-wall {
+    padding: 0;
+}
+.wkg-editor.wp-block-wkg-wall .wall-item-inner {
+  background: #f9f9f9;
+}
+/* item control */
+.wkg-editor.wp-block-wkg-wall .wall-item-control {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: auto;
+  padding: 6px;
+  background: #ffffff;
+  background: rgba(255,255,255,0.7);
+}
+.wkg-editor.wp-block-wkg-wall .wall-item-control .control-item{
+  display: flex;
+  justify-content: flex-end;
+}
+.wkg-editor.wp-block-wkg-wall .wall-item-control .control-item > label i{
+  padding-top: 6px;
+  margin-right: 6px;
+}
+/* loading */
+.wkg-editor .wall-loading{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  background: rgba(255,255,255,0.7);
+  z-index: 9;
+}

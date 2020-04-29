@@ -30,7 +30,7 @@ define('LOGIN_TOOL_NAME', 'login');
 /**
  * Tool instance
  */
-class WoodkitToolLogin extends WoodkitTool{
+class WoodenToolLogin extends WoodkitTool{
 	
 	public function __construct(){
 		parent::__construct(
@@ -51,6 +51,6 @@ class WoodkitToolLogin extends WoodkitTool{
 	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodkitToolLogin();
+	$tools[] = new WoodenToolLogin();
 	return $tools;
 });

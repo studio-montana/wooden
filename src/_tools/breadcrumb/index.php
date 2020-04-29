@@ -30,7 +30,7 @@ define('BREADCRUMB_TOOL_NAME', 'breadcrumb');
 /**
  * Tool instance
  */
-class WoodkitToolBreadCrumb extends WoodkitTool{
+class WoodenToolBreadCrumb extends WoodkitTool{
 	
 	public function __construct(){
 		parent::__construct(
@@ -171,6 +171,6 @@ class WoodkitToolBreadCrumb extends WoodkitTool{
 	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodkitToolBreadCrumb();
+	$tools[] = new WoodenToolBreadCrumb();
 	return $tools;
 });

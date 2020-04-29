@@ -25,34 +25,34 @@ defined('ABSPATH') or die("Go Away!");
 /**
  * Constants
  */
-define('EXCERPT_TOOL_NAME', 'excerpt');
+define('FANCYBOX_TOOL_NAME', 'fancybox');
 
 /**
  * Tool instance
  */
-class WoodkitToolExcerpt extends WoodkitTool{
+class WoodenToolFancybox extends WoodkitTool{
 	
 	public function __construct(){
 		parent::__construct(
-				'excerpt', 								// slug
-				__("Excerpt", 'woodkit'),						// name
-				__("Add a custom excerpt to your posts", 'woodkit'),	// description
-				true,											// has config page
-				false,											// add config page in woodkit submenu
-				WOODKIT_URL_DOCUMENTATION.'/resume-personnalise'// documentation url
+				'fancybox', 								// slug
+				__("Fancybox", 'woodkit'),					// name
+				__("Open image in fancybox", 'woodkit'),	// description
+				true,										// has config page
+				false,										// add config page in woodkit submenu
+				WOODKIT_URL_DOCUMENTATION.'/fancybox'		// documentation url
 			);
 	}
 	
 	public function get_config_fields(){
 		return array(
-				'editor-autop'
+				'wordpress-contents'
 		);
 	}
 	
 	public function get_config_default_values(){
 		return array(
-				'active' => 'off',
-				'editor-autop' => 'on'
+				'active' => 'on',
+				'wordpress-contents' => 'on'
 		);
 	}
 	
@@ -66,16 +66,16 @@ class WoodkitToolExcerpt extends WoodkitTool{
 				<div class="field checkbox">
 					<div class="field-content">
 						<?php
-						$value = $this->get_option('editor-autop');
+						$value = $this->get_option('wordpress-contents');
 						$checked = '';
 						if ($value == 'on'){
 							$checked = ' checked="checked"';
 						}
 						?>
-						<input type="checkbox" id="editor-autop" name="editor-autop" <?php echo $checked; ?> />
-						<label for="editor-autop"><?php _e("Auto paragraph", 'woodkit'); ?></label>
+						<input type="checkbox" id="wordpress-contents" name="wordpress-contents" <?php echo $checked; ?> />
+						<label for="wordpress-contents"><?php _e("Enable for all images", 'woodkit'); ?></label>
 					</div>
-					<p class="description"><?php _e('activate auto paragraph for excerpt text editor', 'woodkit'); ?></p>
+					<p class="description"><?php _e('Enable Fancybox on all wordpress content images - not only woodkit wall', 'woodkit'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -84,6 +84,6 @@ class WoodkitToolExcerpt extends WoodkitTool{
 	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodkitToolExcerpt();
+	$tools[] = new WoodenToolFancybox();
 	return $tools;
 });

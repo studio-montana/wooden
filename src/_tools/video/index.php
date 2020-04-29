@@ -30,7 +30,7 @@ define('VIDEO_TOOL_NAME', 'video');
 /**
  * Tool instance
  */
-class WoodkitToolVideo extends WoodkitTool{
+class WoodenToolVideo extends WoodkitTool{
 	
 	public function __construct(){
 		parent::__construct(
@@ -115,6 +115,6 @@ class WoodkitToolVideo extends WoodkitTool{
 	}
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodkitToolVideo();
+	$tools[] = new WoodenToolVideo();
 	return $tools;
 });

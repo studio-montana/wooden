@@ -25,34 +25,36 @@ defined('ABSPATH') or die("Go Away!");
 /**
  * Constants
  */
-define('FANCYBOX_TOOL_NAME', 'fancybox');
+define('PAGINATION_TOOL_NAME', 'pagination');
 
 /**
  * Tool instance
  */
-class WoodkitToolFancybox extends WoodkitTool{
+class WoodenToolPagination extends WoodkitTool{
 	
 	public function __construct(){
 		parent::__construct(
-				'fancybox', 								// slug
-				__("Fancybox", 'woodkit'),					// name
-				__("Open image in fancybox", 'woodkit'),	// description
+				'pagination', 								// slug
+				__("Pagination", 'woodkit'),				// name
+				__("Intelligent pagination for all post-types", 'woodkit'),	// description
 				true,										// has config page
 				false,										// add config page in woodkit submenu
-				WOODKIT_URL_DOCUMENTATION.'/fancybox'		// documentation url
+				WOODKIT_URL_DOCUMENTATION.'/pagination'		// documentation url
 			);
 	}
 	
 	public function get_config_fields(){
 		return array(
-				'wordpress-contents'
+				'taxnav-active',
+				'loop-active',
 		);
 	}
 	
 	public function get_config_default_values(){
 		return array(
-				'active' => 'on',
-				'wordpress-contents' => 'on'
+				'active' => 'off',
+				'taxnav-active' => 'on',
+				'loop-active' => 'on',
 		);
 	}
 	
@@ -66,24 +68,47 @@ class WoodkitToolFancybox extends WoodkitTool{
 				<div class="field checkbox">
 					<div class="field-content">
 						<?php
-						$value = $this->get_option('wordpress-contents');
+						$value = $this->get_option('taxnav-active');
 						$checked = '';
 						if ($value == 'on'){
 							$checked = ' checked="checked"';
 						}
 						?>
-						<input type="checkbox" id="wordpress-contents" name="wordpress-contents" <?php echo $checked; ?> />
-						<label for="wordpress-contents"><?php _e("Enable for all images", 'woodkit'); ?></label>
+						<input type="checkbox" id="taxnav-active" name="taxnav-active" <?php echo $checked; ?> />
+						<label for="taxnav-active"><?php _e("Include taxonomies", 'woodkit'); ?></label>
 					</div>
-					<p class="description"><?php _e('Enable Fancybox on all wordpress content images - not only woodkit wall', 'woodkit'); ?></p>
+					<p class="description"><?php _e('include taxonomies context if appropriate', 'woodkit'); ?></p>
+				</div>
+				<div class="field checkbox">
+					<div class="field-content">
+						<?php
+						$value = $this->get_option('loop-active');
+						$checked = '';
+						if ($value == 'on'){
+							$checked = ' checked="checked"';
+						}
+						?>
+						<input type="checkbox" id="loop-active" name="loop-active" <?php echo $checked; ?> />
+						<label for="loop-active"><?php _e("Loop", 'woodkit'); ?></label>
+					</div>
+					<p class="description"><?php _e('generate loop navigation', 'woodkit'); ?></p>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h2 class="section-title">
+				<?php _e("Integration", 'woodkit'); ?>
+			</h2>
+			<div class="section-content">
+				<div class="section-info">
+					<?php _e('insert this code in your theme templates :', 'woodkit'); ?><br /><code style="font-size: 0.7rem;">&lt;?php woodkit_pagination(); ?&gt;</code>
 				</div>
 			</div>
 		</div>
 		<?php
 	}
-	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodkitToolFancybox();
+	$tools[] = new WoodenToolPagination();
 	return $tools;
 });

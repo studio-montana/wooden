@@ -123,7 +123,7 @@ function wooden_setup() {
 	 * Image sizes
 	 */
 	add_theme_support ('post-thumbnails');
-
+	
 	/**
 	 * Tutorials
 	 */
@@ -204,7 +204,15 @@ function wooden_get_current_lang() {
  * @return string
  */
 function wooden_get_tools_directory () {
-	return get_template_directory().'/core/tools/';
+	return get_template_directory().'/src/tools/';
+}
+
+/**
+ * Retrieve Wooden template's tools directory path
+ * @return string
+ */
+function wooden_get_tools_directory_uri () {
+	return get_template_directory_uri().'/src/tools/';
 }
 
 /**
