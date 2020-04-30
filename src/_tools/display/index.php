@@ -30,7 +30,7 @@ define('DISPLAY_TOOL_NAME', 'display');
 /**
  * Tool instance
  */
-class WoodenToolDisplay extends WoodkitTool{
+class WK_Tool_Display extends WK_Tool{
 	
 	public function __construct(){
 		parent::__construct(
@@ -51,6 +51,6 @@ class WoodenToolDisplay extends WoodkitTool{
 	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodenToolDisplay();
+	$tools[] = new WK_Tool_Display();
 	return $tools;
 });

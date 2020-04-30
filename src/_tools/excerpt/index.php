@@ -30,7 +30,7 @@ define('EXCERPT_TOOL_NAME', 'excerpt');
 /**
  * Tool instance
  */
-class WoodenToolExcerpt extends WoodkitTool{
+class WK_Tool_Excerpt extends WK_Tool{
 	
 	public function __construct(){
 		parent::__construct(
@@ -84,6 +84,6 @@ class WoodenToolExcerpt extends WoodkitTool{
 	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodenToolExcerpt();
+	$tools[] = new WK_Tool_Excerpt();
 	return $tools;
 });

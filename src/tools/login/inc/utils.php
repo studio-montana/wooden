@@ -23,35 +23,6 @@
 defined('ABSPATH') or die("Go Away!");
 
 /**
- * REQUIREMENTS
-*/
-require_once (wooden_get_tools_directory().LOGIN_TOOL_NAME.'/inc/customizer.php');
-
-
-if (!function_exists("tool_login_enqueue_scripts_tools")):
-/**
- * login template scripts
-*/
-function tool_login_enqueue_scripts_tools(){
-	$js_login = locate_web_ressource(WOODKIT_PLUGIN_TOOLS_FOLDER.LOGIN_TOOL_NAME.'/js/tool-login.js');
-	if (!empty($js_login)){
-		wp_enqueue_script('tool-login-script', $js_login, array('jquery'), '1.0', true );
-		wp_localize_script('tool-login-script', 'ToolLogin', array('url_title' => get_bloginfo( 'name' ), 'url_site' => get_site_url(), 'message' => '', 'placeholder_login' => __("login", 'woodkit'), 'placeholder_password' => __("password", 'woodkit'), 'placeholder_email' => __("email", 'woodkit')));
-	}
-}
-add_action("woodkit_login_enqueue_scripts_tools", "tool_login_enqueue_scripts_tools");
-endif;
-
-if (!function_exists('woodkit_login_filter_register_link')):
-function woodkit_login_filter_register_link($registration_url){
-	$registration_url = sprintf('<a class="registration-url" href="%s">%s</a>', esc_url(wp_registration_url()), __('Register'));
-	return $registration_url;
-}
-add_filter('register', 'woodkit_login_filter_register_link', 1, 1);
-endif;
-
-if (!function_exists("tool_login_display_background")):
-/**
  * add background image div before #page element
 */
 function tool_login_display_background(){
@@ -103,5 +74,3 @@ function tool_login_display_background(){
 	}
 }
 add_action('login_footer', 'tool_login_display_background');
-endif;
-

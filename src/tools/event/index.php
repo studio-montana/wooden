@@ -30,20 +30,24 @@ define('EVENT_TOOL_NAME', 'event');
 /**
  * Tool instance
  */
-class WoodenToolEvent extends WoodkitTool{
+class WK_Tool_Event extends WK_Tool{
 	
 	public function __construct(){
 		parent::__construct(array(
+				'uri' => get_template_directory_uri().'/src/tools/event/', // must be explicitly defined to support symbolic link context
 				'slug' => 'event', 
 				'name' => __("Events", 'wooden'),
 				'description' => __("Events manager", 'wooden'),
 				'has_config' => false,
 				'add_config_in_menu' => false,
+				'context' => 'Wooden',
 			));
 	}
 	
 	public function launch() {
-		require_once ($this->path.'/launch.php');
+		require_once ($this->path.'post-types/index.php');
+		require_once ($this->path.'gutenberg/plugins/eventmeta/index.php');
+		require_once ($this->path.'utils.php');
 	}
 	
 	public function get_config_default_values(){
@@ -54,6 +58,6 @@ class WoodenToolEvent extends WoodkitTool{
 	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodenToolEvent();
+	$tools[] = new WK_Tool_Event();
 	return $tools;
 });

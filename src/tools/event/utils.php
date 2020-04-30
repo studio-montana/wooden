@@ -23,12 +23,6 @@
 defined('ABSPATH') or die("Go Away!");
 
 /**
- * REQUIREMENTS
- */
-require_once (wooden_get_tools_directory().EVENT_TOOL_NAME.'/post-types/index.php');
-require_once (wooden_get_tools_directory().EVENT_TOOL_NAME.'/gutenberg/plugins/eventmeta/index.php');
-
-/**
  * Retieve upcomping events (from date_from to date_to)
  * @param int $date_from : null for now
  * @param int $date_to : null for 100 years after date_from

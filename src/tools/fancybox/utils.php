@@ -22,21 +22,6 @@
  */
 defined('ABSPATH') or die("Go Away!");
 
-/**
- * Enqueue scripts for the front end.
-*/
-function tool_fancybox_woodkit_front_enqueue_scripts_tools($dependencies) {
-	$js_tool_fancybox_fancybox = locate_web_ressource(WOODKIT_PLUGIN_TOOLS_FOLDER.FANCYBOX_TOOL_NAME.'/js/tool-fancybox.js');
-	if (!empty($js_tool_fancybox_fancybox)){
-		wp_enqueue_script('tool-fancybox-script-fancybox', $js_tool_fancybox_fancybox, $dependencies, '1.0', true);
-		$background_color = apply_filters('woodkit-tool-fancybox-backgroundcolor', "rgba(0, 0, 0, 0.85)");
-		wp_localize_script ('tool-fancybox-script-fancybox', 'ToolFancybox', array (
-				'backgroundcolor' => $background_color,
-		) );
-	}
-}
-add_action('woodkit_front_enqueue_scripts_tools', 'tool_fancybox_woodkit_front_enqueue_scripts_tools');
-
 function tool_fancybox_image_send_to_editor($html, $id, $caption, $title, $align, $url, $size, $alt = '' ){
 	$fancybox_wordpress_contents_active = $GLOBALS['woodkit']->tools->get_tool_option(FANCYBOX_TOOL_NAME, 'wordpress-contents');
 	if (!empty($fancybox_wordpress_contents_active) && $fancybox_wordpress_contents_active == 'on'){

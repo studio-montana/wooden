@@ -26,7 +26,7 @@ class WKG_Module_Block_wall extends WKG_Module_Block {
 
 	function __construct() {
 		parent::__construct('wall', array(
-				'uri' => wooden_get_tools_directory_uri().'wall/gutenberg/blocks/wall/', // must be excplicitly defined to support symbolic link context
+				'uri' => wooden_get_tools_directory_uri().'wall/gutenberg/blocks/wall/', // must be explicitly defined to support symbolic link context
 		));
 		add_action('wp_enqueue_scripts', array($this, 'wp_enqueue_scripts'));
 	}

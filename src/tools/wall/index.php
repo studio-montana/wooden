@@ -25,20 +25,22 @@ defined('ABSPATH') or die("Go Away!");
 /**
  * Tool instance
  */
-class WoodenToolWall extends WoodkitTool{
+class WK_Tool_Wall extends WK_Tool{
 	
 	public function __construct(){
 		parent::__construct(array(
+				'uri' => get_template_directory_uri().'/src/tools/wall/', // must be explicitly defined to support symbolic link context
 				'slug' => 'wall', 
 				'name' => __("Wall", 'wooden'),
 				'description' => __("Create Gutenberg Block which displays any contents as a gallery", 'wooden'),
+				'context' => 'Wooden',
 			));
 	}
 	
 	public function launch() {
-		require_once ($this->path.'/gutenberg/inc/rest/index.php');
-		require_once ($this->path.'/gutenberg/inc/helpers/index.php');
-		require_once ($this->path.'/gutenberg/blocks/wall/index.php');
+		require_once ($this->path.'gutenberg/inc/rest/index.php');
+		require_once ($this->path.'gutenberg/inc/helpers/index.php');
+		require_once ($this->path.'gutenberg/blocks/wall/index.php');
 	}
 	
 	public function get_config_fields(){
@@ -52,6 +54,6 @@ class WoodenToolWall extends WoodkitTool{
 	}
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodenToolWall();
+	$tools[] = new WK_Tool_Wall();
 	return $tools;
 });

@@ -30,17 +30,21 @@ define('LOGIN_TOOL_NAME', 'login');
 /**
  * Tool instance
  */
-class WoodenToolLogin extends WoodkitTool{
+class WK_Tool_Login extends WK_Tool{
 	
 	public function __construct(){
-		parent::__construct(
-				'login', 									// slug
-				__("Login page", 'woodkit'),				// name
-				__("Improve your experience on admin login page", 'woodkit'),			// description
-				false,										// has config page
-				false,										// add config page in woodkit submenu
-				WOODKIT_URL_DOCUMENTATION.'/identification'		// documentation url
-			);
+		parent::__construct(array(
+				'uri' => get_template_directory_uri().'/src/tools/login/', // must be explicitly defined to support symbolic link context
+				'slug' => 'login',
+				'name' => __("Login", 'wooden'),
+				'description' => __("Improve your experience on WP login page", 'wooden'),
+				'context' => 'Wooden',
+		));
+	}
+	
+	public function launch() {
+		require_once ($this->path.'inc/utils.php');
+		require_once ($this->path.'inc/customizer.php');
 	}
 	
 	public function get_config_default_values(){
@@ -51,6 +55,6 @@ class WoodenToolLogin extends WoodkitTool{
 	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodenToolLogin();
+	$tools[] = new WK_Tool_Login();
 	return $tools;
 });

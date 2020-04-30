@@ -30,17 +30,24 @@ define('FANCYBOX_TOOL_NAME', 'fancybox');
 /**
  * Tool instance
  */
-class WoodenToolFancybox extends WoodkitTool{
+class WK_Tool_Fancybox extends WK_Tool{
 	
 	public function __construct(){
-		parent::__construct(
-				'fancybox', 								// slug
-				__("Fancybox", 'woodkit'),					// name
-				__("Open image in fancybox", 'woodkit'),	// description
-				true,										// has config page
-				false,										// add config page in woodkit submenu
-				WOODKIT_URL_DOCUMENTATION.'/fancybox'		// documentation url
-			);
+		parent::__construct(array(
+				'uri' => get_template_directory_uri().'/src/tools/fancybox/', // must be explicitly defined to support symbolic link context
+				'slug' => 'fancybox',
+				'name' => __("Fancybox", 'wooden'),
+				'description' => __("Enable Fancybox support on your website frontend", 'wooden'),
+				'has_config' => true,
+				'context' => 'Wooden',
+		));
+	}
+	
+	public function launch() {		
+		add_action('wp_enqueue_scripts', function () {
+			wp_enqueue_script('wooden-fancybox', $this->uri . 'js/fancybox-3.5.2/dist/jquery.fancybox.min.js', array('jquery'), '3.5.2', true);
+			wp_enqueue_style('wooden-fancybox', $this->uri . 'js/fancybox-3.5.2/dist/jquery.fancybox.min.css', array(), '3.5.2');
+		});
 	}
 	
 	public function get_config_fields(){
@@ -84,6 +91,6 @@ class WoodenToolFancybox extends WoodkitTool{
 	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodenToolFancybox();
+	$tools[] = new WK_Tool_Fancybox();
 	return $tools;
 });

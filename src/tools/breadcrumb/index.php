@@ -31,25 +31,36 @@ define('BREADCRUMB_TOOL_NAME', 'breadcrumb');
  * Tool instance
  */
 class WK_Tool_BreadCrumb extends WK_Tool{
-	
+
 	public function __construct(){
-		parent::__construct(
-				'breadcrumb', 								// slug
-				__("Bread crumb", 'woodkit'),				// name
-				__("Bread crumb tool", 'woodkit'),			// description
-				true,										// has config page
-				true,										// add config page in woodkit submenu
-				WOODKIT_URL_DOCUMENTATION.'/fil-dariane'	// documentation url
-			);
+		parent::__construct(array(
+				'uri' => get_template_directory_uri().'/src/tools/breadcrumb/', // must be explicitly defined to support symbolic link context
+				'slug' => 'breadcrumb',
+				'name' => __("Breadcrumb", 'wooden'),
+				'description' => __("Display breadcrumb on you website frontend", 'wooden'),
+				'has_config' => true,
+				'add_config_in_menu' => true,
+				'context' => 'Wooden',
+			));
 	}
-	
+
+	public function launch() {
+		require_once ($this->path.'utils.php');
+		require_once ($this->path.'custom-fields/breadcrumb.php');
+		require_once ($this->path.'gutenberg/plugins/breadcrumbmeta/index.php');
+		add_action('admin_enqueue_scripts', function () {
+			wp_enqueue_script('tool-breadcrumb-js', $this->uri.'js/tool-breadcrumb-admin.js', array('jquery'), WOODEN_WEBCACHE_VERSION, true);
+			wp_enqueue_style('tool-breadcrumb-css', $this->uri.'css/tool-breadcrumb-admin.css', array(), WOODEN_WEBCACHE_VERSION);
+		});
+	}
+
 	public function get_config_fields(){
 		return array(
 				'breadcrumb-post-types',
 				'breadcrumb-menu-management-active',
 		);
 	}
-	
+
 	public function get_config_default_values(){
 		return array(
 				'active' => 'off',
@@ -57,7 +68,7 @@ class WK_Tool_BreadCrumb extends WK_Tool{
 				'breadcrumb-menu-management-active' => 'on',
 		);
 	}
-	
+
 	/**
 	 * Override...
 	 * {@inheritDoc}
@@ -91,7 +102,7 @@ class WK_Tool_BreadCrumb extends WK_Tool{
 				<?php _e("Post types settings", 'woodkit'); ?>
 			</h2>
 			<div class="section-content">
-				<?php 
+				<?php
 				$value = $this->get_option('breadcrumb-post-types');
 				$post_types = get_post_types(array('public' => true), 'objects');
 				if (!empty($post_types)){
@@ -150,7 +161,7 @@ class WK_Tool_BreadCrumb extends WK_Tool{
 							});
 						});
 						</script>
-						<?php 
+						<?php
 					}
 				}?>
 				<p class="info"><?php _e('You can define, for each post type, a customized breadcrumb.', 'woodkit'); ?></p>
@@ -168,7 +179,7 @@ class WK_Tool_BreadCrumb extends WK_Tool{
 		</div>
 		<?php
 	}
-	
+
 }
 add_filter("woodkit-register-tool", function($tools){
 	$tools[] = new WK_Tool_BreadCrumb();

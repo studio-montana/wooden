@@ -1,9 +1,9 @@
 <?php
 /**
- * @package Woodkit
+ * @package Wooden
 * @author Sébastien Chandonay www.seb-c.com / Cyril Tissot www.cyriltissot.com
 * License: GPL2
-* Text Domain: woodkit
+* Text Domain: wooden
 *
 * Copyright 2016 Sébastien Chandonay (email : please contact me from my website)
 *
@@ -30,17 +30,22 @@ define('PAGINATION_TOOL_NAME', 'pagination');
 /**
  * Tool instance
  */
-class WoodenToolPagination extends WoodkitTool{
+class WK_Tool_Pagination extends WK_Tool{
 	
 	public function __construct(){
-		parent::__construct(
-				'pagination', 								// slug
-				__("Pagination", 'woodkit'),				// name
-				__("Intelligent pagination for all post-types", 'woodkit'),	// description
-				true,										// has config page
-				false,										// add config page in woodkit submenu
-				WOODKIT_URL_DOCUMENTATION.'/pagination'		// documentation url
-			);
+		parent::__construct(array(
+				'uri' => get_template_directory_uri().'/src/tools/pagination/', // must be explicitly defined to support symbolic link context
+				'slug' => 'pagination',
+				'name' => __("Pagination", 'wooden'),
+				'description' => __("Intelligent pagination for all post-types", 'wooden'),
+				'has_config' => true,
+				'add_config_in_menu' => false,
+				'context' => 'Wooden',
+		));
+	}
+	
+	public function launch() {
+		require_once ($this->path.'utils.php');
 	}
 	
 	public function get_config_fields(){
@@ -62,7 +67,7 @@ class WoodenToolPagination extends WoodkitTool{
 		?>
 		<div class="section">
 			<h2 class="section-title">
-				<?php _e("General", 'woodkit'); ?>
+				<?php _e("General", 'wooden'); ?>
 			</h2>
 			<div class="section-content">
 				<div class="field checkbox">
@@ -75,9 +80,9 @@ class WoodenToolPagination extends WoodkitTool{
 						}
 						?>
 						<input type="checkbox" id="taxnav-active" name="taxnav-active" <?php echo $checked; ?> />
-						<label for="taxnav-active"><?php _e("Include taxonomies", 'woodkit'); ?></label>
+						<label for="taxnav-active"><?php _e("Include taxonomies", 'wooden'); ?></label>
 					</div>
-					<p class="description"><?php _e('include taxonomies context if appropriate', 'woodkit'); ?></p>
+					<p class="description"><?php _e('include taxonomies context if appropriate', 'wooden'); ?></p>
 				</div>
 				<div class="field checkbox">
 					<div class="field-content">
@@ -89,19 +94,19 @@ class WoodenToolPagination extends WoodkitTool{
 						}
 						?>
 						<input type="checkbox" id="loop-active" name="loop-active" <?php echo $checked; ?> />
-						<label for="loop-active"><?php _e("Loop", 'woodkit'); ?></label>
+						<label for="loop-active"><?php _e("Loop", 'wooden'); ?></label>
 					</div>
-					<p class="description"><?php _e('generate loop navigation', 'woodkit'); ?></p>
+					<p class="description"><?php _e('generate loop navigation', 'wooden'); ?></p>
 				</div>
 			</div>
 		</div>
 		<div class="section">
 			<h2 class="section-title">
-				<?php _e("Integration", 'woodkit'); ?>
+				<?php _e("Integration", 'wooden'); ?>
 			</h2>
 			<div class="section-content">
 				<div class="section-info">
-					<?php _e('insert this code in your theme templates :', 'woodkit'); ?><br /><code style="font-size: 0.7rem;">&lt;?php woodkit_pagination(); ?&gt;</code>
+					<?php _e('insert this code in your theme templates :', 'wooden'); ?><br /><code style="font-size: 0.7rem;">&lt;?php wooden_pagination(); ?&gt;</code>
 				</div>
 			</div>
 		</div>
@@ -109,6 +114,6 @@ class WoodenToolPagination extends WoodkitTool{
 	}
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodenToolPagination();
+	$tools[] = new WK_Tool_Pagination();
 	return $tools;
 });

@@ -25,7 +25,7 @@ defined('ABSPATH') or die("Go Away!");
 /**
  * Tool instance
  */
-class WoodenToolBackgroundImage extends WoodkitTool{
+class WK_Tool_BackgroundImage extends WK_Tool{
 	
 	public function __construct(){
 		parent::__construct(array(
@@ -76,6 +76,6 @@ class WoodenToolBackgroundImage extends WoodkitTool{
 	
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WoodenToolBackgroundImage();
+	$tools[] = new WK_Tool_BackgroundImage();
 	return $tools;
 });
