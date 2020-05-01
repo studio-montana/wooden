@@ -24,8 +24,9 @@ var config = {
 	resolve: {
 		alias: {
 		  wkgcomponents: path.resolve(__dirname, '../../plugins/woodkit/src/gutenberg/components/'), // Woodkit Gutenberg dependencies : import ... from 'wkgcomponents/...'
+		  wkgassets: path.resolve(__dirname, '../../plugins/woodkit/src/gutenberg/assets/'), // Woodkit Gutenberg dependencies : import ... from 'wkgassets/...'
 		},
-    	extensions: ['.js', '.jsx'], // import without extension
+    extensions: ['.js', '.jsx'], // import without extension
 	}
 };
 

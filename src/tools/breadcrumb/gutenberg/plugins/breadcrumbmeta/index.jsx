@@ -5,8 +5,8 @@ const { withSelect, withDispatch } = wp.data
 const { dateI18n } = wp.date
 const { compose } = wp.compose
 const { PluginDocumentSettingPanel } = wp.editPost
-const { PanelBody, PanelRow, SelectControl, Button } = wp.components
-import WKG_Media_Selector from 'wkgcomponents/media-selector'
+const { PanelBody, PanelRow, SelectControl, Button, Icon } = wp.components
+import WKG_Entity_Selector from 'wkgcomponents/entity-selector'
 
 registerPlugin('wooden-plugin-breadcrumbmeta', {
   icon: '',
@@ -26,14 +26,15 @@ class PluginComponent_Base extends Component {
 	render () {
 		return (
 			<Fragment>
-        <PanelRow>
+        <PanelRow className="wkg-plugin-panelrow">
           <SelectControl label={__('Type', 'wooden')} value={this.props._breadcrumb_meta_type} onChange={(value) => this.props.on_meta_change({_breadcrumb_meta_type: value})} options={[
             { value: 'classic', label: __('Classic', 'wooden') },
             { value: 'customized', label: __('Customized', 'wooden') },
           ]} />
         </PanelRow>
         {this.props._breadcrumb_meta_type === 'customized' && (
-          <PanelRow>
+          <PanelRow className="wkg-plugin-panelrow">
+            <div className="wkg-info">{__('Compose your custom breacrumb', 'wooden')}</div>
             <BreadcrumbItemsSelector items={this.props._breadcrumb_meta_items || []} onChange={(value) => this.props.on_meta_change({_breadcrumb_meta_items: value})} />
           </PanelRow>
         )}
@@ -54,7 +55,6 @@ const applyWithDispatch = withDispatch(dispatch => {
   let core_editor_store = dispatch('core/editor')
   return {
     on_meta_change: (meta) => {
-      console.log('on_meta_change : ', meta)
       core_editor_store.editPost({meta})
     },
   }
@@ -71,36 +71,45 @@ class BreadcrumbItemsSelector extends Component {
   constructor(props) {
 		super(props)
 	}
-  getUniqueId (id = 0) {
-    if (this.props.items.filter(item => item.id === id).length > 0) {
-      id += 1
-      return this.getUniqueId(id)
+  getUniqueKey (key = 0) {
+    if (this.props.items.filter(item => item.key === key).length > 0) {
+      key += 1
+      return this.getUniqueKey(key)
     }
-    return id
+    return key
   }
   async addItem () {
-    this.props.onChange([...this.props.items, {id: this.getUniqueId(), type: 'post', value: ''}])
+    this.props.onChange([...this.props.items, {key: this.getUniqueKey(), type: 'post', id: 0}])
   }
-  async removeItem (id) {
-    this.props.onChange(this.props.items.filter(item => item.id !== id))
+  async removeItem (key) {
+    this.props.onChange(this.props.items.filter(item => item.key !== key))
   }
   updateItem (updatedItem) {
     this.props.onChange(this.props.items.map(item => {
-      return item.id === updatedItem.id ? updatedItem : item
+      return item.key === updatedItem.key ? updatedItem : item
     }))
   }
 	render () {
     let items = []
     for (var item of this.props.items) {
-      items.push(<BreadcrumbItemsSelectorItem key={item.id} item={item} onRemove={(id) => this.removeItem(id)} onChange={(item) => this.updateItem(item)} />)
+      if (!item.key && item.key !== 0) {
+        console.warn('BreadcrumbItemsSelector - item\'s key is missing : ', item)
+      } else {
+        items.push(<BreadcrumbItemsSelectorItem key={item.key} item={item} onRemove={(key) => this.removeItem(key)} onChange={(item) => this.updateItem(item)} />)
+      }
     }
 		return (
 			<Fragment>
-        <div style={bc_styles.items}>
-          <div style={bc_styles.item}>{__('Home', 'wooden')}</div>
-          {items}
+        <div className="wrapper">
+          <div className="items">
+            <div className="item item-home">
+              <Icon icon="arrow-down-alt" className="item-arrow" />
+              {__('Home', 'wooden')}
+            </div>
+            {items}
+          </div>
+          <Button className="add" isSecondary onClick={() => this.addItem()}>{__('Add breadcrumb item', 'wooden')}</Button>
         </div>
-        <Button isSecondary onClick={() => this.addItem()}>{__('Add breadcrumb item', 'wooden')}</Button>
 			</Fragment>
 		)
 	}
@@ -109,36 +118,22 @@ class BreadcrumbItemsSelector extends Component {
 class BreadcrumbItemsSelectorItem extends Component {
   constructor(props) {
 		super(props)
+    this.state = {
+      yop: null
+    }
 	}
 	render () {
-    /**
-     <WKG_SelectAnyControl
-       available_posttypes={['post', 'page']}
-       available_taxonomies={['category', 'tag']}
-       value={this.props.item.value}
-       onChange={value => this.props.onChange(value)}
-     />
-     */
 		return (
 			<Fragment>
-        <div style={bc_styles.item}>
-          {this.props.item.value}
-          <SelectControl label={__('Type', 'wooden')} value={this.props.item.type} onChange={(value) => this.props.onChange({...this.props.item, ...{ type: value }})} options={[
-            { value: 'post', label: __('Post', 'wooden') },
-            { value: 'tax', label: __('Tax', 'wooden') },
-          ]} />
-          <Button isSecondary onClick={() => this.props.onRemove(this.props.item.id)}>{__('Remove', 'wooden')}</Button>
+        <div className="item">
+          <Icon icon="arrow-down-alt" className="item-arrow" />
+          <WKG_Entity_Selector
+            value={{type: this.props.item.type, id: this.props.item.id}}
+            onChange={(entity) => this.props.onChange({...this.props.item, ...entity})}
+          />
+          <Button className="remove" isSecondary onClick={() => this.props.onRemove(this.props.item.key)}>X</Button>
         </div>
 			</Fragment>
 		)
 	}
-}
-
-const bc_styles = {
-  items: {
-    display: 'block',
-  },
-  item: {
-    display: 'block',
-  }
 }

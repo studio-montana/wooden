@@ -1,10 +1,51 @@
-/**
- * Plugin styles for editor
- *
- */
- 
 /*************************************************/
 /** applied in the editor                       **/
 /*************************************************/
-.wkg-plugin-breadcrumbmeta{
+.wooden-plugin-breadcrumbmeta{
+
+}
+.wooden-plugin-breadcrumbmeta .wrapper{
+  display: block;
+  width: 100%;
+}
+.wooden-plugin-breadcrumbmeta .wrapper .items{
+    display: block;
+    width: 100%;
+}
+.wooden-plugin-breadcrumbmeta .wrapper .items .item{
+  padding: 3px 27px 3px 12px;
+  margin: 0 0 6px 0;
+  background-color: #f9f9f9;
+  position: relative;
+}
+.wooden-plugin-breadcrumbmeta .wrapper .items .item-home{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.wooden-plugin-breadcrumbmeta .wrapper .items .item .item-arrow {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  max-width: 12px;
+  width: 100%;
+}
+.wooden-plugin-breadcrumbmeta .wrapper .items .item .entity-selector{
+  display: flex;
+}
+.wooden-plugin-breadcrumbmeta .wrapper .items .item .entity-selector .type{
+  max-width: 65px;
+  width: 100%;
+  margin-right: 3px;
+}
+.wooden-plugin-breadcrumbmeta .wrapper .items .item .entity-selector .item{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.wooden-plugin-breadcrumbmeta .wrapper .items .item .remove{
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 24px;
+  width: 100%;
 }

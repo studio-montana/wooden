@@ -49,14 +49,14 @@ class WKG_Module_Plugin_breadcrumbmeta extends WKG_Module_Plugin {
 					'items' => array(
 						'type' => 'object',
 						'properties' => array(
+							'key' => array(
+								'type' => 'number', // order
+							),
 							'id' => array(
-								'type' => 'number',
+								'type' => 'number', // entity ID
 							),
 							'type' => array(
-								'type' => 'string',
-							),
-							'value' => array(
-								'type' => 'string',
+								'type' => 'string', // entity type (post|term)
 							),
 						),
 					),
