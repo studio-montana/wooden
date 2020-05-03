@@ -75,7 +75,7 @@ function tool_breadcrumb($args = array(), $display = true){
 	$defaults = array(
 			'before' => '',
 			'after' => '',
-			'seperator' => '<li class="separator"><i class="fa fa-caret-right"></i></li>',
+			'seperator' => '<li class="separator">&gt;</li>',
 			'final' => '<li class="final"></li>',
 			'home-item' => __("Home", 'woodkit')
 	);
