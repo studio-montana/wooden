@@ -13,6 +13,8 @@
 
 		</div><!-- .wrapper -->
 	</div><!-- #content -->
+	
+	<?php do_action('wooden_before_footer'); ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="wrapper">
@@ -23,6 +25,9 @@
 			</div>
 		</div>
 	</footer><!-- #colophon -->
+	
+	<?php do_action('wooden_after_footer'); ?>
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

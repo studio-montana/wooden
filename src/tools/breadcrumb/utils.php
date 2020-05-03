@@ -25,10 +25,10 @@ defined('ABSPATH') or die("Go Away!");
 function tool_breadcrumb_get_the_title($post_id = null){
 	if (empty($post_id))
 		$post_id = get_the_ID();
-		if (function_exists("woodkit_display_title"))
-			return woodkit_display_title($post_id, false, false, '', '');
-			else
-				return get_the_title($post_id);
+	if (function_exists("woodkit_display_title"))
+		return woodkit_display_title($post_id, false, false, '', '');
+	else
+		return get_the_title($post_id);
 }
 
 /**
@@ -64,7 +64,7 @@ if ($breadcrumb_menu_management_active == 'on'){
  *     @type string		$final			displayed after last breadcrumb item
  *     @type string		$home-item		displayed in place of home's breadcrumb item content
  * }
- * @param string $display : true to display, otherwise return result
+ * @param boolean $display : true to display, otherwise return result
  * @return string
  */
 function tool_breadcrumb($args = array(), $display = true){
@@ -197,7 +197,7 @@ function tool_breadcrumb($args = array(), $display = true){
 
 function tool_breadcrumb_post_ancestors($id_post, $separator, $existing_ids_in_breadcrumb = array()){
 	$output = '';
-	$breadcrumb_type = get_post_meta($id_post, META_BREADCRUMB_TYPE, true);
+	$breadcrumb_type = get_post_meta($id_post, '_breadcrumb_meta_type', true);
 	if (!empty($breadcrumb_type) && $breadcrumb_type == 'customized'){
 		$output .= tool_breadcrumb_customized_post_ancestors($id_post, $separator, $existing_ids_in_breadcrumb);
 	}else{
@@ -233,32 +233,25 @@ function tool_breadcrumb_post_ancestors($id_post, $separator, $existing_ids_in_b
 
 function tool_breadcrumb_customized_post_ancestors($id_post, $separator, $existing_ids_in_breadcrumb = array()){
 	$output = '';
-	$breadcrumb_items = get_post_meta($id_post, META_BREADCRUMB_CUSTOM_ITEMS, true);
+	$breadcrumb_items = get_post_meta($id_post, '_breadcrumb_meta_items', true);
 	if (!empty($breadcrumb_items)){
-		$breadcrumb_items = json_decode($breadcrumb_items, true);
-		if (!empty($breadcrumb_items)){
-			foreach ($breadcrumb_items as $breadcrumb_item){
-				$parts = explode("|", $breadcrumb_item);
-				if (count($parts) == 3){
-					$type = $parts[0];
-					$type_slug = $parts[1];
-					$id = $parts[2];
-					if (!in_array($id, $existing_ids_in_breadcrumb)){
-						if (!empty($type) && !empty($type_slug) && !empty($id) && is_numeric($id)){
-							if ($type == 'post'){
-								$post = get_post($id);
-								if ($post){
-									$existing_ids_in_breadcrumb[] = $id;
-									$output .= tool_breadcrumb_post_ancestors($id, $separator, $existing_ids_in_breadcrumb);
-									$output .= '<li class="breadcrumb-item"><a href="'.get_the_permalink($post).'">'.get_the_title($post).'</a></li>'.$separator;
-								}
-							}else if ($type == 'tax'){
-								$term = get_term($id);
-								if ($term){
-									$output .= tool_breadcrumb_term_ancestors($id, $type_slug, $separator);
-									$output .= '<li class="breadcrumb-item"><a href="'.get_term_link($term).'">'.$term->name.'</a></li>'.$separator;
-								}
-							}
+		foreach ($breadcrumb_items as $breadcrumb_item){
+			$type = $breadcrumb_item['type'];
+			$id = $breadcrumb_item['id'];
+			if (!in_array($id, $existing_ids_in_breadcrumb)){
+				if (!empty($type) && !empty($id) && is_numeric($id)){
+					if ($type == 'post'){
+						$post = get_post($id);
+						if ($post){
+							$existing_ids_in_breadcrumb[] = $id;
+							$output .= tool_breadcrumb_post_ancestors($id, $separator, $existing_ids_in_breadcrumb);
+							$output .= '<li class="breadcrumb-item"><a href="'.get_the_permalink($post).'">'.get_the_title($post).'</a></li>'.$separator;
+						}
+					}else if ($type == 'term'){
+						$term = get_term($id);
+						if ($term){
+							$output .= tool_breadcrumb_term_ancestors($id, null, $separator);
+							$output .= '<li class="breadcrumb-item"><a href="'.get_term_link($term).'">'.$term->name.'</a></li>'.$separator;
 						}
 					}
 				}
@@ -270,7 +263,7 @@ function tool_breadcrumb_customized_post_ancestors($id_post, $separator, $existi
 
 function tool_breadcrumb_term_ancestors($id, $taxonomy, $separator){
 	$output = '';
-	$ancestors = get_ancestors($id, $taxonomy);
+	$ancestors = get_ancestors($id, $taxonomy, 'taxonomy');
 	if ($ancestors){
 		sort($ancestors, -1);
 		foreach ($ancestors as $ancestor ) {
@@ -337,33 +330,27 @@ function breadcrumb_is_in_current_breadcrumb($id, $type = 'post'){
  * @param array $in_array_ids
  * @return array of BreadcrumbItem
  */
-function tool_breadcrumb_get_items($id, $type = 'post', $breadcrumb_items = array(), $in_array_ids = array()) {
+function tool_breadcrumb_get_items($id, $type = 'post', $breadcrumb_items = array(), $in_array = array()) {
 	if ($type === 'post' && !empty($id)) {
-		$item_breadcrumb_type = get_post_meta ( $id, META_BREADCRUMB_TYPE, true );
+		$item_breadcrumb_type = get_post_meta ( $id, '_breadcrumb_meta_type', true );
 		if (! empty ( $item_breadcrumb_type ) && $item_breadcrumb_type == 'customized') {
-			$item_breadcrumb_items = get_post_meta($id, META_BREADCRUMB_CUSTOM_ITEMS, true);
+			$item_breadcrumb_items = get_post_meta($id, '_breadcrumb_meta_items', true);
 			if (!empty($item_breadcrumb_items)){
-				$item_breadcrumb_items = json_decode($item_breadcrumb_items, true);
-				if (!empty($item_breadcrumb_items)){
-					foreach ($item_breadcrumb_items as $item_breadcrumb_item){
-						$parts = explode("|", $item_breadcrumb_item);
-						if (count($parts) > 2){
-							list($item_type, $item_type_slug, $item_id) = $parts;
-							if (!in_array($item_breadcrumb_item, $in_array_ids)){
-								$in_array_ids[] = $item_breadcrumb_item;
-								if (!empty($item_type) && !empty($item_type_slug) && !empty($item_id) && is_numeric($item_id)){
-									if ($item_type == 'post'){
-										$post = get_post($item_id);
-										if ($post){
-											$breadcrumb_items = tool_breadcrumb_get_items($item_id, $item_type, $breadcrumb_items, $in_array_ids);
-										}
-									}else if ($item_type === 'tax' || $item_type === 'term'){
-										$term = get_term($item_id);
-										if ($term){
-											$breadcrumb_items = tool_breadcrumb_get_items($item_id, $item_type, $breadcrumb_items, $in_array_ids);
-										}
-									}
-								}
+				$item_type = $item_breadcrumb_items['type'];
+				$item_id = $item_breadcrumb_items['id'];
+				$in_array_check = $item_type.'|'.$item_id;
+				if (!in_array($in_array_check, $in_array)){
+					$in_array[] = $in_array_check;
+					if (!empty($item_type) && !empty($item_type_slug) && !empty($item_id) && is_numeric($item_id)){
+						if ($item_type == 'post'){
+							$post = get_post($item_id);
+							if ($post){
+								$breadcrumb_items = tool_breadcrumb_get_items($item_id, $item_type, $breadcrumb_items, $in_array);
+							}
+						}else if ($item_type === 'tax' || $item_type === 'term'){
+							$term = get_term($item_id);
+							if ($term){
+								$breadcrumb_items = tool_breadcrumb_get_items($item_id, $item_type, $breadcrumb_items, $in_array);
 							}
 						}
 					}
@@ -372,12 +359,12 @@ function tool_breadcrumb_get_items($id, $type = 'post', $breadcrumb_items = arra
 		}else{
 			$id_post_parent = wp_get_post_parent_id($id);
 			if (!empty($id_post_parent)){
-				$post_parent_breadcrumb_item = 'post|'.get_post_type($id_post_parent).'|'.$id_post_parent;
-				if (!in_array($post_parent_breadcrumb_item, $in_array_ids)){
-					$in_array_ids[] = $post_parent_breadcrumb_item;
+				$in_array_check = 'post|'.$id_post_parent;
+				if (!in_array($in_array_check, $in_array)){
+					$in_array[] = $in_array_check;
 					$post = get_post($id_post_parent);
 					if ($post && !empty($id_post_parent)){
-						$breadcrumb_items = tool_breadcrumb_get_items($id_post_parent, 'post', $breadcrumb_items, $in_array_ids);
+						$breadcrumb_items = tool_breadcrumb_get_items($id_post_parent, 'post', $breadcrumb_items, $in_array);
 					}
 				}
 			}else{

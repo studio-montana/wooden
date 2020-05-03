@@ -52,6 +52,9 @@ class WK_Tool_BreadCrumb extends WK_Tool{
 			wp_enqueue_script('tool-breadcrumb-js', $this->uri.'js/tool-breadcrumb-admin.js', array('jquery'), WOODEN_WEBCACHE_VERSION, true);
 			wp_enqueue_style('tool-breadcrumb-css', $this->uri.'css/tool-breadcrumb-admin.css', array(), WOODEN_WEBCACHE_VERSION);
 		});
+		add_action('wooden_after_header', function () {
+			tool_breadcrumb();
+		});
 	}
 
 	public function get_config_fields(){

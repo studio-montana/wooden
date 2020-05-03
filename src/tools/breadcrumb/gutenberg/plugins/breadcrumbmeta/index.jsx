@@ -118,9 +118,6 @@ class BreadcrumbItemsSelector extends Component {
 class BreadcrumbItemsSelectorItem extends Component {
   constructor(props) {
 		super(props)
-    this.state = {
-      yop: null
-    }
 	}
 	render () {
 		return (

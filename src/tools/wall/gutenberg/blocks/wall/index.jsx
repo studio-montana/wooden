@@ -19,7 +19,7 @@ const MAX_SPACER_HEIGHT = 120
 
 /**
  * Wall Block
- * 
+ *
  */
 registerBlockType('wkg/wall', {
 	title: 'WKG Wall',
@@ -780,21 +780,17 @@ class BlockComponent_Base extends Component {
 }
 
 const BlockComponent = compose([withSelect(select => {
-	const posts_options = select('wkg/commons').getPostsOptions()
-	const terms_options = select('wkg/commons').getTermsOptions()
 	const { getPostTypes } = select('core')
   return {
-		post_types: getPostTypes(),
-		posts_options,
-		terms_options
+		post_types: getPostTypes()
 	}
 }), withDispatch((dispatch) => {
 	const { createNotice } = dispatch('core/notices')
 	const { toggleSelection } = dispatch('core/block-editor')
 	return {
 		noticeError: (message) => createNotice('error', message),
-		onResizeStart: () => toggleSelection( false ),
-		onResizeStop: () => toggleSelection( true ),
+		onResizeStart: () => toggleSelection(false),
+		onResizeStop: () => toggleSelection(true)
 	}
 }), withInstanceId])(BlockComponent_Base)
 
