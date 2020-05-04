@@ -1,5 +1,6 @@
 import classnames from 'classnames'
 const { registerBlockType } = wp.blocks
+const { __ } = wp.i18n
 const { Component, Fragment } = wp.element
 const { InspectorControls, MediaUpload } = wp.blockEditor
 const { PanelBody, PanelRow, Button, SelectControl, RangeControl, TextControl, ResizableBox, ToggleControl } = wp.components
@@ -22,9 +23,20 @@ const MAX_SPACER_HEIGHT = 120
  *
  */
 registerBlockType('wkg/wall', {
-	title: 'WKG Wall',
+	title: __('Wall', 'wooden'),
 	category: 'common',
-	icon: 'media-spreadsheet',
+	description: __('Display galery of anything you want', 'wooden'),
+	icon: 'schedule',
+	example: {
+		attributes: {
+			block_preview: true,
+			block_preview_attrs: {
+				image: wkg_data.base_uri + '/preview.png',
+				image_style: { width: '100%', height: 'auto', display: 'block' },
+				image_alt: __('Wall image preview', 'wooden')
+			}
+		},
+	},
 	supports: {
 		html: false,
 		reusable: false,
@@ -33,6 +45,14 @@ registerBlockType('wkg/wall', {
 	attributes: {
 		id: {
 			type: 'string',
+		},
+		block_preview: { // only used for block's preview
+			type: 'boolean',
+			default: false,
+		},
+		block_preview_attrs: { // only used for block's preview
+			type: 'object',
+			default: {},
 		},
 		items: {
 			type: 'string', // as object => https://developer.wordpress.org/block-editor/developers/block-api/block-attributes/#considerations
@@ -113,19 +133,29 @@ registerBlockType('wkg/wall', {
 		// console.log('attributes : ', props.attributes)
 		props.attributes.id = 'wkg' + props.clientId
 		props.className += " wkg-editor wkg-item"
-		return (
-			<div className={props.className}>
-				<h3 className="wkg-title">
-					Wall
-					<span className="wkg-info">(Affiche un mur d'éléments)</span>
-				</h3>
-				<BlockComponent
-					attributes={props.attributes}
-					isSelected={props.isSelected}
-					onChange={attributes => props.setAttributes(attributes)}
-				/>
-			</div>
-		)
+		if (props.attributes.block_preview && props.attributes.block_preview_attrs) {
+			props.className += " wkg-item-preview"
+			return (
+				<div className={props.className}>
+					<p>{__('Vous pouvez composer votre mur d\'images, d\'articles, de pages ou de tout autre contenu de votre site. Vous choisissez ensuite le style de présentation. Tous les réglages sont en colonne de droite.', 'wooden')}</p>
+					<img style={props.attributes.block_preview_attrs.image_style} src={props.attributes.block_preview_attrs.image} alt={props.attributes.block_preview_attrs.image_alt} />
+				</div>
+			)
+		} else {
+			return (
+				<div className={props.className}>
+					<h3 className="wkg-title">
+						{__('Wall', 'wooden')}
+						<span className="wkg-info">({__('Display a wall of elements', 'wooden')})</span>
+					</h3>
+					<BlockComponent
+						attributes={props.attributes}
+						isSelected={props.isSelected}
+						onChange={attributes => props.setAttributes(attributes)}
+					/>
+				</div>
+			)
+		}
 	},
 	save: function (props) {
 		return null
