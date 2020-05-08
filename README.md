@@ -3,21 +3,21 @@
 Thème racine pour Wordpress - prise en charge de Woodkit v2 & Gutenberg.
 Ce thème est voué à être surchargé, il ne propose aucun style par défaut. Il permet la prise en charge de Woodkit v2 et propose un contexte Gutenberg.
 
-# Les mises à jour
+## Les mises à jour
 
 Ce thème est mis à jour par Woodkit, il est donc fortement recommandé de le surcharger lorsque vous développez votre thème.
 La mise à jour se fait comme tous les autres thème, par action manuelle de votre part depuis le BO de WP.
 
-# Les particularités
+## Les particularités
 
 * Wooden intègre certains tools (encapsulé par Woodkit v2). Le paramétrage des tools est donc faite depuis le BO de WP dans la section Woodkit (comme pour les tool de Woodkit)
 
 **Note :** Wooden nécessite Woodkit v2 et donc nécessite Wordpress > v5 avec l'édieur Gutenberg activé.
   
 ------------------------------------------------------------------------------------------------------------------------
-## Les développements dans Wooden : 
+# Les développements dans Wooden : 
 
-# Context Gutenberg
+## Context Gutenberg
 
 **Pour ajouter un block :**
 
@@ -66,13 +66,13 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
   * exemple : import WKG_Icons from 'wkgassets/icons'
 
 ------------------------------------------------------------------------------------------------------------------------
-## Les développements dans un thème enfant : 
+# Les développements dans un thème enfant : 
 
-# Les tools
+## Les tools
 
 Votre thème enfant peut lui aussi définir des tools, pour cela vous devez respecter l'architecture des tools existants et les placer dans le dossier src/tools/ de votre thème enfant.
 
-# Gutenberg
+## Gutenberg
 
 Pour créer des composant Gutenberg (ReactJS) dans un thème enfant, vous devez créer un contexte de développement. Vous pouvez simplement vous inspirer de celui de Wooden en faisant les actions suivantes : 
 * copier à la racine de votre thème les fichiers suivants : 
