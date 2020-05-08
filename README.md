@@ -14,7 +14,7 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
 
 **Note :** Wooden nécessite Woodkit v2 et donc nécessite Wordpress > v5 avec l'édieur Gutenberg activé.
   
-------------------------------------------------------------------------------------------------------------------------
+
 # Les développements dans Wooden : 
 
 ## Context Gutenberg
@@ -65,7 +65,7 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
 * les assets React proposés par Woodkit sont accessible via *import ASSET_NAME  from 'wkgassets/...'*
   * exemple : import WKG_Icons from 'wkgassets/icons'
 
-------------------------------------------------------------------------------------------------------------------------
+
 # Les développements dans un thème enfant : 
 
 ## Les tools
