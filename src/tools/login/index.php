@@ -38,6 +38,7 @@ class WK_Tool_Login extends WK_Tool{
 				'slug' => 'login',
 				'name' => __("Login", 'wooden'),
 				'description' => __("Improve your experience on WP login page", 'wooden'),
+				'customizer' => add_query_arg(array('autofocus[section]' => 'login_customizer'), admin_url('customize.php')),
 				'context' => 'Wooden',
 		));
 	}
