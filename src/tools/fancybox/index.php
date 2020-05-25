@@ -38,55 +38,26 @@ class WK_Tool_Fancybox extends WK_Tool{
 				'slug' => 'fancybox',
 				'name' => __("Fancybox", 'wooden'),
 				'description' => __("Enable Fancybox support on your website frontend", 'wooden'),
-				'has_config' => true,
 				'context' => 'Wooden',
 		));
 	}
 	
-	public function launch() {		
+	public function launch() {
 		add_action('wp_enqueue_scripts', function () {
 			wp_enqueue_script('wooden-fancybox', $this->uri . 'js/fancybox-3.5.2/dist/jquery.fancybox.min.js', array('jquery'), '3.5.2', true);
 			wp_enqueue_style('wooden-fancybox', $this->uri . 'js/fancybox-3.5.2/dist/jquery.fancybox.min.css', array(), '3.5.2');
+			wp_enqueue_script('wooden-fancybox-front', $this->uri . 'js/front.js', array('wooden-fancybox'), WOODEN_WEBCACHE_VERSION, true);
 		});
 	}
 	
 	public function get_config_fields(){
-		return array(
-				'wordpress-contents'
-		);
+		return array();
 	}
 	
 	public function get_config_default_values(){
 		return array(
-				'active' => 'on',
-				'wordpress-contents' => 'on'
+				'active' => 'on'
 		);
-	}
-	
-	public function display_config_fields(){
-		?>
-		<div class="section">
-			<h2 class="section-title">
-				<?php _e("General", 'woodkit'); ?>
-			</h2>
-			<div class="section-content">
-				<div class="field checkbox">
-					<div class="field-content">
-						<?php
-						$value = $this->get_option('wordpress-contents');
-						$checked = '';
-						if ($value == 'on'){
-							$checked = ' checked="checked"';
-						}
-						?>
-						<input type="checkbox" id="wordpress-contents" name="wordpress-contents" <?php echo $checked; ?> />
-						<label for="wordpress-contents"><?php _e("Enable for all images", 'woodkit'); ?></label>
-					</div>
-					<p class="description"><?php _e('Enable Fancybox on all wordpress content images - not only woodkit wall', 'woodkit'); ?></p>
-				</div>
-			</div>
-		</div>
-		<?php
 	}
 	
 }

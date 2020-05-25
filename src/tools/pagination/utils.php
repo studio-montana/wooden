@@ -25,6 +25,9 @@ defined('ABSPATH') or die("Go Away!");
 /**
  * Wooden pagination for old Woodkit (before v.2.0.0) support dependencies
  * This pagination tool was migrated from Woodkit 1.x.x to Wooden (since Woodkit 2.0.0)
+ * 
+ * @deprecated since Wooden exists
+ * 
  * @param array $args
  * @param string $display
  * @param string $before_links
