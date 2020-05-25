@@ -2,6 +2,9 @@ const path = require('path');
 
 /** gutenberg modules declaration */
 let gutenberg_modules = [
+	// {'entry': 'index.jsx', 'name': 'fake_block', 'path': 'gutenberg/blocks/fake_block/'}, // Block declaration example
+	// {'entry': 'index.jsx', 'name': 'fake_plugin', 'path': 'gutenberg/plugins/fake_plugin/'}, // Plugin declaration example
+	// {'entry': 'index.js', 'name': 'fake_store', 'path': 'gutenberg/stores/fake_store/'}, // Store declaration example
 	{'entry': 'index.jsx', 'name': 'eventmeta', 'path': 'tools/event/gutenberg/plugins/eventmeta/'}, // event tool's plugin
 	{'entry': 'index.jsx', 'name': 'breadcrumbmeta', 'path': 'tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/'}, // breadcrumb tool's plugin
 	{'entry': 'index.jsx', 'name': 'wall', 'path': 'tools/wall/gutenberg/blocks/wall/'}, // wall tool's block

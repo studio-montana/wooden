@@ -27,7 +27,11 @@ class WKG_Module_Plugin_eventmeta extends WKG_Module_Plugin {
 	function __construct() {
 		parent::__construct('eventmeta', array(
 				'uri' => wooden_get_tools_directory_uri().'event/gutenberg/plugins/eventmeta/', // must be explicitly defined to support symbolic link context
-				'post_types' => 'event'
+				'post_types' => 'event',
+				'i18n' => array(
+						'domain' => 'wooden',
+						'path' => get_template_directory().'lang/',
+				)
 		));
 		add_action('init', array($this, 'init'), 10);
 	}
