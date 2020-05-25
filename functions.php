@@ -20,7 +20,7 @@ function wooden_setup() {
 
 	/*
 	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
+	 * Translations can be filed in the /lang/ directory.
 	 * If you're building a theme based on wooden, use a find and replace
 	 * to change 'wooden' to the name of your theme in all the template files.
 	 */

@@ -36,12 +36,16 @@ class WK_Tool_Portfolio extends WK_Tool{
 		parent::__construct(array(
 				'uri' => get_template_directory_uri().'/src/tools/portfolio/', // must be explicitly defined to support symbolic link context
 				'slug' => 'portfolio', 
-				'name' => __("Portfolio", 'wooden'),
-				'description' => __("Create portfolio content type", 'wooden'),
-				'has_config' => false,
-				'add_config_in_menu' => false,
 				'context' => 'Wooden',
 			));
+	}
+	
+	public function get_name() { 
+		return __("Portfolio", 'wooden');
+	}
+	
+	public function get_description() { 
+		return __("Create portfolio content type", 'wooden');
 	}
 	
 	public function launch() {

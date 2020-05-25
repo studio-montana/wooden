@@ -36,12 +36,17 @@ class WK_Tool_Pagination extends WK_Tool{
 		parent::__construct(array(
 				'uri' => get_template_directory_uri().'/src/tools/pagination/', // must be explicitly defined to support symbolic link context
 				'slug' => 'pagination',
-				'name' => __("Pagination", 'wooden'),
-				'description' => __("Intelligent pagination for all post-types", 'wooden'),
 				'has_config' => true,
-				'add_config_in_menu' => false,
 				'context' => 'Wooden',
 		));
+	}
+	
+	public function get_name() { 
+		return __("Pagination", 'wooden');
+	}
+	
+	public function get_description() { 
+		return __("Intelligent pagination for all post-types", 'wooden');
 	}
 	
 	public function launch() {
@@ -65,11 +70,11 @@ class WK_Tool_Pagination extends WK_Tool{
 	
 	public function display_config_fields(){
 		?>
-		<div class="section">
-			<h2 class="section-title">
+		<div class="wk-panel">
+			<h2 class="wk-panel-title">
 				<?php _e("General", 'wooden'); ?>
 			</h2>
-			<div class="section-content">
+			<div class="wk-panel-content">
 				<div class="field checkbox">
 					<div class="field-content">
 						<?php
@@ -100,12 +105,12 @@ class WK_Tool_Pagination extends WK_Tool{
 				</div>
 			</div>
 		</div>
-		<div class="section">
-			<h2 class="section-title">
+		<div class="wk-panel">
+			<h2 class="wk-panel-title">
 				<?php _e("Integration", 'wooden'); ?>
 			</h2>
-			<div class="section-content">
-				<div class="section-info">
+			<div class="wk-panel-content">
+				<div class="wk-panel-info">
 					<?php _e('insert this code in your theme templates :', 'wooden'); ?><br /><code style="font-size: 0.7rem;">&lt;?php wooden_pagination(); ?&gt;</code>
 				</div>
 			</div>

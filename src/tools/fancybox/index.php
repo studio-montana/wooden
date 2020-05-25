@@ -36,10 +36,16 @@ class WK_Tool_Fancybox extends WK_Tool{
 		parent::__construct(array(
 				'uri' => get_template_directory_uri().'/src/tools/fancybox/', // must be explicitly defined to support symbolic link context
 				'slug' => 'fancybox',
-				'name' => __("Fancybox", 'wooden'),
-				'description' => __("Enable Fancybox support on your website frontend", 'wooden'),
 				'context' => 'Wooden',
 		));
+	}
+	
+	public function get_name() { 
+		return __("Fancybox", 'wooden');
+	}
+	
+	public function get_description() { 
+		return __("Enable Fancybox support on your website frontend", 'wooden');
 	}
 	
 	public function launch() {

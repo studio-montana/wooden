@@ -36,12 +36,16 @@ class WK_Tool_Event extends WK_Tool{
 		parent::__construct(array(
 				'uri' => get_template_directory_uri().'/src/tools/event/', // must be explicitly defined to support symbolic link context
 				'slug' => 'event', 
-				'name' => __("Events", 'wooden'),
-				'description' => __("Events manager", 'wooden'),
-				'has_config' => false,
-				'add_config_in_menu' => false,
 				'context' => 'Wooden',
 			));
+	}
+	
+	public function get_name() { 
+		return __("Events", 'wooden');
+	}
+	
+	public function get_description() { 
+		return __("Events manager", 'wooden');
 	}
 	
 	public function launch() {

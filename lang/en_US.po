@@ -1,0 +1,339 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woody\n"
+"POT-Creation-Date: 2016-03-05 14:11+0100\n"
+"PO-Revision-Date: 2016-03-05 14:11+0100\n"
+"Last-Translator: Sebastien Chandonay <sebastien.chandonay@gmail.com>\n"
+"Language-Team: Sebastien Chandonay / Cyril Tissot <sebastien.chandonay@gmail."
+"com artcyril@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Projewoody-Id-Version: Bancassurances Theme WP\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:25
+msgid "We couldn't find the page you were looking for. This is either because"
+msgstr ""
+
+#: ../404.php:28
+msgid ""
+"There is an error in the URL entered into your web browser. Please check the "
+"URL and try again"
+msgstr ""
+
+#: ../404.php:29
+msgid "The page you are looking for has been moved or deleted"
+msgstr ""
+
+#: ../404.php:32
+msgid "You can return to our homepage by"
+msgstr ""
+
+#: ../404.php:32
+msgid "Home"
+msgstr ""
+
+#: ../404.php:32
+msgid "clicking here"
+msgstr ""
+
+#: ../404.php:33
+msgid "or you can try searching for the content you are seeking"
+msgstr ""
+
+#: ../archive.php:23 ../archive.php:25 ../archive.php:27
+#, php-format
+msgid "Archives %s"
+msgstr ""
+
+#: ../archive.php:29
+msgid "Archives"
+msgstr ""
+
+#: ../author-bio.php:30
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: ../author-bio.php:34
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../author.php:33
+#, php-format
+msgid "All posts by %s"
+msgstr ""
+
+#: ../comments.php:47
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:48
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:49
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:54
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-none.php:19
+msgid "No result"
+msgstr ""
+
+#: ../content-none.php:21
+#, fuzzy
+msgid "No content"
+msgstr "No content"
+
+#: ../content-resume.php:59 ../content.php:58
+msgid "Comment"
+msgstr ""
+
+#: ../content-resume.php:59 ../content.php:58
+#, fuzzy
+msgid "One comment"
+msgstr "Un commentaire (FR)"
+
+#: ../content-resume.php:59 ../content.php:58
+#, fuzzy, php-format
+msgid "See % comments"
+msgstr "show % comments"
+
+#: ../content.php:50
+msgid "Read more <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../functions.php:58
+msgid "Main menu"
+msgstr ""
+
+#: ../functions.php:129
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:131
+msgid "Shown in your site"
+msgstr ""
+
+#: ../functions.php:183
+msgid "Sticky"
+msgstr ""
+
+#: ../functions.php:189 ../functions.php:195
+msgid ", "
+msgstr ""
+
+#: ../functions.php:204
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: ../functions.php:226
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: ../image.php:48
+msgid "Pages:"
+msgstr ""
+
+#: ../image.php:52
+msgid "Page"
+msgstr ""
+
+#: ../search.php:22
+#, php-format
+msgid "'%s' results"
+msgstr ""
+
+#: ../tag.php:21
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#: ../taxonomy-post_format.php:21
+#, php-format
+msgid "%s Archives"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Enable comments"
+#~ msgstr "Un commentaire (FR)"
+
+#, fuzzy
+#~ msgid "Thumb navigation"
+#~ msgstr "Navigation menu"
+
+#, fuzzy
+#~ msgid "Active"
+#~ msgstr "Active"
+
+#, fuzzy
+#~ msgid "Captcha"
+#~ msgstr "Invalid captcha"
+
+#, fuzzy
+#~ msgid "Meta-description"
+#~ msgstr "Meta-Description home page"
+
+#, fuzzy
+#~ msgid "OpenGraph-description"
+#~ msgstr "Meta-Description home page"
+
+#, fuzzy
+#~ msgid "meta-description used by default"
+#~ msgstr "Meta-Description home page"
+
+#, fuzzy
+#~ msgid "before content"
+#~ msgstr "Content types"
+
+#, fuzzy
+#~ msgid "No thumb navigation"
+#~ msgstr "Navigation menu"
+
+#~ msgid "Laisser un commentaire"
+#~ msgstr "Comment"
+
+#~ msgid "Un commentaire"
+#~ msgstr "Un commentaire (FR)"
+
+#~ msgid "Voir les % commentaires"
+#~ msgstr "show % comments"
+
+#, fuzzy
+#~ msgid "Activer les commentaires"
+#~ msgstr "Un commentaire (FR)"
+
+#~ msgid "Menu de navigation"
+#~ msgstr "Navigation menu"
+
+#, fuzzy
+#~ msgid "Apparait dans le site."
+#~ msgstr "Show in footer"
+
+#~ msgid "Résultats pour '%s'"
+#~ msgstr "Results for '%s'"
+
+#, fuzzy
+#~ msgid "En savoir plus"
+#~ msgstr "more about"
+
+#~ msgid "Aucun résultat"
+#~ msgstr "No result"
+
+#~ msgid "Évènement"
+#~ msgstr "Event"
+
+#~ msgid "Woody - Toutes les fonctionnalités"
+#~ msgstr "Woody -All fonctionnalities"
+
+#~ msgid "Woody - Les Bonnes pratiques"
+#~ msgstr "Woody - Good practices"
+
+#~ msgid "Apparait en colonne du site."
+#~ msgstr "show as sidebar"
+
+#~ msgid "aucune entrée"
+#~ msgstr "no entry"
+
+#~ msgid "Ce type de contenu n'est pas activé"
+#~ msgstr "This post-type is not activated"
+
+#~ msgid "Contact depuis le site"
+#~ msgstr "Contact from site"
+
+#~ msgid "Votre email a bien été envoyé"
+#~ msgstr "Your email is send"
+
+#~ msgid "Votre email a bien été envoyée, merci."
+#~ msgstr "Your email is send, thank you"
+
+#~ msgid "Champ requis"
+#~ msgstr "Required field"
+
+#~ msgid "Email invalide"
+#~ msgstr "Invalid email"
+
+#~ msgid "Erreur lors de l'envoi"
+#~ msgstr "Error in emailing"
+
+#~ msgid "NOM"
+#~ msgstr "LAST-NAME"
+
+#~ msgid "PRENOM"
+#~ msgstr "FIRST-NAME"
+
+#~ msgid "Informations obligatoires"
+#~ msgstr "Needed informations"
+
+#~ msgid "ENVOYER"
+#~ msgstr "SEND"
+
+#~ msgid "Votre message a bien été envoyé. Merci."
+#~ msgstr "Your message is send"
+
+#~ msgid "Identité"
+#~ msgstr "Identity"
+
+#~ msgid "Options sauvegardées"
+#~ msgstr "Options are saved"
+
+#~ msgid "Enregistrer"
+#~ msgstr "Save"
+
+#~ msgid "Types de contenus"
+#~ msgstr "Content types"
+
+#~ msgid "Oui"
+#~ msgstr "Yes"
+
+#~ msgid "Non"
+#~ msgstr "No"
+
+#~ msgid "Coordonnées / Google Maps"
+#~ msgstr "Coord. / Google Maps"
+
+#~ msgid ""
+#~ "Paramètres utilisés en page contact + widget Coordonnées + widget "
+#~ "GoogleMaps"
+#~ msgstr "Parameters used on contact page + coord widget + googlemaps widget"
+
+#~ msgid "Adresse"
+#~ msgstr "Adress"
+
+#~ msgid "Code postal"
+#~ msgstr "CP"
+
+#~ msgid "Ville"
+#~ msgstr "City"
+
+#~ msgid "Pays"
+#~ msgstr "Country"
+
+#~ msgid "Tél."
+#~ msgstr "Tel."
+
+#~ msgid "Meta-Titre page accueil"
+#~ msgstr "Meta-Titre home page"
+
+#~ msgid "Meta-Mots-Clés page accueil"
+#~ msgstr "Meta-Mots-Clés home page"
+
+#~ msgid "voir"
+#~ msgstr "show"
+
+#~ msgid "Alalah le gros test !"
+#~ msgstr "Alalah le gros test ! (EN)"

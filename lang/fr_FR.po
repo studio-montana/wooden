@@ -1,0 +1,1466 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woody\n"
+"POT-Creation-Date: 2020-05-25 12:59+0200\n"
+"PO-Revision-Date: 2020-05-25 12:59+0200\n"
+"Last-Translator: Sébastien Chandonay <sebastien.chandonay@gmail.com>\n"
+"Language-Team: Sebastien Chandonay / Cyril Tissot <sebastien.chandonay@gmail."
+"com artcyril@gmail.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Projewoody-Id-Version: Bancassurances Theme WP\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;R\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+msgid "Event attributes"
+msgstr "Propriétés de l'évènement"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/post-types/index.php:87
+msgid "Begin"
+msgstr "Début"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+msgid "Begin date"
+msgstr "Date de début"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+msgid "set end date"
+msgstr "fixer une date de fin"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/post-types/index.php:88
+msgid "End"
+msgstr "Fin"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+msgid "End date"
+msgstr "Date de fin"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+msgid "Address"
+msgstr "Adresse"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+msgid "CP"
+msgstr "CP"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+msgid "City"
+msgstr "Ville"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+msgid "Country"
+msgstr "Pays"
+
+#: footer.php:23
+msgid "Tous droits réservés"
+msgstr ""
+
+#: footer.php:23
+msgid "Politique de confidentialité"
+msgstr ""
+
+#: inc/tutorials/index.php:30 inc/tutorials/index.php:31
+msgid "Tutoriels"
+msgstr ""
+
+#: inc/tutorials/render.php:35
+msgid "Tutorials"
+msgstr "Tutoriels"
+
+#: inc/tutorials/render.php:116
+msgid "posted on"
+msgstr "publié le"
+
+#: src/_tools/backgroundimage/custom-fields/backgroundimage.php:42
+#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:25
+#: src/_tools/backgroundimage/inc/customizer.php:35
+#: src/_tools/backgroundimage/index.php:33
+msgid "Background Image"
+msgstr "Image de fond"
+
+#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:68
+msgid "Choose image"
+msgstr "Choisir une image"
+
+#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:69
+msgid "Delete"
+msgstr "Supprimer"
+
+#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:117
+msgid "Choose document"
+msgstr "Choisir un document"
+
+#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:119
+msgid "Ok"
+msgstr "Ok"
+
+#: src/_tools/backgroundimage/inc/customizer.php:45
+#: src/tools/login/inc/customizer.php:46
+msgid "Background image"
+msgstr "Image de fond"
+
+#: src/_tools/backgroundimage/inc/customizer.php:59
+msgid "Background color"
+msgstr "Couleur de fond"
+
+#: src/_tools/backgroundimage/inc/customizer.php:70
+msgid "Opacity"
+msgstr "Opacité"
+
+#: src/_tools/backgroundimage/inc/customizer.php:71
+msgid "expressed in %"
+msgstr "exprimé en %"
+
+#: src/_tools/backgroundimage/index.php:34
+msgid "Add background image to your site and posts"
+msgstr "Ajoute une image de fond à votre site et à vos publications"
+
+#: src/_tools/backgroundimage/index.php:56 src/_tools/video/index.php:80
+msgid "Auto insert"
+msgstr "Insertion automatique"
+
+#: src/_tools/backgroundimage/index.php:69
+msgid "otherwise, you can insert this code directly in your theme templates :"
+msgstr ""
+"autrement, vous pouvez intégrer ce code directement dans les templates de "
+"votre thème :"
+
+#: src/_tools/display/custom-fields/templates/display.php:27
+msgid "Display options"
+msgstr "Afficher les options"
+
+#: src/_tools/display/custom-fields/templates/display.php:33
+msgid "Customized title"
+msgstr "Titre personnalisé"
+
+#: src/_tools/display/custom-fields/templates/display.php:41
+msgid "Replace native title"
+msgstr "Remplace le titre natif"
+
+#: src/_tools/display/custom-fields/templates/display.php:45
+msgid "Subtitle"
+msgstr "Sous-titre"
+
+#: src/_tools/display/custom-fields/templates/display.php:56
+msgid "Hide title"
+msgstr "Cacher le titre"
+
+#: src/_tools/display/custom-fields/templates/display.php:64
+msgid "Hide title or woodkit title except in lists"
+msgstr "Cacher le titre de cette page excepté dans les listes"
+
+#: src/_tools/display/custom-fields/templates/display.php:68
+msgid "Hide thumbnail"
+msgstr "Cacher l'image à la une"
+
+#: src/_tools/display/custom-fields/templates/display.php:76
+msgid "Hide thumbnail except in lists"
+msgstr "Cacher l'image à la une excepté dans les listes"
+
+#: src/_tools/display/custom-fields/templates/display.php:83
+msgid "Hide featured video"
+msgstr "Cacher la vidéo à la une"
+
+#: src/_tools/display/custom-fields/templates/display.php:91
+msgid "Hide featured video except in lists"
+msgstr "Cache la vidéo à la une excepté dans les listes"
+
+#: src/_tools/display/custom-fields/templates/display.php:98
+msgid "Badge"
+msgstr "Badge"
+
+#: src/_tools/display/custom-fields/templates/display.php:106
+msgid "Add awesome badge for new stuff !"
+msgstr "Add awesome badge for new stuff !"
+
+#: src/_tools/display/custom-fields/templates/display.php:110
+msgid "Badge's text"
+msgstr "Texte du badge"
+
+#: src/_tools/display/custom-fields/templates/display.php:116
+msgid "new"
+msgstr "nouveau"
+
+#: src/_tools/display/index.php:38
+msgid "Display"
+msgstr "Afficher"
+
+#: src/_tools/display/index.php:39
+msgid "Hide title, thumbnail, set alternative title, badge, subtitle..."
+msgstr ""
+"Cacher les titres, les images à la une, paramétrer des titres alternatifs, "
+"des badges, des sous-titres…"
+
+#: src/_tools/excerpt/custom-fields/templates/excerpt.php:28
+msgid "Customized excerpt"
+msgstr "Résumé personnalisé"
+
+#: src/_tools/excerpt/custom-fields/templates/excerpt.php:29
+msgid "Let empty to get automatic excerpt from content"
+msgstr "Laisser vide pour obtenir le résumé automatique"
+
+#: src/_tools/excerpt/index.php:38
+msgid "Excerpt"
+msgstr "Résumé"
+
+#: src/_tools/excerpt/index.php:39
+msgid "Add a custom excerpt to your posts"
+msgstr "Ajoute un résumé personnalisé à vos publications"
+
+#: src/_tools/excerpt/index.php:63 src/_tools/video/index.php:67
+#: src/tools/pagination/index.php:70
+msgid "General"
+msgstr "Général"
+
+#: src/_tools/excerpt/index.php:76
+msgid "Auto paragraph"
+msgstr "Paragraphe automatique"
+
+#: src/_tools/excerpt/index.php:78
+msgid "activate auto paragraph for excerpt text editor"
+msgstr "active la génération automatique des paragraphes dans le résumé"
+
+#: src/_tools/video/custom-fields/featured-video.php:40
+msgid "Featured Video"
+msgstr "Vidéo à la une"
+
+#: src/_tools/video/index.php:38
+msgid "Video"
+msgstr "Vidéo"
+
+#: src/_tools/video/index.php:39
+msgid "Add featured video to your posts"
+msgstr "Ajoute une vidéo à la une sur vos publications"
+
+#: src/_tools/video/index.php:82
+msgid ""
+"replace featured image if exists, otherwise, you can insert this code "
+"directly in your theme templates, please see 'integration' section bellow."
+msgstr ""
+
+#: src/_tools/video/index.php:89
+msgid "Default width"
+msgstr "Largeur par défaut"
+
+#: src/_tools/video/index.php:98
+msgid "Default height"
+msgstr "Hauteur par défaut"
+
+#: src/_tools/video/index.php:106 src/tools/breadcrumb/index.php:175
+#: src/tools/pagination/index.php:105
+msgid "Integration"
+msgstr "Intégration"
+
+#: src/_tools/video/index.php:110 src/tools/pagination/index.php:109
+msgid "insert this code in your theme templates :"
+msgstr "insérer ce code dans vos templates :"
+
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:27
+msgid "Breadcrumb options"
+msgstr "Options du fil d’Ariane"
+
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:33
+msgid "Breadcrumb type"
+msgstr "Type"
+
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:40
+#: src/tools/breadcrumb/index.php:133
+msgid "classic"
+msgstr "classic"
+
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:41
+#: src/tools/breadcrumb/index.php:134
+msgid "customized"
+msgstr "personnalisé"
+
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:50
+msgid "Breadcrumb composition"
+msgstr "Composition du fil d’Ariane"
+
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:53
+#: src/tools/breadcrumb/index.php:137 src/tools/breadcrumb/utils.php:80
+#: src/tools/breadcrumb/utils.php:96
+msgid "Home"
+msgstr "Accueil"
+
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:75
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:90
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:109
+msgid "Choose element"
+msgstr "Choisir un élément"
+
+#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:96
+msgid "Add breadcrumb element"
+msgstr "Ajouter un élément"
+
+#: src/tools/breadcrumb/index.php:39
+msgid "Breadcrumb"
+msgstr "Fil d’Ariane"
+
+#: src/tools/breadcrumb/index.php:40
+msgid "Display breadcrumb on your website frontend"
+msgstr "Affiche un fil d’Ariane sur votre site Web"
+
+#: src/tools/breadcrumb/index.php:84
+msgid "Breacrumb Options"
+msgstr "Options du fil d’Ariane"
+
+#: src/tools/breadcrumb/index.php:97
+msgid "Activate menu management"
+msgstr "Active la gestion du menu"
+
+#: src/tools/breadcrumb/index.php:99
+msgid ""
+"WP menus will be altered (classes) by this tool. Ex. : add \"active\" classe "
+"on breadcrumb elements."
+msgstr ""
+"Les menu WP seront altérés (classes CSS) par cet outil. Ex. : ajoute la "
+"classe ‘active’ sur un élément présent dans le fil d’Ariane."
+
+#: src/tools/breadcrumb/index.php:105
+msgid "Post types settings"
+msgstr "Paramètres des types de contenus"
+
+#: src/tools/breadcrumb/index.php:159
+msgid "Add Breadcrumb Item"
+msgstr "Ajouter un item"
+
+#: src/tools/breadcrumb/index.php:160
+msgid "Remove this breadcrumb item"
+msgstr "Supprimer cet item"
+
+#: src/tools/breadcrumb/index.php:161
+msgid "Choose item"
+msgstr "Choisir un item"
+
+#: src/tools/breadcrumb/index.php:170
+msgid "You can define, for each post type, a customized breadcrumb."
+msgstr ""
+"Vous pouvez définir pour chaque type de contenu un fil d’Ariane spécific."
+
+#: src/tools/breadcrumb/index.php:179
+msgid "PHP :"
+msgstr "PHP :"
+
+#: src/tools/breadcrumb/utils.php:174
+msgid "search"
+msgstr "recherche"
+
+#: src/tools/breadcrumb/utils.php:178 src/tools/breadcrumb/utils.php:180
+#: src/tools/breadcrumb/utils.php:182
+msgid "Archive "
+msgstr "Archive "
+
+#: src/tools/breadcrumb/utils.php:184
+msgid "Author"
+msgstr "Auteur"
+
+#: src/tools/breadcrumb/utils.php:186
+msgid "Blog archives"
+msgstr "Archives du blog"
+
+#: src/tools/event/index.php:39 src/tools/event/post-types/index.php:28
+#: src/tools/event/post-types/index.php:33
+msgid "Events"
+msgstr "Évènements"
+
+#: src/tools/event/index.php:40
+msgid "Events manager"
+msgstr "Gestion des évènements"
+
+#: src/tools/event/post-types/index.php:29
+msgid "Event"
+msgstr "Évènement"
+
+#: src/tools/event/post-types/index.php:30
+msgid "Add Event"
+msgstr "Ajouter un évènement"
+
+#: src/tools/event/post-types/index.php:31
+msgid "Edit Event"
+msgstr "Editer un évènement"
+
+#: src/tools/event/post-types/index.php:32
+msgid "New Event"
+msgstr "Nouvel évènement"
+
+#: src/tools/event/post-types/index.php:34
+msgid "Look Event"
+msgstr "Voir un évènement"
+
+#: src/tools/event/post-types/index.php:35
+msgid "Search Events"
+msgstr "Rechercher un évènement"
+
+#: src/tools/event/post-types/index.php:36
+msgid "No Event found"
+msgstr "Aucun évènement trouvé"
+
+#: src/tools/event/post-types/index.php:37
+msgid "No Event found in trash"
+msgstr "Aucun évènement trouvé dans la corbeille"
+
+#: src/tools/event/post-types/index.php:56
+msgid "Event Types"
+msgstr "Types d'évènement"
+
+#: src/tools/event/post-types/index.php:57
+#: src/tools/event/post-types/index.php:66
+msgid "Event Type"
+msgstr "Type d'évènement"
+
+#: src/tools/event/post-types/index.php:58
+msgid "Search Event Type"
+msgstr "Recherche un type d'évènement"
+
+#: src/tools/event/post-types/index.php:59
+msgid "All Event Types"
+msgstr "Tous les types d'évènement"
+
+#: src/tools/event/post-types/index.php:60
+#: src/tools/event/post-types/index.php:61
+msgid "Event Type's parent"
+msgstr "Type d'évènement parent"
+
+#: src/tools/event/post-types/index.php:62
+msgid "Edit Event Type"
+msgstr "Editer un type d'évènement"
+
+#: src/tools/event/post-types/index.php:63
+msgid "Update Event Type"
+msgstr "Mettre à jour un type d'évènement"
+
+#: src/tools/event/post-types/index.php:64
+msgid "Add Event Type"
+msgstr "Ajouter un type d'évènement"
+
+#: src/tools/event/post-types/index.php:65
+#: src/tools/portfolio/post-types/index.php:66
+msgid "Name"
+msgstr "Nom"
+
+#: src/tools/event/utils.php:152 src/tools/event/utils.php:171
+msgid "from (hour)"
+msgstr "de"
+
+#: src/tools/event/utils.php:152 src/tools/event/utils.php:171
+msgid "to (hour)"
+msgstr "à"
+
+#: src/tools/event/utils.php:154 src/tools/event/utils.php:173
+#: src/tools/event/utils.php:189 src/tools/event/utils.php:202
+#: src/tools/event/utils.php:219 src/tools/event/utils.php:232
+#: src/tools/event/utils.php:249
+msgid "at (hour)"
+msgstr "à"
+
+#: src/tools/event/utils.php:163 src/tools/event/utils.php:182
+#: src/tools/event/utils.php:209
+msgid "from (date)"
+msgstr "du"
+
+#: src/tools/event/utils.php:163 src/tools/event/utils.php:192
+#: src/tools/event/utils.php:222
+msgid "to (date)"
+msgstr "au"
+
+#: src/tools/event/utils.php:185 src/tools/event/utils.php:212
+msgid "from (month)"
+msgstr "de"
+
+#: src/tools/event/utils.php:195 src/tools/event/utils.php:225
+msgid "to (month)"
+msgstr "à"
+
+#: src/tools/fancybox/index.php:39
+msgid "Fancybox"
+msgstr "FancyBox"
+
+#: src/tools/fancybox/index.php:40
+msgid "Enable Fancybox support on your website frontend"
+msgstr "Active Fancybox sur votre site Web"
+
+#: src/tools/login/inc/customizer.php:36
+msgid "Login page"
+msgstr "Page de connexion"
+
+#: src/tools/login/index.php:39
+msgid "Login"
+msgstr "Identifiant"
+
+#: src/tools/login/index.php:40
+msgid "Improve your experience on WP login page"
+msgstr "Personnalise votre page d’identification"
+
+#: src/tools/pagination/index.php:39
+msgid "Pagination"
+msgstr "Pagination"
+
+#: src/tools/pagination/index.php:40
+msgid "Intelligent pagination for all post-types"
+msgstr "Pagination intelligente pour toutes vos publications"
+
+#: src/tools/pagination/index.php:83
+msgid "Include taxonomies"
+msgstr "Inclure les taxonomies"
+
+#: src/tools/pagination/index.php:85
+msgid "include taxonomies context if appropriate"
+msgstr "inclure le contexte de taxonomie si nécessaire"
+
+#: src/tools/pagination/index.php:97
+msgid "Loop"
+msgstr "Boucle"
+
+#: src/tools/pagination/index.php:99
+msgid "generate loop navigation"
+msgstr "navigation en boucle"
+
+#: src/tools/portfolio/index.php:39 src/tools/portfolio/post-types/index.php:29
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: src/tools/portfolio/index.php:40
+msgid "Create portfolio content type"
+msgstr "Créer un type de portfolio"
+
+#: src/tools/portfolio/post-types/index.php:28
+#: src/tools/portfolio/post-types/index.php:33
+msgid "Portfolios"
+msgstr "Portfolios"
+
+#: src/tools/portfolio/post-types/index.php:30
+msgid "Add Portfolio"
+msgstr "Ajouter un portfolio"
+
+#: src/tools/portfolio/post-types/index.php:31
+msgid "Edit Portfolio"
+msgstr "Editer un portfolio"
+
+#: src/tools/portfolio/post-types/index.php:32
+msgid "New Portfolio"
+msgstr "Nouveau portfolio"
+
+#: src/tools/portfolio/post-types/index.php:34
+msgid "Look Portfolio"
+msgstr "Voir un portfolio"
+
+#: src/tools/portfolio/post-types/index.php:35
+msgid "Search Portfolios"
+msgstr "Rechercher un portfolio"
+
+#: src/tools/portfolio/post-types/index.php:36
+msgid "No Portfolio found"
+msgstr "Aucun portfolio trouvé"
+
+#: src/tools/portfolio/post-types/index.php:37
+msgid "No Portfolio found in trash"
+msgstr "Aucun portfolio trouvé dans la corbeille"
+
+#: src/tools/portfolio/post-types/index.php:57
+msgid "Portfolio Types"
+msgstr "Types de portfolio"
+
+#: src/tools/portfolio/post-types/index.php:58
+#: src/tools/portfolio/post-types/index.php:67
+msgid "Portfolio Type"
+msgstr "Type de portfolio"
+
+#: src/tools/portfolio/post-types/index.php:59
+msgid "Search Portfolio Type"
+msgstr "Rechercher un type de portfolio"
+
+#: src/tools/portfolio/post-types/index.php:60
+msgid "All Portfolio Types"
+msgstr "Tous les types de portfolio"
+
+#: src/tools/portfolio/post-types/index.php:61
+#: src/tools/portfolio/post-types/index.php:62
+msgid "Portfolio Type's parent"
+msgstr "Type de portfolio parent"
+
+#: src/tools/portfolio/post-types/index.php:63
+msgid "Edit Portfolio Type"
+msgstr "Editer un type de portfolio"
+
+#: src/tools/portfolio/post-types/index.php:64
+msgid "Update Portfolio Type"
+msgstr "Mettre à jour un type de portfolio"
+
+#: src/tools/portfolio/post-types/index.php:65
+msgid "Add Portfolio Type"
+msgstr "Ajouter un type de portfolio"
+
+#: src/tools/portfolio/post-types/index.php:87
+msgid "Thumb"
+msgstr "Vignette"
+
+#: src/tools/wall/index.php:34
+msgid "Wall"
+msgstr "Mur"
+
+#: src/tools/wall/index.php:35
+msgid "Create Gutenberg Block which displays any contents as a gallery"
+msgstr ""
+"Créer un block Gutenberg qui affiche n’importe quel contenu comme une galerie"
+
+#: template-parts/content-resume.php:22
+msgid "Lire la suite"
+msgstr ""
+
+#: template-parts/content.php:24
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#, fuzzy
+#~| msgid "No result"
+#~ msgid "No results."
+#~ msgstr "Aucun résultat"
+
+#, fuzzy
+#~| msgid "Choose image"
+#~ msgid "Choose a shade"
+#~ msgstr "Choisir une image"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#, fuzzy
+#~| msgid "Home"
+#~ msgid "Home/End"
+#~ msgstr "Accueil"
+
+#, fuzzy
+#~| msgid "january"
+#~ msgid "January"
+#~ msgstr "janvier"
+
+#, fuzzy
+#~| msgid "february"
+#~ msgid "February"
+#~ msgstr "février"
+
+#, fuzzy
+#~| msgid "march"
+#~ msgid "March"
+#~ msgstr "mars"
+
+#, fuzzy
+#~| msgid "april"
+#~ msgid "April"
+#~ msgstr "avril"
+
+#, fuzzy
+#~| msgid "may"
+#~ msgid "May"
+#~ msgstr "mai"
+
+#, fuzzy
+#~| msgid "august"
+#~ msgid "August"
+#~ msgstr "août"
+
+#, fuzzy
+#~| msgid "september"
+#~ msgid "September"
+#~ msgstr "septembre"
+
+#, fuzzy
+#~| msgid "october"
+#~ msgid "October"
+#~ msgstr "octobre"
+
+#, fuzzy
+#~| msgid "november"
+#~ msgid "November"
+#~ msgstr "novembre"
+
+#, fuzzy
+#~| msgid "december"
+#~ msgid "December"
+#~ msgstr "décembre"
+
+#, fuzzy
+#~| msgid "may"
+#~ msgid "Day"
+#~ msgstr "mai"
+
+#, fuzzy
+#~| msgid "Presentation"
+#~ msgid "Preset size"
+#~ msgstr "Présentation"
+
+#, fuzzy
+#~| msgid "Remove"
+#~ msgid "Remove item"
+#~ msgstr "Supprimer"
+
+#, fuzzy
+#~| msgid "Previous page"
+#~ msgid "Previous"
+#~ msgstr "Page précédente"
+
+#, fuzzy
+#~| msgid "Next page"
+#~ msgid "Next"
+#~ msgstr "Page suivante"
+
+#, fuzzy
+#~| msgid "title"
+#~ msgid "Add title"
+#~ msgstr "titre"
+
+#, fuzzy
+#~| msgid "behance"
+#~ msgid "Cancel"
+#~ msgstr "behance"
+
+#, fuzzy
+#~| msgid "Choose image"
+#~ msgid "Close dialog"
+#~ msgstr "Choisir une image"
+
+#~ msgid "Order by"
+#~ msgstr "Trier par"
+
+#, fuzzy
+#~| msgid "Number limit"
+#~ msgid "Number of items"
+#~ msgstr "Nombre maximum"
+
+#~ msgid "All"
+#~ msgstr "Tous"
+
+#, fuzzy
+#~| msgid "Comment"
+#~ msgid "Comma"
+#~ msgstr "Commentaire"
+
+#, fuzzy
+#~| msgid "id"
+#~ msgid "d"
+#~ msgstr "id"
+
+#, fuzzy
+#~| msgid "Comment"
+#~ msgid "comment2"
+#~ msgstr "Commentaire"
+
+#, fuzzy
+#~| msgid "Meta-keyword"
+#~ msgid "keyword"
+#~ msgstr "Meta-mot-clé"
+
+#, fuzzy
+#~| msgid ", "
+#~ msgid ","
+#~ msgstr ", "
+
+#, fuzzy
+#~| msgid "Position"
+#~ msgid "Positionals:"
+#~ msgstr "Position"
+
+#, fuzzy
+#~| msgid "Comment"
+#~ msgid "Commands:"
+#~ msgstr "Commentaire"
+
+#, fuzzy
+#~ msgid "number"
+#~ msgstr "Nombre"
+
+#~ msgid ""
+#~ "We couldn't find the page you were looking for. This is either because"
+#~ msgstr "La page n'existe plus. Cela peut provenir des raisons suivantes"
+
+#~ msgid ""
+#~ "There is an error in the URL entered into your web browser. Please check "
+#~ "the URL and try again"
+#~ msgstr "Il y a une erreur dans l'url de votre navigateur"
+
+#~ msgid "The page you are looking for has been moved or deleted"
+#~ msgstr "La page que vous cherchez a été déplacée ou supprimée"
+
+#~ msgid "You can return to our homepage by"
+#~ msgstr "Retour vers l'accueil en"
+
+#~ msgid "clicking here"
+#~ msgstr "cliquant ici"
+
+#~ msgid "or you can try searching for the content you are seeking"
+#~ msgstr "ou rechercher votre contenu"
+
+#, php-format
+#~ msgid "Archives %s"
+#~ msgstr "Archives %s"
+
+#~ msgid "Archives"
+#~ msgstr "Archives"
+
+#~ msgid "Page"
+#~ msgstr "Page"
+
+#, php-format
+#~ msgid "About %s"
+#~ msgstr "À propos %s"
+
+#, php-format
+#~ msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Voir tous les articles de %s <span class=\"meta-nav\">&rarr;</span>"
+
+#, php-format
+#~ msgid "All posts by %s"
+#~ msgstr "Tous les articles de %s"
+
+#~ msgid "&larr; Older Comments"
+#~ msgstr "&larr; Anciens commentaires"
+
+#~ msgid "Newer Comments &rarr;"
+#~ msgstr "Commentaires récents &rarr;"
+
+#~ msgid "Comments are closed."
+#~ msgstr "Les commentaires sont fermés"
+
+#~ msgid "No content"
+#~ msgstr "Aucun contenu"
+
+#~ msgid "Pages:"
+#~ msgstr "Pages:"
+
+#~ msgid "One comment"
+#~ msgstr "Un commentaire"
+
+#, php-format
+#~ msgid "See % comments"
+#~ msgstr "Voir % commentaires"
+
+#~ msgid "Read more <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Lire la suite <span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgid "Main menu"
+#~ msgstr "Menu principal"
+
+#~ msgid "Sidebar"
+#~ msgstr "Sidebar"
+
+#~ msgid "Shown in your site"
+#~ msgstr "Affiché dans votre site"
+
+#~ msgid "Sticky"
+#~ msgstr "Autocollant"
+
+#, php-format
+#~ msgid "View all posts by %s"
+#~ msgstr "Voir tous les articles de %s"
+
+#, php-format
+#~ msgid "Permalink to %s"
+#~ msgstr "Lien vers %s"
+
+#, php-format
+#~ msgid "'%s' results"
+#~ msgstr "Résultats pour '%s'"
+
+#, php-format
+#~ msgid "Archives: %s"
+#~ msgstr "Archives: %s"
+
+#, php-format
+#~ msgid "%s Archives"
+#~ msgstr "%s Archives"
+
+#~ msgid "Woodyize"
+#~ msgstr "Personnaliser"
+
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgid "Enable comments"
+#~ msgstr "Activer les commentaires"
+
+#~ msgid "Invalid URL..."
+#~ msgstr "URL invalide"
+
+#~ msgid "Invalid Format..."
+#~ msgstr "Format invalide"
+
+#~ msgid "are supported"
+#~ msgstr "sont supportés"
+
+#~ msgid "june"
+#~ msgstr "juin"
+
+#~ msgid "july"
+#~ msgstr "juillet"
+
+#~ msgid "jan"
+#~ msgstr "jan"
+
+#~ msgid "feb"
+#~ msgstr "fév"
+
+#, fuzzy
+#~ msgid "mar"
+#~ msgstr "mars"
+
+#~ msgid "apr"
+#~ msgstr "avr"
+
+#, fuzzy
+#~ msgid "jun"
+#~ msgstr "juin"
+
+#~ msgid "jul"
+#~ msgstr "juil"
+
+#, fuzzy
+#~ msgid "aug"
+#~ msgstr "août"
+
+#~ msgid "sept"
+#~ msgstr "sept"
+
+#~ msgid "oct"
+#~ msgstr "oct"
+
+#~ msgid "nov"
+#~ msgstr "nov"
+
+#~ msgid "dec"
+#~ msgstr "déc"
+
+#~ msgid "Done"
+#~ msgstr "Ok"
+
+#~ msgid "Order"
+#~ msgstr "Tri"
+
+#~ msgid "BACKGROUNDIMAGE"
+#~ msgstr "Image de fond"
+
+#~ msgid "Search results"
+#~ msgstr "Résultat de recherche"
+
+#~ msgid ""
+#~ "By continuing your visit to this site, you accept the use of cookies or "
+#~ "other tracers"
+#~ msgstr ""
+#~ "En continuant votre visite sur ce site, vous acceptez l'utilisation de "
+#~ "cookies et autres traceurs"
+
+#~ msgid "More about"
+#~ msgstr "En savoir plus"
+
+#~ msgid "Hide title/woody title"
+#~ msgstr "Cacher le titre de cette page"
+
+#~ msgid "dd/mm/yyyy"
+#~ msgstr "jj/mm/aaaa"
+
+#~ msgid "Show upcoming events"
+#~ msgstr "Affiche les évènements à venir"
+
+#~ msgid "Title"
+#~ msgstr "Titre"
+
+#~ msgid "to"
+#~ msgstr "au"
+
+#~ msgid "No upcoming event"
+#~ msgstr "aucun évènement à venir"
+
+#~ msgid "Gallery options"
+#~ msgstr "Options de la galerie"
+
+#~ msgid "woodyize inner content galleries"
+#~ msgstr "personnaliser les galeries de votre contenu"
+
+#~ msgid "slider"
+#~ msgstr "slider"
+
+#~ msgid "masonry"
+#~ msgstr "masonry"
+
+#~ msgid "random grid"
+#~ msgstr "grille aléatoire"
+
+#~ msgid "Autoplay"
+#~ msgstr "Autoplay"
+
+#~ msgid "Thumb navigation"
+#~ msgstr "Navigation par vignette"
+
+#~ msgid "Carousel"
+#~ msgstr "Carousel"
+
+#~ msgid "Carousel item width"
+#~ msgstr "Largeur des items du carousel"
+
+#~ msgid "Carousel item margin"
+#~ msgstr "Marge des items du carousel"
+
+#~ msgid "Height"
+#~ msgstr "Hauteur"
+
+#~ msgid "Format"
+#~ msgstr "Format"
+
+#~ msgid "square"
+#~ msgstr "carré"
+
+#~ msgid "portrait"
+#~ msgstr "portrait"
+
+#~ msgid "landscape"
+#~ msgstr "paysage"
+
+#~ msgid "Max width"
+#~ msgstr "Largeur max."
+
+#~ msgid "fully responsive"
+#~ msgstr "adaptée"
+
+#~ msgid "woodyized"
+#~ msgstr "Personnalisé"
+
+#~ msgid "Max height"
+#~ msgstr "Hauteur max."
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "Disable fancybox"
+#~ msgstr "Désactiver fancybox"
+
+#~ msgid "Disable"
+#~ msgstr "Désactiver"
+
+#~ msgid "disable fancybox on this site"
+#~ msgstr "désactiver fancybox sur tout le site"
+
+#~ msgid "Code"
+#~ msgstr "Code"
+
+#, fuzzy
+#~ msgid "login"
+#~ msgstr "Identifiant"
+
+#~ msgid "password"
+#~ msgstr "mot de passe"
+
+#~ msgid "Login options"
+#~ msgstr "Options d'identification"
+
+#~ msgid "Logo"
+#~ msgstr "Logo"
+
+#~ msgid "sign out"
+#~ msgstr "déconnexion"
+
+#~ msgid "You want to"
+#~ msgstr "Vous voulez"
+
+#, fuzzy
+#~ msgid "do nothing"
+#~ msgstr "rien"
+
+#, fuzzy
+#~ msgid "go private this site"
+#~ msgstr "Site privé"
+
+#~ msgid "go private few elements"
+#~ msgstr "rendre privé quelques éléments"
+
+#~ msgid "Message"
+#~ msgstr "Message"
+
+#~ msgid "Private area"
+#~ msgstr "Zone privée"
+
+#, fuzzy
+#~ msgid "Private site"
+#~ msgstr "Site privé"
+
+#~ msgid "sign in"
+#~ msgstr "connexion"
+
+#~ msgid "Captcha"
+#~ msgstr "Captcha"
+
+#~ msgid "ERROR"
+#~ msgstr "ERREUR"
+
+#~ msgid "invalid captcha"
+#~ msgstr "captcha invalide"
+
+#~ msgid "<strong>ERROR</strong>: invalid captcha"
+#~ msgstr "<strong>ERREUR</strong>: captcha invalide"
+
+#~ msgid "Please solve the problem. This is an anti-spam security check."
+#~ msgstr ""
+#~ "Saisissez le résultat de l'addition. Ceci est une sécurité anti-spam."
+
+#~ msgid "Security"
+#~ msgstr "Sécurité"
+
+#~ msgid "Activate captcha"
+#~ msgstr "Activer captcha"
+
+#~ msgid ""
+#~ "add captcha on login, register and comment forms (Woocommerce supported)"
+#~ msgstr ""
+#~ "ajoute un captcha sur les formulaires de login, d'inscription et de "
+#~ "commentaire (Woocommerce supporté)"
+
+#~ msgid "Activate failtoban"
+#~ msgstr "Activer failtoban"
+
+#~ msgid ""
+#~ "block gross power hacking on login, register and comment forms "
+#~ "(Woocommerce supported)"
+#~ msgstr ""
+#~ "bloque les attaque par force brute sur les formulaires de login, "
+#~ "d'inscription et de commentaire (Woocommerce supporté)"
+
+#~ msgid "Too many tries - please wait 1min"
+#~ msgstr "Trop de tentatives - merci d'attendre 1min"
+
+#~ msgid "<strong>ERROR</strong>: Too many tries - please wait 1min"
+#~ msgstr "<strong>ERREUR</strong>: Trop de tentatives - merci d'attendre 1min"
+
+#~ msgid "numeric captcha"
+#~ msgstr "captcha numéric"
+
+#~ msgid "Generate a form-tag for a numeric captcha."
+#~ msgstr "Génère un captcha numérique"
+
+#~ msgid "Field type"
+#~ msgstr "Type de champ"
+
+#~ msgid "Insert Tag"
+#~ msgstr "Insérer de champ"
+
+#~ msgid ""
+#~ "To use the value input through this field in a mail field, you need to "
+#~ "insert the corresponding mail-tag (%s) into the field on the Mail tab."
+#~ msgstr ""
+#~ "Pour utiliser cette valeur dans les champ du mail, vous devez insérer le "
+#~ "tag (%s) dans le corps du mail de l'onglet Mail."
+
+#~ msgid "Meta-title"
+#~ msgstr "Meta-titre"
+
+#~ msgid "Meta-description"
+#~ msgstr "Meta-description"
+
+#~ msgid "SEO"
+#~ msgstr "SEO"
+
+#~ msgid "look at sitemap.xml"
+#~ msgstr "voir le sitemap.xml"
+
+#~ msgid "content title used by default"
+#~ msgstr "titre utilisé par défaut"
+
+#~ msgid "site description used by default"
+#~ msgstr "description du site utilisé par défaut"
+
+#~ msgid "separate keywords by comma"
+#~ msgstr "séparer les mots-clés par une virgule"
+
+#~ msgid "Open Graph"
+#~ msgstr "Open Graph"
+
+#~ msgid "Social network publication"
+#~ msgstr "Publication sur les réseaux sociaux"
+
+#~ msgid "OpenGraph-title"
+#~ msgstr "OpenGraph-titre"
+
+#~ msgid "meta-title used by default"
+#~ msgstr "meta-titre utilisé par défaut"
+
+#~ msgid "OpenGraph-description"
+#~ msgstr "OpenGraph-description"
+
+#~ msgid "meta-description used by default"
+#~ msgstr "meta-description utilisée par défaut"
+
+#~ msgid "OpenGraph-image"
+#~ msgstr "OpenGraph-image"
+
+#~ msgid "featured image used by default"
+#~ msgstr "image à la une utilisée par défaut"
+
+#~ msgid "Choose"
+#~ msgstr "Choisir"
+
+#~ msgid "page %s"
+#~ msgstr "page %s"
+
+#~ msgid "Exergue"
+#~ msgstr "Exergue"
+
+#~ msgid "Height Space"
+#~ msgstr "Espace en hauteur"
+
+#~ msgid "Icons"
+#~ msgstr "Icons"
+
+#~ msgid "Icons shortcodes"
+#~ msgstr "Icons shortcodes"
+
+#~ msgid "Social"
+#~ msgstr "Social"
+
+#~ msgid "Show socials links"
+#~ msgstr "Afficher les liens sociaux"
+
+#, fuzzy
+#~ msgid "backgrounded"
+#~ msgstr "Image de fond"
+
+#~ msgid "facebook"
+#~ msgstr "facebook"
+
+#~ msgid "twitter"
+#~ msgstr "twitter"
+
+#~ msgid "google+"
+#~ msgstr "google+"
+
+#~ msgid "linkedin"
+#~ msgstr "linkedin"
+
+#~ msgid "pinterest"
+#~ msgstr "pinterest"
+
+#~ msgid "instagram"
+#~ msgstr "instagram"
+
+#~ msgid "vimeo"
+#~ msgstr "vimeo"
+
+#~ msgid "youtube"
+#~ msgstr "youtube"
+
+#~ msgid "dribbble"
+#~ msgstr "dribbble"
+
+#~ msgid "tumblr"
+#~ msgstr "tumblr"
+
+#~ msgid "flickr"
+#~ msgstr "flickr"
+
+#~ msgid "soundcloud"
+#~ msgstr "soundcloud"
+
+#~ msgid "mail"
+#~ msgstr "mail"
+
+#~ msgid "download"
+#~ msgstr "téléchargement"
+
+#~ msgid "Url"
+#~ msgstr "Url"
+
+#~ msgid "insert elements in this"
+#~ msgstr "afficher des éléments dans "
+
+#~ msgid "nothing"
+#~ msgstr "rien"
+
+#~ msgid "woodyized…"
+#~ msgstr "Personnalisé..."
+
+#~ msgid "manage your elements"
+#~ msgstr "choisir vos éléments"
+
+#~ msgid "no order"
+#~ msgstr "aucun tri"
+
+#~ msgid "author"
+#~ msgstr "autheur"
+
+#~ msgid "random"
+#~ msgstr "aléatoire"
+
+#~ msgid "num. order"
+#~ msgstr "numéro ordre"
+
+#~ msgid "descendant"
+#~ msgstr "descendant"
+
+#~ msgid "ascendant"
+#~ msgstr "ascendant"
+
+#~ msgid "Children of"
+#~ msgstr "Fils de"
+
+#~ msgid "First level"
+#~ msgstr "Premier niveau"
+
+#~ msgid "after content"
+#~ msgstr "après le contenu"
+
+#~ msgid "before content"
+#~ msgstr "avant le contenu"
+
+#~ msgid "list"
+#~ msgstr "liste"
+
+#~ msgid "grid"
+#~ msgstr "grille"
+
+#~ msgid "Columns"
+#~ msgstr "Colonnes"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgid "5"
+#~ msgstr "5"
+
+#~ msgid "6"
+#~ msgstr "6"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "33%"
+#~ msgstr "33%"
+
+#~ msgid "25%"
+#~ msgstr "25%"
+
+#~ msgid "20%"
+#~ msgstr "20%"
+
+#~ msgid "16%"
+#~ msgstr "16%"
+
+#~ msgid "Display filters"
+#~ msgstr "Afficher les filtres"
+
+#, fuzzy
+#~ msgid "Carousel columns"
+#~ msgstr "Colonnes"
+
+#~ msgid "Update wall"
+#~ msgstr "Mettre à jour le mur"
+
+#~ msgid "No presentation found !"
+#~ msgstr "Aucune présentation trouvée"
+
+#~ msgid "more"
+#~ msgstr "plus"
+
+#~ msgid "Work In Progress"
+#~ msgstr "Site en maintenance"
+
+#~ msgid "Active"
+#~ msgstr "Activer"
+
+#~ msgid "only logged in user can look you site"
+#~ msgstr "seuls les utilisateurs connectés peuvent voir votre site"
+
+#~ msgid "This content doesn't exists anymore."
+#~ msgstr "Ce contenu n'existe plus"
+
+#~ msgid "hh:mm"
+#~ msgstr "hh:mm"
+
+#~ msgid "Private Site"
+#~ msgstr "Site privé"
+
+#~ msgid "Make your site private"
+#~ msgstr "Rendre votre site privé"
+
+#~ msgid "Password"
+#~ msgstr "Mot de passe"
+
+#~ msgid "unknown account"
+#~ msgstr "compte inconnu"
+
+#~ msgid ""
+#~ "Default values are used when nothing is recoverable (blog page for "
+#~ "example)"
+#~ msgstr ""
+#~ "Ces valeurs par défaut sont utilisées quand aucune autre donnée n'est "
+#~ "utilisable (page blog par exemple)"
+
+#~ msgid "Default meta-description"
+#~ msgstr "Meta-description par défaut"
+
+#~ msgid "Default meta-keywords"
+#~ msgstr "Meta-mot-clé par défaut"
+
+#~ msgid "work in progress"
+#~ msgstr "site en maintenance"
+
+#~ msgid "you can drag and drop element to order them."
+#~ msgstr "vous pouvez glisser et déposer les éléments pour les ordonner"
+
+#~ msgid "use"
+#~ msgstr "utiliser"
+
+#~ msgid "to add element."
+#~ msgstr "pour ajouter un élément"
+
+#~ msgid "to remove element."
+#~ msgstr "pour supprimer un élément"
+
+#~ msgid "LOGIN"
+#~ msgstr "IDENTIFIANT"
+
+#~ msgid "PASSWORD"
+#~ msgstr "MOT DE PASSE"
+
+#~ msgid "Initial height"
+#~ msgstr "Hauteur initiale"
+
+#~ msgid ""
+#~ "Resolve this addition and put the result in field. It's a secure field to "
+#~ "be sure your are not a robot."
+#~ msgstr ""
+#~ "Saisisez le résultat de l'addition. Cette sécurité permet de s'assurer "
+#~ "que vous n'êtes pas un robot."
+
+#, fuzzy
+#~ msgid "RESULT OF"
+#~ msgstr "RESULTAT DE*"
+
+#, fuzzy
+#~ msgid "No thumb navigation"
+#~ msgstr "Navigation par vignette"
+
+#~ msgid "no thumb"
+#~ msgstr "aucune vignette"
+
+#~ msgid "Alalah le gros test !"
+#~ msgstr "Alalah le gros test ! (FR)"

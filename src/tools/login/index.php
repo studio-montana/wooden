@@ -36,11 +36,17 @@ class WK_Tool_Login extends WK_Tool{
 		parent::__construct(array(
 				'uri' => get_template_directory_uri().'/src/tools/login/', // must be explicitly defined to support symbolic link context
 				'slug' => 'login',
-				'name' => __("Login", 'wooden'),
-				'description' => __("Improve your experience on WP login page", 'wooden'),
 				'customizer' => add_query_arg(array('autofocus[section]' => 'login_customizer'), admin_url('customize.php')),
 				'context' => 'Wooden',
 		));
+	}
+	
+	public function get_name() {
+		return __("Login", 'wooden');
+	}
+	
+	public function get_description() {
+		return __("Improve your experience on WP login page", 'wooden');
 	}
 	
 	public function launch() {
