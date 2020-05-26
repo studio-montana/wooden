@@ -23,30 +23,25 @@
 defined('ABSPATH') or die("Go Away!");
 
 /**
- * Constants
- */
-define('PAGINATION_TOOL_NAME', 'pagination');
-
-/**
  * Tool instance
  */
-class WK_Tool_Pagination extends WK_Tool{
+class WK_Tool_PostsNavigation extends WK_Tool{
 	
 	public function __construct(){
 		parent::__construct(array(
-				'uri' => get_template_directory_uri().'/src/tools/pagination/', // must be explicitly defined to support symbolic link context
-				'slug' => 'pagination',
+				'uri' => get_template_directory_uri().'/src/tools/postsnavigation/', // must be explicitly defined to support symbolic link context
+				'slug' => 'postsnavigation',
 				'has_config' => true,
 				'context' => 'Wooden',
 		));
 	}
 	
 	public function get_name() { 
-		return __("Pagination", 'wooden');
+		return __("Posts Navigation", 'wooden');
 	}
 	
 	public function get_description() { 
-		return __("Intelligent pagination for all post-types", 'wooden');
+		return __("Intelligent navigation for all post-types", 'wooden');
 	}
 	
 	public function launch() {
@@ -111,7 +106,7 @@ class WK_Tool_Pagination extends WK_Tool{
 			</h2>
 			<div class="wk-panel-content">
 				<div class="wk-panel-info">
-					<?php _e('insert this code in your theme templates :', 'wooden'); ?><br /><code style="font-size: 0.7rem;">&lt;?php wooden_pagination(); ?&gt;</code>
+					<?php _e('insert this code in your theme templates :', 'wooden'); ?><br /><code style="font-size: 0.7rem;">&lt;?php the_wooden_posts_navigation(); ?&gt;</code>
 				</div>
 			</div>
 		</div>
@@ -119,6 +114,6 @@ class WK_Tool_Pagination extends WK_Tool{
 	}
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WK_Tool_Pagination();
+	$tools[] = new WK_Tool_PostsNavigation($args);
 	return $tools;
 });

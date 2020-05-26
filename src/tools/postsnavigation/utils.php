@@ -23,8 +23,8 @@
 defined('ABSPATH') or die("Go Away!");
 
 /**
- * Wooden pagination for old Woodkit (before v.2.0.0) support dependencies
- * This pagination tool was migrated from Woodkit 1.x.x to Wooden (since Woodkit 2.0.0)
+ * Wooden navigation for old Woodkit (before v.2.0.0) support dependencies
+ * This navigation tool was migrated from Woodkit 1.x.x to Wooden (since Woodkit 2.0.0)
  * 
  * @deprecated since Wooden exists
  * 
@@ -41,7 +41,7 @@ defined('ABSPATH') or die("Go Away!");
  * @return string
  */
 function woodkit_pagination($args = array(), $display = true, $before_links = '', $after_links = '', $text_link_previous = '', $text_link_next = '', $before_previous_link = '', $after_previous_link = '', $before_next_link = '', $after_next_link = '') {
-	$pagination = wooden_pagination($args, array(
+	$navigation = wooden_posts_navigation($args, array(
 			'before_links' => $before_links,
 			'after_links' => $after_links,
 			'text_link_previous' => $text_link_previous,
@@ -52,9 +52,13 @@ function woodkit_pagination($args = array(), $display = true, $before_links = ''
 			'after_next_link' => $after_next_link
 	));
 	if (!$display) {
-		return $pagination;
+		return $navigation;
 	}
-	echo $pagination;
+	echo $navigation;
+}
+
+function the_wooden_posts_navigation($args = array(), $display_args = array()){
+	echo wooden_posts_navigation($args, $display_args);
 }
 
 /**
@@ -71,15 +75,15 @@ function woodkit_pagination($args = array(), $display = true, $before_links = ''
 * @param string $after_next_link : displayed after next a tag
 * @return string : HTML link
 */
-function wooden_pagination($args = array(), $display_args = array()){
+function wooden_posts_navigation($args = array(), $display_args = array()){
 	$res = '';
 	$current_post_id = get_the_ID();
 	$current_post_type = get_post_type();
-	$pagination_post_types_allowed = apply_filters("wooden_pagination_post_types_allowed", get_displayed_post_types());
-	if (in_array(get_post_type(), $pagination_post_types_allowed)){
+	$navigation_post_types_allowed = apply_filters("wooden_posts_navigation_post_types_allowed", get_displayed_post_types());
+	if (in_array(get_post_type(), $navigation_post_types_allowed)){
 
 		// display args
-		$display_args = wp_parse_args($display_args, apply_filters("wooden_pagination_default_display_args", array(
+		$display_args = wp_parse_args($display_args, apply_filters("wooden_posts_navigation_default_display_args", array(
 				'before_links' => '',
 				'after_links' => '',
 				'text_link_previous' => '',
@@ -104,7 +108,7 @@ function wooden_pagination($args = array(), $display_args = array()){
 
 			// tax_query
 			if (!isset($args['include_tax'])){
-				$taxnav_active = $GLOBALS['woodkit']->tools->get_tool_option(PAGINATION_TOOL_NAME, 'taxnav-active');
+				$taxnav_active = $GLOBALS['woodkit']->tools->get_tool_option(POSTSNAVIGATION_TOOL_NAME, 'taxnav-active');
 				if ($taxnav_active == 'on'){
 					$args['include_tax'] = true;
 				}else{
@@ -184,7 +188,7 @@ function wooden_pagination($args = array(), $display_args = array()){
 					}
 				}
 				// loop
-				$loop_active = $GLOBALS['woodkit']->tools->get_tool_option(PAGINATION_TOOL_NAME, 'loop-active');
+				$loop_active = $GLOBALS['woodkit']->tools->get_tool_option('postsnavigation', 'loop-active');
 				if ($loop_active == 'on'){
 					if ($prev_post_nav == null && $last_post_nav != null && $last_post_nav->ID != $current_post_id){
 						$prev_post_nav = $last_post_nav;
@@ -195,7 +199,7 @@ function wooden_pagination($args = array(), $display_args = array()){
 				}
 
 				if ($prev_post_nav != null){
-					$res .= $display_args['before_previous_link'].'<a class="pagination pagination-previous" href="'.get_the_permalink($prev_post_nav->ID).'">';
+					$res .= $display_args['before_previous_link'].'<a class="navigation navigation-previous" href="'.get_the_permalink($prev_post_nav->ID).'">';
 					if (!empty($display_args['text_link_previous'])){
 						$res .= $display_args['text_link_previous'];
 					}else{
@@ -205,7 +209,7 @@ function wooden_pagination($args = array(), $display_args = array()){
 				}
 
 				if ($next_post_nav != null){
-					$res .= $display_args['before_next_link'].'<a class="pagination pagination-next" href="'.get_the_permalink($next_post_nav->ID).'">';
+					$res .= $display_args['before_next_link'].'<a class="navigation navigation-next" href="'.get_the_permalink($next_post_nav->ID).'">';
 					if (!empty($display_args['text_link_next'])){
 						$res .= $display_args['text_link_next'];
 					}else{
