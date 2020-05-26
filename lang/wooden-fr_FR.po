@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wooden 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wooden\n"
-"POT-Creation-Date: 2020-05-26T14:03:23+00:00\n"
-"PO-Revision-Date: 2020-05-26 16:05+0200\n"
+"POT-Creation-Date: 2020-05-26T15:49:35+00:00\n"
+"PO-Revision-Date: 2020-05-26 17:55+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -233,42 +233,6 @@ msgstr "Identifiant"
 msgid "Improve your experience on WP login page"
 msgstr "Personnalise votre page d’identification"
 
-#: src/tools/pagination/index.php:45
-msgid "Pagination"
-msgstr "Pagination"
-
-#: src/tools/pagination/index.php:49
-msgid "Intelligent pagination for all post-types"
-msgstr "Pagination intelligente pour toutes vos publications"
-
-#: src/tools/pagination/index.php:75
-msgid "General"
-msgstr "Général"
-
-#: src/tools/pagination/index.php:88
-msgid "Include taxonomies"
-msgstr "Inclure les taxonomies"
-
-#: src/tools/pagination/index.php:90
-msgid "include taxonomies context if appropriate"
-msgstr "inclure le contexte de taxonomie si nécessaire"
-
-#: src/tools/pagination/index.php:102
-msgid "Loop"
-msgstr "Boucle"
-
-#: src/tools/pagination/index.php:104
-msgid "generate loop navigation"
-msgstr "navigation en boucle"
-
-#: src/tools/pagination/index.php:110
-msgid "Integration"
-msgstr "Intégration"
-
-#: src/tools/pagination/index.php:114
-msgid "insert this code in your theme templates :"
-msgstr "insérer ce code dans vos templates :"
-
 #: src/tools/portfolio/index.php:44
 msgid "Portfolio"
 msgstr "Portfolio"
@@ -276,6 +240,42 @@ msgstr "Portfolio"
 #: src/tools/portfolio/index.php:48
 msgid "Create portfolio content type"
 msgstr "Créer un type de portfolio"
+
+#: src/tools/postsnavigation/index.php:40
+msgid "Posts Navigation"
+msgstr "Navigation entre publications"
+
+#: src/tools/postsnavigation/index.php:44
+msgid "Intelligent navigation for all post-types"
+msgstr "Pagination intelligente pour toutes vos publications"
+
+#: src/tools/postsnavigation/index.php:70
+msgid "General"
+msgstr "Général"
+
+#: src/tools/postsnavigation/index.php:83
+msgid "Include taxonomies"
+msgstr "Inclure les taxonomies"
+
+#: src/tools/postsnavigation/index.php:85
+msgid "include taxonomies context if appropriate"
+msgstr "inclure le contexte de taxonomie si nécessaire"
+
+#: src/tools/postsnavigation/index.php:97
+msgid "Loop"
+msgstr "Boucle"
+
+#: src/tools/postsnavigation/index.php:99
+msgid "generate loop navigation"
+msgstr "navigation en boucle"
+
+#: src/tools/postsnavigation/index.php:105
+msgid "Integration"
+msgstr "Intégration"
+
+#: src/tools/postsnavigation/index.php:109
+msgid "insert this code in your theme templates :"
+msgstr "insérer ce code dans vos templates :"
 
 #: src/tools/wall/index.php:39 src/tools/wall/gutenberg/blocks/wall/build.js:16
 #: src/tools/wall/gutenberg/blocks/wall/index.jsx:26
@@ -401,6 +401,9 @@ msgstr ""
 #: src/tools/wall/gutenberg/blocks/wall/index.jsx:149
 msgid "Display a wall of elements"
 msgstr "Affiche un mur d’élements"
+
+#~ msgid "Pagination"
+#~ msgstr "Pagination"
 
 #~ msgid "Tutorials"
 #~ msgstr "Tutoriels"
@@ -1453,10 +1456,6 @@ msgstr "Affiche un mur d’élements"
 #, fuzzy
 #~ msgid "RESULT OF"
 #~ msgstr "RESULTAT DE*"
-
-#, fuzzy
-#~ msgid "No thumb navigation"
-#~ msgstr "Navigation par vignette"
 
 #~ msgid "no thumb"
 #~ msgstr "aucune vignette"
