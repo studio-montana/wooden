@@ -20,7 +20,7 @@
 		<div class="wrapper">
 			<div class="inner">
 				<div class="site-info">
-					&copy; <?php _e('Tous droits réservés', 'wooden'); ?> - <?php bloginfo('name'); ?> <?php echo date('Y'); ?> - <a href="<?php echo get_privacy_policy_url(); ?>"><?php _e('Politique de confidentialité', 'wooden'); ?></a>
+					&copy; <?php _e('All rights reserved', 'wooden'); ?> - <?php bloginfo('name'); ?> <?php echo date('Y'); ?> - <a href="<?php echo get_privacy_policy_url(); ?>"><?php _e('Privacy policy', 'wooden'); ?></a>
 				</div><!-- .site-info -->
 			</div>
 		</div>

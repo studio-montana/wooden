@@ -19,7 +19,7 @@
 		<?php the_excerpt(); ?>
 	</div>
 	<div class="entry-readmore">
-		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1" title="<?php echo esc_attr(get_the_title()); ?>"><?php _e('Lire la suite', 'wooden'); ?></a>
+		<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1" title="<?php echo esc_attr(get_the_title()); ?>"><?php _e('Read more', 'wooden'); ?></a>
 	</div>
 
 </article>

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wooden 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wooden\n"
-"POT-Creation-Date: 2020-05-26T08:58:14+00:00\n"
-"PO-Revision-Date: 2020-05-26 15:24+0200\n"
+"POT-Creation-Date: 2020-05-26T14:03:23+00:00\n"
+"PO-Revision-Date: 2020-05-26 16:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_EN\n"
@@ -54,11 +54,11 @@ msgid "Comments are closed."
 msgstr ""
 
 #: footer.php:23
-msgid "Tous droits réservés"
+msgid "All rights reserved"
 msgstr ""
 
 #: footer.php:23
-msgid "Politique de confidentialité"
+msgid "Privacy policy"
 msgstr ""
 
 #: functions.php:42
@@ -67,18 +67,6 @@ msgstr ""
 
 #: header.php:25
 msgid "Skip to content"
-msgstr ""
-
-#: inc/tutorials/index.php:30 inc/tutorials/index.php:31
-msgid "Tutoriels"
-msgstr ""
-
-#: inc/tutorials/render.php:35
-msgid "Tutorials"
-msgstr ""
-
-#: inc/tutorials/render.php:116
-msgid "posted on"
 msgstr ""
 
 #: search.php:19
@@ -300,12 +288,24 @@ msgid "Create Gutenberg Block which displays any contents as a gallery"
 msgstr ""
 
 #: template-parts/content-resume.php:22
-msgid "Lire la suite"
+msgid "Read more"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:24
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+msgid "Post"
+msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+msgid "Term"
+msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+msgid "loading..."
 msgstr ""
 
 #: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1

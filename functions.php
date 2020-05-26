@@ -123,11 +123,6 @@ function wooden_setup() {
 	 * Image sizes
 	 */
 	add_theme_support ('post-thumbnails');
-	
-	/**
-	 * Tutorials
-	 */
-	require get_template_directory() . '/inc/tutorials/index.php';
 
 	/**
 	 * Functions which enhance the theme by hooking into WordPress.

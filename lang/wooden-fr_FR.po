@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wooden 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wooden\n"
-"POT-Creation-Date: 2020-05-26T08:58:14+00:00\n"
-"PO-Revision-Date: 2020-05-26 11:27+0200\n"
+"POT-Creation-Date: 2020-05-26T14:03:23+00:00\n"
+"PO-Revision-Date: 2020-05-26 16:05+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Oop ! La page est introuvable."
 
 #. translators: 1: title.
 #: comments.php:35
@@ -54,32 +54,20 @@ msgid "Comments are closed."
 msgstr "Les commentaires sont fermés"
 
 #: footer.php:23
-msgid "Tous droits réservés"
-msgstr ""
+msgid "All rights reserved"
+msgstr "Tous droits réservés"
 
 #: footer.php:23
-msgid "Politique de confidentialité"
-msgstr ""
+msgid "Privacy policy"
+msgstr "Politique de confidentialité"
 
 #: functions.php:42
 msgid "Primary"
-msgstr ""
+msgstr "Primaire"
 
 #: header.php:25
 msgid "Skip to content"
 msgstr "Aller au contenu"
-
-#: inc/tutorials/index.php:30 inc/tutorials/index.php:31
-msgid "Tutoriels"
-msgstr ""
-
-#: inc/tutorials/render.php:35
-msgid "Tutorials"
-msgstr "Tutoriels"
-
-#: inc/tutorials/render.php:116
-msgid "posted on"
-msgstr "publié le"
 
 #: search.php:19
 msgid "Search Results for: %s"
@@ -301,13 +289,25 @@ msgstr ""
 "Créer un block Gutenberg qui affiche n’importe quel contenu comme une galerie"
 
 #: template-parts/content-resume.php:22
-msgid "Lire la suite"
-msgstr ""
+msgid "Read more"
+msgstr "Lire la suite"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:24
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+msgid "Post"
+msgstr "Post"
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+msgid "Term"
+msgstr "Terme"
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+msgid "loading..."
+msgstr "chargement…"
 
 #: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
 #: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:30
@@ -401,6 +401,12 @@ msgstr ""
 #: src/tools/wall/gutenberg/blocks/wall/index.jsx:149
 msgid "Display a wall of elements"
 msgstr "Affiche un mur d’élements"
+
+#~ msgid "Tutorials"
+#~ msgstr "Tutoriels"
+
+#~ msgid "posted on"
+#~ msgstr "publié le"
 
 #~ msgid "Background Image"
 #~ msgstr "Image de fond"
@@ -1372,9 +1378,6 @@ msgstr "Affiche un mur d’élements"
 
 #~ msgid "No presentation found !"
 #~ msgstr "Aucune présentation trouvée"
-
-#~ msgid "more"
-#~ msgstr "plus"
 
 #~ msgid "Work In Progress"
 #~ msgstr "Site en maintenance"

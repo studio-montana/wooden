@@ -13,9 +13,9 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
 * Wooden intègre certains tools (encapsulé par Woodkit v2). Le paramétrage des tools est donc faite depuis le BO de WP dans la section Woodkit (comme pour les tool de Woodkit)
 
 **Note :** Wooden nécessite Woodkit v2 et donc nécessite Wordpress > v5 avec l'édieur Gutenberg activé.
-  
 
-# Les développements dans Wooden : 
+
+# Les développements dans Wooden :
 
 ## Context Gutenberg
 
@@ -26,7 +26,7 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
 * Dupliquer le dossier *src/gutenberg/blocks/_blank_* dans le dossier de votre choix sous *src/* (afin de profiter du context Webpack) et renommer ce nouveau dossier avec 'votre_slug' (Important : nommage en snake_case)
 * Dans ce nouveau dossier, faire un rechercher/remplacer global dans ce nouveau dossier sur "_blank_" par 'votre_slug'
 * Faites en sorte d'appeller le fichier présent dans votre nouveau dossier index.php
-* Ouvrir webpack.config.js qui est à la racine du projet et ajouter la référence à votre nouveau block comme ceci : 
+* Ouvrir webpack.config.js qui est à la racine du projet et ajouter la référence à votre nouveau block comme ceci :
   * {'entry': 'index.jsx', 'name': 'votre_slug', 'path': 'PATH_TO_YOUR_BLOCK_DIR', 'entry': 'index.jsx'},
 * Lancez *$ npm run dev* (si webpack est déjà en route, vous devez le redémarrer)
 * Commencez à developper
@@ -39,7 +39,7 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
 * Dupliquer le dossier *src/gutenberg/plugins/_blank_* dans le dossier de votre choix sous *src/* (afin de profiter du context Webpack) et renommer ce nouveau dossier avec 'votre_slug' (Important : nommage en snake_case)
 * Dans ce nouveau dossier, faire un rechercher/remplacer global dans ce nouveau dossier sur "_blank_" par 'votre_slug'
 * Faites en sorte d'appeller le fichier présent dans votre nouveau dossier index.php
-* Ouvrir webpack.config.js qui est à la racine du projet et ajouter la référence à votre nouveau block comme ceci : 
+* Ouvrir webpack.config.js qui est à la racine du projet et ajouter la référence à votre nouveau block comme ceci :
   * {'entry': 'index.jsx', 'name': 'votre_slug', 'path': 'PATH_TO_YOUR_PLUGIN_DIR', 'entry': 'index.jsx'},
 * Lancez *$ npm run dev* (si webpack est déjà en route, vous devez le redémarrer)
 * Commencez à developper
@@ -52,7 +52,7 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
 * Dupliquer le dossier *src/gutenberg/stores/_blank_* dans le dossier de votre choix sous *src/* (afin de profiter du context Webpack) et renommer ce nouveau dossier avec 'votre_slug' (Important : nommage en snake_case)
 * Dans ce nouveau dossier, faire un rechercher/remplacer global dans ce nouveau dossier sur "_blank_" par 'votre_slug'
 * Faites en sorte d'appeller le fichier présent dans votre nouveau dossier index.php
-* Ouvrir webpack.config.js qui est à la racine du projet et ajouter la référence à votre nouveau block comme ceci : 
+* Ouvrir webpack.config.js qui est à la racine du projet et ajouter la référence à votre nouveau block comme ceci :
   * {'entry': 'index.jsx', 'name': 'votre_slug', 'path': 'PATH_TO_YOUR_STORE_DIR', 'entry': 'index.jsx'},
 * Lancez *$ npm run dev* (si webpack est déjà en route, vous devez le redémarrer)
 * Commencez à developper
@@ -66,7 +66,7 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
   * exemple : import WKG_Icons from 'wkgassets/icons'
 
 
-# Les développements dans un thème enfant : 
+# Les développements dans un thème enfant :
 
 ## Les tools
 
@@ -74,10 +74,23 @@ Votre thème enfant peut lui aussi définir des tools, pour cela vous devez resp
 
 ## Gutenberg
 
-Pour créer des composant Gutenberg (ReactJS) dans un thème enfant, vous devez créer un contexte de développement. Vous pouvez simplement vous inspirer de celui de Wooden en faisant les actions suivantes : 
-* copier à la racine de votre thème les fichiers suivants : 
+Pour créer des composant Gutenberg (ReactJS) dans un thème enfant, vous devez créer un contexte de développement. Vous pouvez simplement vous inspirer de celui de Wooden en faisant les actions suivantes :
+* copier à la racine de votre thème les fichiers suivants :
   * webpack.config.js
   * package.json
 * Lancez un $ npm install (afin d'installer les node_modules défini par package.json)
 * modifiez la variable 'gutenberg_modules' dans webpack.config.js pour correspondre à votre thème enfant
 * tous vos développements doivent être fait dans le dossier src/ de votre thème enfant
+
+## Internationalisation
+
+**Mise à jour des fichiers de traductions**
+
+* Placez-vous à la racine du thème
+* Veillez à bien compiler vos modules avec la commande $ npm run build
+* Ensuite, faite la commande *$ wp i18n make-pot ./ lang/wooden.pot* afin de mettre à jour le fichier POT contenant les chaines à traduire
+* Ouvrez tous les fichier .po avec Poedit et faite une mise à jour à partir d'un fichier .pot (en sélectionnant celui que nous venons de mettre à jour)
+* Faites les traductions avec Poedit puis enregistrez
+* Maintenant, mettez à jour les fichier JSON de traduction avec la commande suivante *$ wp i18n make-json lang/ --no-purge*
+
+Pour en savoir plus, visitez : *https://www.seb-c.com/documentations/internationaliser-vos-modules-gutenberg/*
