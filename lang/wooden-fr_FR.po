@@ -1,65 +1,57 @@
+# Copyright (C) 2020 Sébastien Chandonay & Cyril Tissot (Studio Montana)
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Woody\n"
-"POT-Creation-Date: 2020-05-25 12:59+0200\n"
-"PO-Revision-Date: 2020-05-25 12:59+0200\n"
-"Last-Translator: Sébastien Chandonay <sebastien.chandonay@gmail.com>\n"
-"Language-Team: Sebastien Chandonay / Cyril Tissot <sebastien.chandonay@gmail."
-"com artcyril@gmail.com>\n"
-"Language: fr\n"
+"Project-Id-Version: Wooden 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wooden\n"
+"POT-Creation-Date: 2020-05-26T08:58:14+00:00\n"
+"PO-Revision-Date: 2020-05-26 11:27+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Projewoody-Id-Version: Bancassurances Theme WP\n"
 "X-Generator: Poedit 2.3\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;R\n"
-"X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Domain: wooden\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-msgid "Event attributes"
-msgstr "Propriétés de l'évènement"
+#. Theme Name of the theme
+msgid "Wooden"
+msgstr "Wooden"
 
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-#: src/tools/event/post-types/index.php:87
-msgid "Begin"
-msgstr "Début"
+#. Description of the theme
+msgid "Root Wordpress theme"
+msgstr ""
 
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-msgid "Begin date"
-msgstr "Date de début"
+#. Author of the theme
+msgid "Sébastien Chandonay & Cyril Tissot (Studio Montana)"
+msgstr ""
 
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-msgid "set end date"
-msgstr "fixer une date de fin"
+#. Author URI of the theme
+msgid "http://www.seb-c.com"
+msgstr ""
 
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-#: src/tools/event/post-types/index.php:88
-msgid "End"
-msgstr "Fin"
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
 
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-msgid "End date"
-msgstr "Date de fin"
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
 
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-msgid "Address"
-msgstr "Adresse"
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-msgid "CP"
-msgstr "CP"
-
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-msgid "City"
-msgstr "Ville"
-
-#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
-msgid "Country"
-msgstr "Pays"
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés"
 
 #: footer.php:23
 msgid "Tous droits réservés"
@@ -68,6 +60,14 @@ msgstr ""
 #: footer.php:23
 msgid "Politique de confidentialité"
 msgstr ""
+
+#: functions.php:42
+msgid "Primary"
+msgstr ""
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "Aller au contenu"
 
 #: inc/tutorials/index.php:30 inc/tutorials/index.php:31
 msgid "Tutoriels"
@@ -81,300 +81,26 @@ msgstr "Tutoriels"
 msgid "posted on"
 msgstr "publié le"
 
-#: src/_tools/backgroundimage/custom-fields/backgroundimage.php:42
-#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:25
-#: src/_tools/backgroundimage/inc/customizer.php:35
-#: src/_tools/backgroundimage/index.php:33
-msgid "Background Image"
-msgstr "Image de fond"
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr "Résultat de recherche"
 
-#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:68
-msgid "Choose image"
-msgstr "Choisir une image"
-
-#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:69
-msgid "Delete"
-msgstr "Supprimer"
-
-#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:117
-msgid "Choose document"
-msgstr "Choisir un document"
-
-#: src/_tools/backgroundimage/custom-fields/templates/backgroundimage.php:119
-msgid "Ok"
-msgstr "Ok"
-
-#: src/_tools/backgroundimage/inc/customizer.php:45
-#: src/tools/login/inc/customizer.php:46
-msgid "Background image"
-msgstr "Image de fond"
-
-#: src/_tools/backgroundimage/inc/customizer.php:59
-msgid "Background color"
-msgstr "Couleur de fond"
-
-#: src/_tools/backgroundimage/inc/customizer.php:70
-msgid "Opacity"
-msgstr "Opacité"
-
-#: src/_tools/backgroundimage/inc/customizer.php:71
-msgid "expressed in %"
-msgstr "exprimé en %"
-
-#: src/_tools/backgroundimage/index.php:34
-msgid "Add background image to your site and posts"
-msgstr "Ajoute une image de fond à votre site et à vos publications"
-
-#: src/_tools/backgroundimage/index.php:56 src/_tools/video/index.php:80
-msgid "Auto insert"
-msgstr "Insertion automatique"
-
-#: src/_tools/backgroundimage/index.php:69
-msgid "otherwise, you can insert this code directly in your theme templates :"
-msgstr ""
-"autrement, vous pouvez intégrer ce code directement dans les templates de "
-"votre thème :"
-
-#: src/_tools/display/custom-fields/templates/display.php:27
-msgid "Display options"
-msgstr "Afficher les options"
-
-#: src/_tools/display/custom-fields/templates/display.php:33
-msgid "Customized title"
-msgstr "Titre personnalisé"
-
-#: src/_tools/display/custom-fields/templates/display.php:41
-msgid "Replace native title"
-msgstr "Remplace le titre natif"
-
-#: src/_tools/display/custom-fields/templates/display.php:45
-msgid "Subtitle"
-msgstr "Sous-titre"
-
-#: src/_tools/display/custom-fields/templates/display.php:56
-msgid "Hide title"
-msgstr "Cacher le titre"
-
-#: src/_tools/display/custom-fields/templates/display.php:64
-msgid "Hide title or woodkit title except in lists"
-msgstr "Cacher le titre de cette page excepté dans les listes"
-
-#: src/_tools/display/custom-fields/templates/display.php:68
-msgid "Hide thumbnail"
-msgstr "Cacher l'image à la une"
-
-#: src/_tools/display/custom-fields/templates/display.php:76
-msgid "Hide thumbnail except in lists"
-msgstr "Cacher l'image à la une excepté dans les listes"
-
-#: src/_tools/display/custom-fields/templates/display.php:83
-msgid "Hide featured video"
-msgstr "Cacher la vidéo à la une"
-
-#: src/_tools/display/custom-fields/templates/display.php:91
-msgid "Hide featured video except in lists"
-msgstr "Cache la vidéo à la une excepté dans les listes"
-
-#: src/_tools/display/custom-fields/templates/display.php:98
-msgid "Badge"
-msgstr "Badge"
-
-#: src/_tools/display/custom-fields/templates/display.php:106
-msgid "Add awesome badge for new stuff !"
-msgstr "Add awesome badge for new stuff !"
-
-#: src/_tools/display/custom-fields/templates/display.php:110
-msgid "Badge's text"
-msgstr "Texte du badge"
-
-#: src/_tools/display/custom-fields/templates/display.php:116
-msgid "new"
-msgstr "nouveau"
-
-#: src/_tools/display/index.php:38
-msgid "Display"
-msgstr "Afficher"
-
-#: src/_tools/display/index.php:39
-msgid "Hide title, thumbnail, set alternative title, badge, subtitle..."
-msgstr ""
-"Cacher les titres, les images à la une, paramétrer des titres alternatifs, "
-"des badges, des sous-titres…"
-
-#: src/_tools/excerpt/custom-fields/templates/excerpt.php:28
-msgid "Customized excerpt"
-msgstr "Résumé personnalisé"
-
-#: src/_tools/excerpt/custom-fields/templates/excerpt.php:29
-msgid "Let empty to get automatic excerpt from content"
-msgstr "Laisser vide pour obtenir le résumé automatique"
-
-#: src/_tools/excerpt/index.php:38
-msgid "Excerpt"
-msgstr "Résumé"
-
-#: src/_tools/excerpt/index.php:39
-msgid "Add a custom excerpt to your posts"
-msgstr "Ajoute un résumé personnalisé à vos publications"
-
-#: src/_tools/excerpt/index.php:63 src/_tools/video/index.php:67
-#: src/tools/pagination/index.php:70
-msgid "General"
-msgstr "Général"
-
-#: src/_tools/excerpt/index.php:76
-msgid "Auto paragraph"
-msgstr "Paragraphe automatique"
-
-#: src/_tools/excerpt/index.php:78
-msgid "activate auto paragraph for excerpt text editor"
-msgstr "active la génération automatique des paragraphes dans le résumé"
-
-#: src/_tools/video/custom-fields/featured-video.php:40
-msgid "Featured Video"
-msgstr "Vidéo à la une"
-
-#: src/_tools/video/index.php:38
-msgid "Video"
-msgstr "Vidéo"
-
-#: src/_tools/video/index.php:39
-msgid "Add featured video to your posts"
-msgstr "Ajoute une vidéo à la une sur vos publications"
-
-#: src/_tools/video/index.php:82
-msgid ""
-"replace featured image if exists, otherwise, you can insert this code "
-"directly in your theme templates, please see 'integration' section bellow."
-msgstr ""
-
-#: src/_tools/video/index.php:89
-msgid "Default width"
-msgstr "Largeur par défaut"
-
-#: src/_tools/video/index.php:98
-msgid "Default height"
-msgstr "Hauteur par défaut"
-
-#: src/_tools/video/index.php:106 src/tools/breadcrumb/index.php:175
-#: src/tools/pagination/index.php:105
-msgid "Integration"
-msgstr "Intégration"
-
-#: src/_tools/video/index.php:110 src/tools/pagination/index.php:109
-msgid "insert this code in your theme templates :"
-msgstr "insérer ce code dans vos templates :"
-
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:27
-msgid "Breadcrumb options"
-msgstr "Options du fil d’Ariane"
-
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:33
-msgid "Breadcrumb type"
-msgstr "Type"
-
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:40
-#: src/tools/breadcrumb/index.php:133
-msgid "classic"
-msgstr "classic"
-
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:41
-#: src/tools/breadcrumb/index.php:134
-msgid "customized"
-msgstr "personnalisé"
-
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:50
-msgid "Breadcrumb composition"
-msgstr "Composition du fil d’Ariane"
-
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:53
-#: src/tools/breadcrumb/index.php:137 src/tools/breadcrumb/utils.php:80
-#: src/tools/breadcrumb/utils.php:96
-msgid "Home"
-msgstr "Accueil"
-
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:75
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:90
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:109
-msgid "Choose element"
-msgstr "Choisir un élément"
-
-#: src/tools/breadcrumb/custom-fields/templates/breadcrumb.php:96
-msgid "Add breadcrumb element"
-msgstr "Ajouter un élément"
-
-#: src/tools/breadcrumb/index.php:39
+#: src/tools/breadcrumb/index.php:46
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:15
 msgid "Breadcrumb"
 msgstr "Fil d’Ariane"
 
-#: src/tools/breadcrumb/index.php:40
+#: src/tools/breadcrumb/index.php:50
 msgid "Display breadcrumb on your website frontend"
 msgstr "Affiche un fil d’Ariane sur votre site Web"
 
-#: src/tools/breadcrumb/index.php:84
-msgid "Breacrumb Options"
-msgstr "Options du fil d’Ariane"
-
-#: src/tools/breadcrumb/index.php:97
-msgid "Activate menu management"
-msgstr "Active la gestion du menu"
-
-#: src/tools/breadcrumb/index.php:99
-msgid ""
-"WP menus will be altered (classes) by this tool. Ex. : add \"active\" classe "
-"on breadcrumb elements."
-msgstr ""
-"Les menu WP seront altérés (classes CSS) par cet outil. Ex. : ajoute la "
-"classe ‘active’ sur un élément présent dans le fil d’Ariane."
-
-#: src/tools/breadcrumb/index.php:105
-msgid "Post types settings"
-msgstr "Paramètres des types de contenus"
-
-#: src/tools/breadcrumb/index.php:159
-msgid "Add Breadcrumb Item"
-msgstr "Ajouter un item"
-
-#: src/tools/breadcrumb/index.php:160
-msgid "Remove this breadcrumb item"
-msgstr "Supprimer cet item"
-
-#: src/tools/breadcrumb/index.php:161
-msgid "Choose item"
-msgstr "Choisir un item"
-
-#: src/tools/breadcrumb/index.php:170
-msgid "You can define, for each post type, a customized breadcrumb."
-msgstr ""
-"Vous pouvez définir pour chaque type de contenu un fil d’Ariane spécific."
-
-#: src/tools/breadcrumb/index.php:179
-msgid "PHP :"
-msgstr "PHP :"
-
-#: src/tools/breadcrumb/utils.php:174
-msgid "search"
-msgstr "recherche"
-
-#: src/tools/breadcrumb/utils.php:178 src/tools/breadcrumb/utils.php:180
-#: src/tools/breadcrumb/utils.php:182
-msgid "Archive "
-msgstr "Archive "
-
-#: src/tools/breadcrumb/utils.php:184
-msgid "Author"
-msgstr "Auteur"
-
-#: src/tools/breadcrumb/utils.php:186
-msgid "Blog archives"
-msgstr "Archives du blog"
-
-#: src/tools/event/index.php:39 src/tools/event/post-types/index.php:28
+#: src/tools/event/index.php:44 src/tools/event/post-types/index.php:28
 #: src/tools/event/post-types/index.php:33
 msgid "Events"
 msgstr "Évènements"
 
-#: src/tools/event/index.php:40
+#: src/tools/event/index.php:48
 msgid "Events manager"
 msgstr "Gestion des évènements"
 
@@ -409,6 +135,11 @@ msgstr "Aucun évènement trouvé"
 #: src/tools/event/post-types/index.php:37
 msgid "No Event found in trash"
 msgstr "Aucun évènement trouvé dans la corbeille"
+
+#: src/tools/event/post-types/index.php:50
+msgctxt "URL slug"
+msgid "events"
+msgstr "Évènements"
 
 #: src/tools/event/post-types/index.php:56
 msgid "Event Types"
@@ -445,9 +176,25 @@ msgid "Add Event Type"
 msgstr "Ajouter un type d'évènement"
 
 #: src/tools/event/post-types/index.php:65
-#: src/tools/portfolio/post-types/index.php:66
 msgid "Name"
 msgstr "Nom"
+
+#: src/tools/event/post-types/index.php:75
+msgctxt "URL slug"
+msgid "evenement-type"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:87
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:38
+msgid "Begin"
+msgstr "Début"
+
+#: src/tools/event/post-types/index.php:88
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:60
+msgid "End"
+msgstr "Fin"
 
 #: src/tools/event/utils.php:152 src/tools/event/utils.php:171
 msgid "from (hour)"
@@ -482,134 +229,73 @@ msgstr "de"
 msgid "to (month)"
 msgstr "à"
 
-#: src/tools/fancybox/index.php:39
+#: src/tools/fancybox/index.php:44
 msgid "Fancybox"
 msgstr "FancyBox"
 
-#: src/tools/fancybox/index.php:40
+#: src/tools/fancybox/index.php:48
 msgid "Enable Fancybox support on your website frontend"
 msgstr "Active Fancybox sur votre site Web"
 
-#: src/tools/login/inc/customizer.php:36
-msgid "Login page"
-msgstr "Page de connexion"
-
-#: src/tools/login/index.php:39
+#: src/tools/login/index.php:45
 msgid "Login"
 msgstr "Identifiant"
 
-#: src/tools/login/index.php:40
+#: src/tools/login/index.php:49
 msgid "Improve your experience on WP login page"
 msgstr "Personnalise votre page d’identification"
 
-#: src/tools/pagination/index.php:39
+#: src/tools/pagination/index.php:45
 msgid "Pagination"
 msgstr "Pagination"
 
-#: src/tools/pagination/index.php:40
+#: src/tools/pagination/index.php:49
 msgid "Intelligent pagination for all post-types"
 msgstr "Pagination intelligente pour toutes vos publications"
 
-#: src/tools/pagination/index.php:83
+#: src/tools/pagination/index.php:75
+msgid "General"
+msgstr "Général"
+
+#: src/tools/pagination/index.php:88
 msgid "Include taxonomies"
 msgstr "Inclure les taxonomies"
 
-#: src/tools/pagination/index.php:85
+#: src/tools/pagination/index.php:90
 msgid "include taxonomies context if appropriate"
 msgstr "inclure le contexte de taxonomie si nécessaire"
 
-#: src/tools/pagination/index.php:97
+#: src/tools/pagination/index.php:102
 msgid "Loop"
 msgstr "Boucle"
 
-#: src/tools/pagination/index.php:99
+#: src/tools/pagination/index.php:104
 msgid "generate loop navigation"
 msgstr "navigation en boucle"
 
-#: src/tools/portfolio/index.php:39 src/tools/portfolio/post-types/index.php:29
+#: src/tools/pagination/index.php:110
+msgid "Integration"
+msgstr "Intégration"
+
+#: src/tools/pagination/index.php:114
+msgid "insert this code in your theme templates :"
+msgstr "insérer ce code dans vos templates :"
+
+#: src/tools/portfolio/index.php:44
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: src/tools/portfolio/index.php:40
+#: src/tools/portfolio/index.php:48
 msgid "Create portfolio content type"
 msgstr "Créer un type de portfolio"
 
-#: src/tools/portfolio/post-types/index.php:28
-#: src/tools/portfolio/post-types/index.php:33
-msgid "Portfolios"
-msgstr "Portfolios"
-
-#: src/tools/portfolio/post-types/index.php:30
-msgid "Add Portfolio"
-msgstr "Ajouter un portfolio"
-
-#: src/tools/portfolio/post-types/index.php:31
-msgid "Edit Portfolio"
-msgstr "Editer un portfolio"
-
-#: src/tools/portfolio/post-types/index.php:32
-msgid "New Portfolio"
-msgstr "Nouveau portfolio"
-
-#: src/tools/portfolio/post-types/index.php:34
-msgid "Look Portfolio"
-msgstr "Voir un portfolio"
-
-#: src/tools/portfolio/post-types/index.php:35
-msgid "Search Portfolios"
-msgstr "Rechercher un portfolio"
-
-#: src/tools/portfolio/post-types/index.php:36
-msgid "No Portfolio found"
-msgstr "Aucun portfolio trouvé"
-
-#: src/tools/portfolio/post-types/index.php:37
-msgid "No Portfolio found in trash"
-msgstr "Aucun portfolio trouvé dans la corbeille"
-
-#: src/tools/portfolio/post-types/index.php:57
-msgid "Portfolio Types"
-msgstr "Types de portfolio"
-
-#: src/tools/portfolio/post-types/index.php:58
-#: src/tools/portfolio/post-types/index.php:67
-msgid "Portfolio Type"
-msgstr "Type de portfolio"
-
-#: src/tools/portfolio/post-types/index.php:59
-msgid "Search Portfolio Type"
-msgstr "Rechercher un type de portfolio"
-
-#: src/tools/portfolio/post-types/index.php:60
-msgid "All Portfolio Types"
-msgstr "Tous les types de portfolio"
-
-#: src/tools/portfolio/post-types/index.php:61
-#: src/tools/portfolio/post-types/index.php:62
-msgid "Portfolio Type's parent"
-msgstr "Type de portfolio parent"
-
-#: src/tools/portfolio/post-types/index.php:63
-msgid "Edit Portfolio Type"
-msgstr "Editer un type de portfolio"
-
-#: src/tools/portfolio/post-types/index.php:64
-msgid "Update Portfolio Type"
-msgstr "Mettre à jour un type de portfolio"
-
-#: src/tools/portfolio/post-types/index.php:65
-msgid "Add Portfolio Type"
-msgstr "Ajouter un type de portfolio"
-
-#: src/tools/portfolio/post-types/index.php:87
-msgid "Thumb"
-msgstr "Vignette"
-
-#: src/tools/wall/index.php:34
+#: src/tools/wall/index.php:39 src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:26
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:148
 msgid "Wall"
 msgstr "Mur"
 
-#: src/tools/wall/index.php:35
+#: src/tools/wall/index.php:43
 msgid "Create Gutenberg Block which displays any contents as a gallery"
 msgstr ""
 "Créer un block Gutenberg qui affiche n’importe quel contenu comme une galerie"
@@ -618,10 +304,335 @@ msgstr ""
 msgid "Lire la suite"
 msgstr ""
 
+#. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:24
-#, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:30
+msgid "Type"
+msgstr "Type"
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:31
+msgid "Classic"
+msgstr "Classic"
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:32
+msgid "Customized"
+msgstr "Personnalisé"
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:37
+msgid "Compose your custom breacrumb"
+msgstr "Composez votre fil d’Ariane"
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:107
+msgid "Home"
+msgstr "Accueil"
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:111
+msgid "Add breadcrumb item"
+msgstr "Ajouter un item"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:15
+msgid "Event attributes"
+msgstr "Propriétés de l'évènement"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:44
+msgid "Begin date"
+msgstr "Date de début"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:56
+msgid "set end date"
+msgstr "fixer une date de fin"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:66
+msgid "End date"
+msgstr "Date de fin"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:73
+msgid "Address"
+msgstr "Adresse"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:77
+msgid "CP"
+msgstr "CP"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:81
+msgid "City"
+msgstr "Ville"
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:85
+msgid "Country"
+msgstr "Pays"
+
+#: src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:28
+msgid "Display galery of anything you want"
+msgstr "Affiche une galerie de tout ce que vous voulez"
+
+#: src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:36
+msgid "Wall image preview"
+msgstr ""
+
+#: src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:140
+msgid ""
+"Vous pouvez composer votre mur d'images, d'articles, de pages ou de tout "
+"autre contenu de votre site. Vous choisissez ensuite le style de "
+"présentation. Tous les réglages sont en colonne de droite."
+msgstr ""
+
+#: src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:149
+msgid "Display a wall of elements"
+msgstr "Affiche un mur d’élements"
+
+#~ msgid "Background Image"
+#~ msgstr "Image de fond"
+
+#~ msgid "Choose image"
+#~ msgstr "Choisir une image"
+
+#~ msgid "Delete"
+#~ msgstr "Supprimer"
+
+#~ msgid "Choose document"
+#~ msgstr "Choisir un document"
+
+#~ msgid "Ok"
+#~ msgstr "Ok"
+
+#~ msgid "Background image"
+#~ msgstr "Image de fond"
+
+#~ msgid "Background color"
+#~ msgstr "Couleur de fond"
+
+#~ msgid "Opacity"
+#~ msgstr "Opacité"
+
+#~ msgid "expressed in %"
+#~ msgstr "exprimé en %"
+
+#~ msgid "Add background image to your site and posts"
+#~ msgstr "Ajoute une image de fond à votre site et à vos publications"
+
+#~ msgid "Auto insert"
+#~ msgstr "Insertion automatique"
+
+#~ msgid ""
+#~ "otherwise, you can insert this code directly in your theme templates :"
+#~ msgstr ""
+#~ "autrement, vous pouvez intégrer ce code directement dans les templates de "
+#~ "votre thème :"
+
+#~ msgid "Display options"
+#~ msgstr "Afficher les options"
+
+#~ msgid "Customized title"
+#~ msgstr "Titre personnalisé"
+
+#~ msgid "Replace native title"
+#~ msgstr "Remplace le titre natif"
+
+#~ msgid "Subtitle"
+#~ msgstr "Sous-titre"
+
+#~ msgid "Hide title"
+#~ msgstr "Cacher le titre"
+
+#~ msgid "Hide title or woodkit title except in lists"
+#~ msgstr "Cacher le titre de cette page excepté dans les listes"
+
+#~ msgid "Hide thumbnail"
+#~ msgstr "Cacher l'image à la une"
+
+#~ msgid "Hide thumbnail except in lists"
+#~ msgstr "Cacher l'image à la une excepté dans les listes"
+
+#~ msgid "Hide featured video"
+#~ msgstr "Cacher la vidéo à la une"
+
+#~ msgid "Hide featured video except in lists"
+#~ msgstr "Cache la vidéo à la une excepté dans les listes"
+
+#~ msgid "Badge"
+#~ msgstr "Badge"
+
+#~ msgid "Add awesome badge for new stuff !"
+#~ msgstr "Add awesome badge for new stuff !"
+
+#~ msgid "Badge's text"
+#~ msgstr "Texte du badge"
+
+#~ msgid "new"
+#~ msgstr "nouveau"
+
+#~ msgid "Display"
+#~ msgstr "Afficher"
+
+#~ msgid "Hide title, thumbnail, set alternative title, badge, subtitle..."
+#~ msgstr ""
+#~ "Cacher les titres, les images à la une, paramétrer des titres "
+#~ "alternatifs, des badges, des sous-titres…"
+
+#~ msgid "Customized excerpt"
+#~ msgstr "Résumé personnalisé"
+
+#~ msgid "Let empty to get automatic excerpt from content"
+#~ msgstr "Laisser vide pour obtenir le résumé automatique"
+
+#~ msgid "Excerpt"
+#~ msgstr "Résumé"
+
+#~ msgid "Add a custom excerpt to your posts"
+#~ msgstr "Ajoute un résumé personnalisé à vos publications"
+
+#~ msgid "Auto paragraph"
+#~ msgstr "Paragraphe automatique"
+
+#~ msgid "activate auto paragraph for excerpt text editor"
+#~ msgstr "active la génération automatique des paragraphes dans le résumé"
+
+#~ msgid "Featured Video"
+#~ msgstr "Vidéo à la une"
+
+#~ msgid "Video"
+#~ msgstr "Vidéo"
+
+#~ msgid "Add featured video to your posts"
+#~ msgstr "Ajoute une vidéo à la une sur vos publications"
+
+#~ msgid "Default width"
+#~ msgstr "Largeur par défaut"
+
+#~ msgid "Default height"
+#~ msgstr "Hauteur par défaut"
+
+#~ msgid "Breadcrumb options"
+#~ msgstr "Options du fil d’Ariane"
+
+#~ msgid "Breadcrumb type"
+#~ msgstr "Type"
+
+#~ msgid "Breadcrumb composition"
+#~ msgstr "Composition du fil d’Ariane"
+
+#~ msgid "Choose element"
+#~ msgstr "Choisir un élément"
+
+#~ msgid "Add breadcrumb element"
+#~ msgstr "Ajouter un élément"
+
+#~ msgid "Breacrumb Options"
+#~ msgstr "Options du fil d’Ariane"
+
+#~ msgid "Activate menu management"
+#~ msgstr "Active la gestion du menu"
+
+#~ msgid ""
+#~ "WP menus will be altered (classes) by this tool. Ex. : add \"active\" "
+#~ "classe on breadcrumb elements."
+#~ msgstr ""
+#~ "Les menu WP seront altérés (classes CSS) par cet outil. Ex. : ajoute la "
+#~ "classe ‘active’ sur un élément présent dans le fil d’Ariane."
+
+#~ msgid "Post types settings"
+#~ msgstr "Paramètres des types de contenus"
+
+#~ msgid "Remove this breadcrumb item"
+#~ msgstr "Supprimer cet item"
+
+#~ msgid "Choose item"
+#~ msgstr "Choisir un item"
+
+#~ msgid "You can define, for each post type, a customized breadcrumb."
+#~ msgstr ""
+#~ "Vous pouvez définir pour chaque type de contenu un fil d’Ariane spécific."
+
+#~ msgid "PHP :"
+#~ msgstr "PHP :"
+
+#~ msgid "search"
+#~ msgstr "recherche"
+
+#~ msgid "Archive "
+#~ msgstr "Archive "
+
+#~ msgid "Author"
+#~ msgstr "Auteur"
+
+#~ msgid "Blog archives"
+#~ msgstr "Archives du blog"
+
+#~ msgid "Login page"
+#~ msgstr "Page de connexion"
+
+#~ msgid "Portfolios"
+#~ msgstr "Portfolios"
+
+#~ msgid "Add Portfolio"
+#~ msgstr "Ajouter un portfolio"
+
+#~ msgid "Edit Portfolio"
+#~ msgstr "Editer un portfolio"
+
+#~ msgid "New Portfolio"
+#~ msgstr "Nouveau portfolio"
+
+#~ msgid "Look Portfolio"
+#~ msgstr "Voir un portfolio"
+
+#~ msgid "Search Portfolios"
+#~ msgstr "Rechercher un portfolio"
+
+#~ msgid "No Portfolio found"
+#~ msgstr "Aucun portfolio trouvé"
+
+#~ msgid "No Portfolio found in trash"
+#~ msgstr "Aucun portfolio trouvé dans la corbeille"
+
+#~ msgid "Portfolio Types"
+#~ msgstr "Types de portfolio"
+
+#~ msgid "Portfolio Type"
+#~ msgstr "Type de portfolio"
+
+#~ msgid "Search Portfolio Type"
+#~ msgstr "Rechercher un type de portfolio"
+
+#~ msgid "All Portfolio Types"
+#~ msgstr "Tous les types de portfolio"
+
+#~ msgid "Portfolio Type's parent"
+#~ msgstr "Type de portfolio parent"
+
+#~ msgid "Edit Portfolio Type"
+#~ msgstr "Editer un type de portfolio"
+
+#~ msgid "Update Portfolio Type"
+#~ msgstr "Mettre à jour un type de portfolio"
+
+#~ msgid "Add Portfolio Type"
+#~ msgstr "Ajouter un type de portfolio"
+
+#~ msgid "Thumb"
+#~ msgstr "Vignette"
 
 #, fuzzy
 #~| msgid "No result"
@@ -632,9 +643,6 @@ msgstr ""
 #~| msgid "Choose image"
 #~ msgid "Choose a shade"
 #~ msgstr "Choisir une image"
-
-#~ msgid "Type"
-#~ msgstr "Type"
 
 #, fuzzy
 #~| msgid "Home"
@@ -830,12 +838,6 @@ msgstr ""
 #~ msgid "Newer Comments &rarr;"
 #~ msgstr "Commentaires récents &rarr;"
 
-#~ msgid "Comments are closed."
-#~ msgstr "Les commentaires sont fermés"
-
-#~ msgid "No content"
-#~ msgstr "Aucun contenu"
-
 #~ msgid "Pages:"
 #~ msgstr "Pages:"
 
@@ -880,9 +882,6 @@ msgstr ""
 #, php-format
 #~ msgid "%s Archives"
 #~ msgstr "%s Archives"
-
-#~ msgid "Woodyize"
-#~ msgstr "Personnaliser"
 
 #~ msgid "Copyright"
 #~ msgstr "Copyright"
@@ -949,9 +948,6 @@ msgstr ""
 
 #~ msgid "BACKGROUNDIMAGE"
 #~ msgstr "Image de fond"
-
-#~ msgid "Search results"
-#~ msgstr "Résultat de recherche"
 
 #~ msgid ""
 #~ "By continuing your visit to this site, you accept the use of cookies or "

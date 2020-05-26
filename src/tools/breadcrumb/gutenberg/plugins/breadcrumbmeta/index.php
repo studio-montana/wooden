@@ -29,7 +29,7 @@ class WKG_Module_Plugin_breadcrumbmeta extends WKG_Module_Plugin {
 				'uri' => wooden_get_tools_directory_uri().'breadcrumb/gutenberg/plugins/breadcrumbmeta/', // must be explicitly defined to support symbolic link context
 				'i18n' => array(
 						'domain' => 'wooden',
-						'path' => get_template_directory().'lang/',
+						'path' => get_template_directory().'/lang/',
 				)
 		));
 		add_action('init', array($this, 'init'), 10);

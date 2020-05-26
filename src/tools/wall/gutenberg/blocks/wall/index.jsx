@@ -1,6 +1,6 @@
 import classnames from 'classnames'
+import { __ } from '@wordpress/i18n'
 const { registerBlockType } = wp.blocks
-const { __ } = wp.i18n
 const { Component, Fragment } = wp.element
 const { InspectorControls, MediaUpload } = wp.blockEditor
 const { PanelBody, PanelRow, Button, SelectControl, RangeControl, TextControl, ResizableBox, ToggleControl } = wp.components

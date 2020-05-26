@@ -1,0 +1,402 @@
+# Copyright (C) 2020 Sébastien Chandonay & Cyril Tissot (Studio Montana)
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wooden 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wooden\n"
+"POT-Creation-Date: 2020-05-26T08:58:14+00:00\n"
+"PO-Revision-Date: 2020-05-26 15:24+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_EN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Domain: wooden\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Theme Name of the theme
+msgid "Wooden"
+msgstr ""
+
+#. Description of the theme
+msgid "Root Wordpress theme"
+msgstr ""
+
+#. Author of the theme
+msgid "Sébastien Chandonay & Cyril Tissot (Studio Montana)"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://www.seb-c.com"
+msgstr ""
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:23
+msgid "Tous droits réservés"
+msgstr ""
+
+#: footer.php:23
+msgid "Politique de confidentialité"
+msgstr ""
+
+#: functions.php:42
+msgid "Primary"
+msgstr ""
+
+#: header.php:25
+msgid "Skip to content"
+msgstr ""
+
+#: inc/tutorials/index.php:30 inc/tutorials/index.php:31
+msgid "Tutoriels"
+msgstr ""
+
+#: inc/tutorials/render.php:35
+msgid "Tutorials"
+msgstr ""
+
+#: inc/tutorials/render.php:116
+msgid "posted on"
+msgstr ""
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr ""
+
+#: src/tools/breadcrumb/index.php:46
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:15
+msgid "Breadcrumb"
+msgstr ""
+
+#: src/tools/breadcrumb/index.php:50
+msgid "Display breadcrumb on your website frontend"
+msgstr ""
+
+#: src/tools/event/index.php:44 src/tools/event/post-types/index.php:28
+#: src/tools/event/post-types/index.php:33
+msgid "Events"
+msgstr ""
+
+#: src/tools/event/index.php:48
+msgid "Events manager"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:29
+msgid "Event"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:30
+msgid "Add Event"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:31
+msgid "Edit Event"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:32
+msgid "New Event"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:34
+msgid "Look Event"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:35
+msgid "Search Events"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:36
+msgid "No Event found"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:37
+msgid "No Event found in trash"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:50
+msgctxt "URL slug"
+msgid "events"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:56
+msgid "Event Types"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:57
+#: src/tools/event/post-types/index.php:66
+msgid "Event Type"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:58
+msgid "Search Event Type"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:59
+msgid "All Event Types"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:60
+#: src/tools/event/post-types/index.php:61
+msgid "Event Type's parent"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:62
+msgid "Edit Event Type"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:63
+msgid "Update Event Type"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:64
+msgid "Add Event Type"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:65
+msgid "Name"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:75
+msgctxt "URL slug"
+msgid "evenement-type"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:87
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:38
+msgid "Begin"
+msgstr ""
+
+#: src/tools/event/post-types/index.php:88
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:60
+msgid "End"
+msgstr ""
+
+#: src/tools/event/utils.php:152 src/tools/event/utils.php:171
+msgid "from (hour)"
+msgstr "from"
+
+#: src/tools/event/utils.php:152 src/tools/event/utils.php:171
+msgid "to (hour)"
+msgstr "to"
+
+#: src/tools/event/utils.php:154 src/tools/event/utils.php:173
+#: src/tools/event/utils.php:189 src/tools/event/utils.php:202
+#: src/tools/event/utils.php:219 src/tools/event/utils.php:232
+#: src/tools/event/utils.php:249
+msgid "at (hour)"
+msgstr ""
+
+#: src/tools/event/utils.php:163 src/tools/event/utils.php:182
+#: src/tools/event/utils.php:209
+msgid "from (date)"
+msgstr "from"
+
+#: src/tools/event/utils.php:163 src/tools/event/utils.php:192
+#: src/tools/event/utils.php:222
+msgid "to (date)"
+msgstr "to"
+
+#: src/tools/event/utils.php:185 src/tools/event/utils.php:212
+msgid "from (month)"
+msgstr "from"
+
+#: src/tools/event/utils.php:195 src/tools/event/utils.php:225
+msgid "to (month)"
+msgstr "to"
+
+#: src/tools/fancybox/index.php:44
+msgid "Fancybox"
+msgstr ""
+
+#: src/tools/fancybox/index.php:48
+msgid "Enable Fancybox support on your website frontend"
+msgstr ""
+
+#: src/tools/login/index.php:45
+msgid "Login"
+msgstr ""
+
+#: src/tools/login/index.php:49
+msgid "Improve your experience on WP login page"
+msgstr ""
+
+#: src/tools/pagination/index.php:45
+msgid "Pagination"
+msgstr ""
+
+#: src/tools/pagination/index.php:49
+msgid "Intelligent pagination for all post-types"
+msgstr ""
+
+#: src/tools/pagination/index.php:75
+msgid "General"
+msgstr ""
+
+#: src/tools/pagination/index.php:88
+msgid "Include taxonomies"
+msgstr ""
+
+#: src/tools/pagination/index.php:90
+msgid "include taxonomies context if appropriate"
+msgstr ""
+
+#: src/tools/pagination/index.php:102
+msgid "Loop"
+msgstr ""
+
+#: src/tools/pagination/index.php:104
+msgid "generate loop navigation"
+msgstr ""
+
+#: src/tools/pagination/index.php:110
+msgid "Integration"
+msgstr ""
+
+#: src/tools/pagination/index.php:114
+msgid "insert this code in your theme templates :"
+msgstr ""
+
+#: src/tools/portfolio/index.php:44
+msgid "Portfolio"
+msgstr ""
+
+#: src/tools/portfolio/index.php:48
+msgid "Create portfolio content type"
+msgstr ""
+
+#: src/tools/wall/index.php:39 src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:26
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:148
+msgid "Wall"
+msgstr ""
+
+#: src/tools/wall/index.php:43
+msgid "Create Gutenberg Block which displays any contents as a gallery"
+msgstr ""
+
+#: template-parts/content-resume.php:22
+msgid "Lire la suite"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:24
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:30
+msgid "Type"
+msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:31
+msgid "Classic"
+msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:32
+msgid "Customized"
+msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:37
+msgid "Compose your custom breacrumb"
+msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:107
+msgid "Home"
+msgstr ""
+
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
+#: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:111
+msgid "Add breadcrumb item"
+msgstr ""
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:15
+msgid "Event attributes"
+msgstr ""
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:44
+msgid "Begin date"
+msgstr ""
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:56
+msgid "set end date"
+msgstr ""
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:66
+msgid "End date"
+msgstr ""
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:73
+msgid "Address"
+msgstr ""
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:77
+msgid "CP"
+msgstr ""
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:81
+msgid "City"
+msgstr ""
+
+#: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
+#: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:85
+msgid "Country"
+msgstr ""
+
+#: src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:28
+msgid "Display galery of anything you want"
+msgstr ""
+
+#: src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:36
+msgid "Wall image preview"
+msgstr ""
+
+#: src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:140
+msgid ""
+"Vous pouvez composer votre mur d'images, d'articles, de pages ou de tout "
+"autre contenu de votre site. Vous choisissez ensuite le style de "
+"présentation. Tous les réglages sont en colonne de droite."
+msgstr ""
+
+#: src/tools/wall/gutenberg/blocks/wall/build.js:16
+#: src/tools/wall/gutenberg/blocks/wall/index.jsx:149
+msgid "Display a wall of elements"
+msgstr ""

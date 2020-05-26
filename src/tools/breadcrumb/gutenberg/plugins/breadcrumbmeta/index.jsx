@@ -1,5 +1,5 @@
+import { __ } from '@wordpress/i18n'
 const { registerPlugin } = wp.plugins
-const { __ } = wp.i18n
 const { Component, Fragment } = wp.element
 const { withSelect, withDispatch } = wp.data
 const { dateI18n } = wp.date
