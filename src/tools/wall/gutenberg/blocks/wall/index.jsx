@@ -514,7 +514,7 @@ class BlockComponent_Base extends Component {
 	render_IC__columns () {
 		if (this.state.display === 'grid') {
 			const min = 1
-			const max = 6
+			const max = 8
 			return (
 				<PanelRow className="wkg-ic-panelrow">
 					<RangeControl
@@ -540,6 +540,7 @@ class BlockComponent_Base extends Component {
 				{value: '25%', label: '25%'},
 				{value: '20%', label: '20%'},
 				{value: '16.666666%', label: '16.66%'},
+				{value: '12.5%', label: '12.5%'},
 				{value: 'custom', label: 'Personnalisée'},
 			]
 			let render_maxwidth_custom = null

@@ -288,8 +288,7 @@ class WKG_Module_Block_wall extends WKG_Module_Block {
 						'overflow' => 'hidden',
 					));
 				} ?>
-				<li class="wall-item custom-columns-<?php echo $custom_columns; ?>
-					custom-lines-<?php echo $custom_lines; ?>"
+				<li class="wall-item custom-columns-<?php echo $custom_columns; ?> custom-lines-<?php echo $custom_lines; ?>"
 					style="<?php echo $this->implode_styles($itemStyle); ?>"
 					data-filter="<?php echo implode(' ', $itemFilterTerms); ?>"
 				>
