@@ -181,7 +181,8 @@
 }
 @media (max-width: 1200px) {
   .wp-block-wkg-wall.alignfull .wall.columns-8 > li,
-  .wp-block-wkg-wall.alignfull .wall.columns-6 > li{
+  .wp-block-wkg-wall.alignfull .wall.columns-6 > li,
+    .wp-block-wkg-wall .wall.grid[class*="columns-"] > li{
     max-width: 33.33333% !important;
     width: 33.33333% !important;
   }
@@ -203,7 +204,8 @@
   }
 }
 @media (max-width: 900px) {
-  .wp-block-wkg-wall.alignfull .wall.columns-8 > li{
+  .wp-block-wkg-wall.alignfull .wall.columns-8 > li,
+  .wp-block-wkg-wall .wall.grid[class*="columns-"] > li{
     max-width: 50% !important;
     width: 50% !important;
   }
@@ -225,11 +227,12 @@
   }
 }
 @media (max-width: 600px) {
-  .wp-block-wkg-wall.alignfull .wall[class*="columns-"] > li {
+  .wp-block-wkg-wall.alignfull .wall[class*="columns-"] > li,
+    .wp-block-wkg-wall .wall.grid[class*="columns-"] > li{
     max-width: 100% !important;
     width: 100% !important;
   }
-  .wp-block-wkg-wall .wall.grid .wall-item-content {
+  .wp-block-wkg-wall .wall.grid .wall-item-content{
     padding-bottom: 100% !important;
   }
 }
