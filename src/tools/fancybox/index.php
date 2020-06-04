@@ -31,7 +31,7 @@ define('FANCYBOX_TOOL_NAME', 'fancybox');
  * Tool instance
  */
 class WK_Tool_Fancybox extends WK_Tool{
-	
+
 	public function __construct(){
 		parent::__construct(array(
 				'uri' => get_template_directory_uri().'/src/tools/fancybox/', // must be explicitly defined to support symbolic link context
@@ -39,15 +39,15 @@ class WK_Tool_Fancybox extends WK_Tool{
 				'context' => 'Wooden',
 		));
 	}
-	
-	public function get_name() { 
+
+	public function get_name() {
 		return __("Fancybox", 'wooden');
 	}
-	
-	public function get_description() { 
-		return __("Enable Fancybox support on your website frontend", 'wooden');
+
+	public function get_description() {
+		return __("Enable Fancybox aesthetic jQuery lightbox", 'wooden');
 	}
-	
+
 	public function launch() {
 		add_action('wp_enqueue_scripts', function () {
 			wp_enqueue_script('wooden-fancybox', $this->uri . 'js/fancybox-3.5.2/dist/jquery.fancybox.min.js', array('jquery'), '3.5.2', true);
@@ -55,17 +55,17 @@ class WK_Tool_Fancybox extends WK_Tool{
 			wp_enqueue_script('wooden-fancybox-front', $this->uri . 'js/front.js', array('wooden-fancybox'), WOODEN_WEBCACHE_VERSION, true);
 		});
 	}
-	
+
 	public function get_config_fields(){
 		return array();
 	}
-	
+
 	public function get_config_default_values(){
 		return array(
 				'active' => 'on'
 		);
 	}
-	
+
 }
 add_filter("woodkit-register-tool", function($tools){
 	$tools[] = new WK_Tool_Fancybox();

@@ -26,29 +26,29 @@ defined('ABSPATH') or die("Go Away!");
  * Tool instance
  */
 class WK_Tool_BackgroundImage extends WK_Tool{
-	
+
 	public function __construct(){
 		parent::__construct(array(
 				'slug' => 'backgroundimage',
 				'name' => __("Background Image", 'woodkit'),
-				'description' => __("Add background image to your site and posts", 'woodkit'),
+				'description' => __("Display background image on your website and pages", 'woodkit'),
 				'has_config' => true,
 		));
 	}
-	
+
 	public function get_config_fields(){
 		return array(
 				'auto-insert'
 		);
 	}
-	
+
 	public function get_config_default_values(){
 		return array(
 				'active' => 'off',
 				'auto-insert' => 'on'
 		);
 	}
-	
+
 	public function display_config_fields(){
 		?>
 		<div class="section">
@@ -73,7 +73,7 @@ class WK_Tool_BackgroundImage extends WK_Tool{
 		</div>
 		<?php
 	}
-	
+
 }
 add_filter("woodkit-register-tool", function($tools){
 	$tools[] = new WK_Tool_BackgroundImage();

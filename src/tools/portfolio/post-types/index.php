@@ -31,7 +31,7 @@ function tool_portfolio_add_post_types(){
 			'edit_item'          => __('Edit Portfolio', 'woodkit'),
 			'new_item'           => __('New Portfolio', 'woodkit'),
 			'all_items'          => __('Portfolios', 'woodkit'),
-			'view_item'          => __('Look Portfolio', 'woodkit'),
+			'view_item'          => __('View Portfolio', 'woodkit'),
 			'search_items'       => __('Search Portfolios', 'woodkit'),
 			'not_found'          => __('No Portfolio found', 'woodkit'),
 			'not_found_in_trash' => __('No Portfolio found in trash', 'woodkit')

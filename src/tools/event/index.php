@@ -31,35 +31,35 @@ define('EVENT_TOOL_NAME', 'event');
  * Tool instance
  */
 class WK_Tool_Event extends WK_Tool{
-	
+
 	public function __construct(){
 		parent::__construct(array(
 				'uri' => get_template_directory_uri().'/src/tools/event/', // must be explicitly defined to support symbolic link context
-				'slug' => 'event', 
+				'slug' => 'event',
 				'context' => 'Wooden',
 			));
 	}
-	
-	public function get_name() { 
+
+	public function get_name() {
 		return __("Events", 'wooden');
 	}
-	
-	public function get_description() { 
-		return __("Events manager", 'wooden');
+
+	public function get_description() {
+		return __("Create and manage Events", 'wooden');
 	}
-	
+
 	public function launch() {
 		require_once ($this->path.'post-types/index.php');
 		require_once ($this->path.'gutenberg/plugins/eventmeta/index.php');
 		require_once ($this->path.'utils.php');
 	}
-	
+
 	public function get_config_default_values(){
 		return array(
 				'active' => 'off'
 		);
 	}
-	
+
 }
 add_filter("woodkit-register-tool", function($tools){
 	$tools[] = new WK_Tool_Event();

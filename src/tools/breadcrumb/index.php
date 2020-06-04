@@ -41,13 +41,13 @@ class WK_Tool_BreadCrumb extends WK_Tool{
 				'context' => 'Wooden',
 			));
 	}
-	
-	public function get_name() { 
+
+	public function get_name() {
 		return __("Breadcrumb", 'wooden');
 	}
-	
-	public function get_description() { 
-		return __("Display breadcrumb on your website frontend", 'wooden');
+
+	public function get_description() {
+		return __("Display breadcrumb on your website", 'wooden');
 	}
 
 	public function launch() {
@@ -182,7 +182,7 @@ class WK_Tool_BreadCrumb extends WK_Tool{
 			</h2>
 			<div class="wk-panel-content">
 				<div class="wk-panel-info">
-					<?php _e('PHP :', 'woodkit'); ?><br /><code style="font-size: 0.7rem;">&lt;?php tool_breadcrumb(array(), true); ?&gt;</code>
+					<?php _e('Paste this code into your theme templates :', 'woodkit'); ?><br /><code style="font-size: 0.7rem;">&lt;?php tool_breadcrumb(array(), true); ?&gt;</code>
 				</div>
 			</div>
 		</div>

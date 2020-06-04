@@ -31,7 +31,7 @@ function tool_event_add_post_types(){
 			'edit_item'          => __('Edit Event', 'wooden'),
 			'new_item'           => __('New Event', 'wooden'),
 			'all_items'          => __('Events', 'wooden'),
-			'view_item'          => __('Look Event', 'wooden'),
+			'view_item'          => __('View Event', 'wooden'),
 			'search_items'       => __('Search Events', 'wooden'),
 			'not_found'          => __('No Event found', 'wooden'),
 			'not_found_in_trash' => __('No Event found in trash', 'wooden')
@@ -75,7 +75,7 @@ function tool_event_add_post_types(){
 			'rewrite'           => array('slug' => _x('evenement-type', 'URL slug', 'wooden'))
 	);
 	register_taxonomy('eventtype', array( 'event' ), $args);
-	
+
 	do_action("tool_event_add_post_type_after", "event");
 }
 add_action('init', 'tool_event_add_post_types');

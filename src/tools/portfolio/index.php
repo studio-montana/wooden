@@ -31,33 +31,33 @@ define('PORTFOLIO_TOOL_NAME', 'portfolio');
  * Tool instance
  */
 class WK_Tool_Portfolio extends WK_Tool{
-	
+
 	public function __construct(){
 		parent::__construct(array(
 				'uri' => get_template_directory_uri().'/src/tools/portfolio/', // must be explicitly defined to support symbolic link context
-				'slug' => 'portfolio', 
+				'slug' => 'portfolio',
 				'context' => 'Wooden',
 			));
 	}
-	
-	public function get_name() { 
+
+	public function get_name() {
 		return __("Portfolio", 'wooden');
 	}
-	
-	public function get_description() { 
-		return __("Create portfolio content type", 'wooden');
+
+	public function get_description() {
+		return __("Create Portfolio content type", 'wooden');
 	}
-	
+
 	public function launch() {
 		require_once ($this->path.'post-types/index.php');
 	}
-	
+
 	public function get_config_default_values(){
 		return array(
 				'active' => 'off'
 		);
 	}
-	
+
 }
 add_filter("woodkit-register-tool", function($tools){
 	$tools[] = new WK_Tool_Portfolio();

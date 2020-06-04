@@ -31,24 +31,24 @@ define('DISPLAY_TOOL_NAME', 'display');
  * Tool instance
  */
 class WK_Tool_Display extends WK_Tool{
-	
+
 	public function __construct(){
 		parent::__construct(
 				'display', 									// slug
 				__("Display", 'woodkit'),					// name
-				__("Hide title, thumbnail, set alternative title, badge, subtitle...", 'woodkit'),	// description
+				__("Hide page title, post thumbnail… display alternative title, badge, subtitle...", 'woodkit'),	// description
 				false,										// has config page
 				false,										// add config page in woodkit submenu
 				WOODKIT_URL_DOCUMENTATION.'/options-generales-daffichage'		// documentation url
 			);
 	}
-	
+
 	public function get_config_default_values(){
 		return array(
 				'active' => 'off'
 		);
 	}
-	
+
 }
 add_filter("woodkit-register-tool", function($tools){
 	$tools[] = new WK_Tool_Display();

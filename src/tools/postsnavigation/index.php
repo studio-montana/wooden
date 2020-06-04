@@ -26,7 +26,7 @@ defined('ABSPATH') or die("Go Away!");
  * Tool instance
  */
 class WK_Tool_PostsNavigation extends WK_Tool{
-	
+
 	public function __construct(){
 		parent::__construct(array(
 				'uri' => get_template_directory_uri().'/src/tools/postsnavigation/', // must be explicitly defined to support symbolic link context
@@ -35,26 +35,26 @@ class WK_Tool_PostsNavigation extends WK_Tool{
 				'context' => 'Wooden',
 		));
 	}
-	
-	public function get_name() { 
+
+	public function get_name() {
 		return __("Posts Navigation", 'wooden');
 	}
-	
-	public function get_description() { 
-		return __("Intelligent navigation for all post-types", 'wooden');
+
+	public function get_description() {
+		return __("Display 'Previous-Next' single post navigation", 'wooden');
 	}
-	
+
 	public function launch() {
 		require_once ($this->path.'utils.php');
 	}
-	
+
 	public function get_config_fields(){
 		return array(
 				'taxnav-active',
 				'loop-active',
 		);
 	}
-	
+
 	public function get_config_default_values(){
 		return array(
 				'active' => 'off',
@@ -62,7 +62,7 @@ class WK_Tool_PostsNavigation extends WK_Tool{
 				'loop-active' => 'on',
 		);
 	}
-	
+
 	public function display_config_fields(){
 		?>
 		<div class="wk-panel">
@@ -106,7 +106,7 @@ class WK_Tool_PostsNavigation extends WK_Tool{
 			</h2>
 			<div class="wk-panel-content">
 				<div class="wk-panel-info">
-					<?php _e('insert this code in your theme templates :', 'wooden'); ?><br /><code style="font-size: 0.7rem;">&lt;?php the_wooden_posts_navigation(); ?&gt;</code>
+					<?php _e('Paste this code into your theme templates :', 'wooden'); ?><br /><code style="font-size: 0.7rem;">&lt;?php the_wooden_posts_navigation(); ?&gt;</code>
 				</div>
 			</div>
 		</div>
