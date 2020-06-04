@@ -150,10 +150,6 @@
     max-width: 20% !important;
     width: 20% !important;
   }
-  .wp-block-wkg-wall.alignfull .wall.columns-5 > li.custom-columns-3{
-    max-width: 75% !important;
-    width: 75% !important;
-  }
 }
 @media (max-width: 1600px) {
   .wp-block-wkg-wall.alignfull .wall.columns-6 > li{
