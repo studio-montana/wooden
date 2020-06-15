@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: Wooden 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wooden\n"
 "POT-Creation-Date: 2020-06-15T09:16:55+00:00\n"
-"PO-Revision-Date: 2020-06-15 11:19+0200\n"
+"PO-Revision-Date: 2020-06-15 12:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Domain: wooden\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -51,7 +51,7 @@ msgstr[1] ""
 
 #: comments.php:66
 msgid "Comments are closed."
-msgstr "Les commentaires sont fermés"
+msgstr "Les commentaires sont fermés."
 
 #: footer.php:23
 msgid "All rights reserved"
@@ -71,7 +71,7 @@ msgstr "Aller au contenu"
 
 #: search.php:19
 msgid "Search Results for: %s"
-msgstr "Résultat de recherche"
+msgstr "Résultats de recherche"
 
 #: src/tools/breadcrumb/index.php:46
 #: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
@@ -80,10 +80,8 @@ msgid "Breadcrumb"
 msgstr "Fil d’Ariane"
 
 #: src/tools/breadcrumb/index.php:50
-#, fuzzy
-#| msgid "Display breadcrumb on your website frontend"
 msgid "Display breadcrumb on your website"
-msgstr "Affiche un fil d’Ariane sur votre site Web"
+msgstr "Afficher un fil d’Ariane sur votre site Web"
 
 #: src/tools/event/index.php:44 src/tools/event/post-types/index.php:28
 #: src/tools/event/post-types/index.php:33
@@ -91,10 +89,8 @@ msgid "Events"
 msgstr "Évènements"
 
 #: src/tools/event/index.php:48
-#, fuzzy
-#| msgid "Activate menu management"
 msgid "Create and manage Events"
-msgstr "Active la gestion du menu"
+msgstr "Activer la gestion du menu"
 
 #: src/tools/event/post-types/index.php:29
 msgid "Event"
@@ -113,10 +109,8 @@ msgid "New Event"
 msgstr "Nouvel évènement"
 
 #: src/tools/event/post-types/index.php:34
-#, fuzzy
-#| msgid "New Event"
 msgid "View Event"
-msgstr "Nouvel évènement"
+msgstr "Voir l’évènement"
 
 #: src/tools/event/post-types/index.php:35
 msgid "Search Events"
@@ -133,7 +127,7 @@ msgstr "Aucun évènement trouvé dans la corbeille"
 #: src/tools/event/post-types/index.php:50
 msgctxt "URL slug"
 msgid "events"
-msgstr "Évènements"
+msgstr ""
 
 #: src/tools/event/post-types/index.php:56
 msgid "Event Types"
@@ -229,7 +223,7 @@ msgstr "FancyBox"
 
 #: src/tools/fancybox/index.php:48
 msgid "Enable Fancybox aesthetic jQuery lightbox"
-msgstr ""
+msgstr "Activer la visionneuse jQuery Fancybox"
 
 #: src/tools/login/index.php:45
 msgid "Login"
@@ -237,17 +231,15 @@ msgstr "Identifiant"
 
 #: src/tools/login/index.php:49
 msgid "Improve your experience on WP login page"
-msgstr "Personnalise votre page d’identification"
+msgstr "Personnaliser votre page d’identification"
 
 #: src/tools/portfolio/index.php:44
 msgid "Portfolio"
 msgstr "Portfolio"
 
 #: src/tools/portfolio/index.php:48
-#, fuzzy
-#| msgid "Create portfolio content type"
 msgid "Create Portfolio content type"
-msgstr "Créer un type de portfolio"
+msgstr "Créer un type de contenu Portfolio"
 
 #: src/tools/postsnavigation/index.php:40
 msgid "Posts Navigation"
@@ -255,7 +247,7 @@ msgstr "Navigation entre publications"
 
 #: src/tools/postsnavigation/index.php:44
 msgid "Display 'Previous-Next' single post navigation"
-msgstr ""
+msgstr "Afficher la navigation entre publications de type ‘suivant-précédent’"
 
 #: src/tools/postsnavigation/index.php:70
 msgid "General"
@@ -267,7 +259,7 @@ msgstr "Inclure les taxonomies"
 
 #: src/tools/postsnavigation/index.php:85
 msgid "include taxonomies context if appropriate"
-msgstr "inclure le contexte de taxonomie si nécessaire"
+msgstr "Inclure le contexte de taxonomie si nécessaire"
 
 #: src/tools/postsnavigation/index.php:97
 msgid "Loop"
@@ -282,10 +274,8 @@ msgid "Integration"
 msgstr "Intégration"
 
 #: src/tools/postsnavigation/index.php:109
-#, fuzzy
-#| msgid "insert this code in your theme templates :"
 msgid "Paste this code into your theme templates :"
-msgstr "insérer ce code dans vos templates :"
+msgstr "Insérer ce code dans les templates de votre thème :"
 
 #: src/tools/wall/index.php:39 src/tools/wall/gutenberg/blocks/wall/build.js:16
 #: src/tools/wall/gutenberg/blocks/wall/index.jsx:26
@@ -294,11 +284,10 @@ msgid "Wall"
 msgstr "Mur"
 
 #: src/tools/wall/index.php:43
-#, fuzzy
-#| msgid "Create Gutenberg Block which displays any contents as a gallery"
 msgid "Create Wall Gutenberg Block and display any contents as a gallery"
 msgstr ""
-"Créer un block Gutenberg qui affiche n’importe quel contenu comme une galerie"
+"Créer un block Gutenberg Wall et afficher n’importe quel contenu comme une "
+"galerie"
 
 #: template-parts/content-resume.php:22
 msgid "Read more"
@@ -339,7 +328,7 @@ msgstr "Personnalisé"
 #: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
 #: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:37
 msgid "Compose your custom breacrumb"
-msgstr "Composez votre fil d’Ariane"
+msgstr "Composer votre fil d’Ariane"
 
 #: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/build.js:1
 #: src/tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/index.jsx:107
@@ -379,7 +368,7 @@ msgstr "Adresse"
 #: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
 #: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:77
 msgid "CP"
-msgstr "CP"
+msgstr "Code postal"
 
 #: src/tools/event/gutenberg/plugins/eventmeta/build.js:1
 #: src/tools/event/gutenberg/plugins/eventmeta/index.jsx:81
@@ -394,7 +383,7 @@ msgstr "Pays"
 #: src/tools/wall/gutenberg/blocks/wall/build.js:16
 #: src/tools/wall/gutenberg/blocks/wall/index.jsx:28
 msgid "Display galery of anything you want"
-msgstr "Affiche une galerie de tout ce que vous voulez"
+msgstr "Afficher une galerie de tout type de contenu"
 
 #: src/tools/wall/gutenberg/blocks/wall/build.js:16
 #: src/tools/wall/gutenberg/blocks/wall/index.jsx:36
@@ -412,7 +401,7 @@ msgstr ""
 #: src/tools/wall/gutenberg/blocks/wall/build.js:16
 #: src/tools/wall/gutenberg/blocks/wall/index.jsx:149
 msgid "Display a wall of elements"
-msgstr "Affiche un mur d’élements"
+msgstr "Afficher un mur d’élements"
 
 #~ msgid "Events manager"
 #~ msgstr "Gestion des évènements"
