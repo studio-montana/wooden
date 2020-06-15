@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wooden 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wooden\n"
-"POT-Creation-Date: 2020-05-26T14:03:23+00:00\n"
-"PO-Revision-Date: 2020-05-26 16:03+0200\n"
+"POT-Creation-Date: 2020-06-15T09:16:55+00:00\n"
+"PO-Revision-Date: 2020-06-15 11:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_EN\n"
@@ -80,7 +80,7 @@ msgid "Breadcrumb"
 msgstr ""
 
 #: src/tools/breadcrumb/index.php:50
-msgid "Display breadcrumb on your website frontend"
+msgid "Display breadcrumb on your website"
 msgstr ""
 
 #: src/tools/event/index.php:44 src/tools/event/post-types/index.php:28
@@ -89,7 +89,7 @@ msgid "Events"
 msgstr ""
 
 #: src/tools/event/index.php:48
-msgid "Events manager"
+msgid "Create and manage Events"
 msgstr ""
 
 #: src/tools/event/post-types/index.php:29
@@ -109,7 +109,7 @@ msgid "New Event"
 msgstr ""
 
 #: src/tools/event/post-types/index.php:34
-msgid "Look Event"
+msgid "View Event"
 msgstr ""
 
 #: src/tools/event/post-types/index.php:35
@@ -222,7 +222,7 @@ msgid "Fancybox"
 msgstr ""
 
 #: src/tools/fancybox/index.php:48
-msgid "Enable Fancybox support on your website frontend"
+msgid "Enable Fancybox aesthetic jQuery lightbox"
 msgstr ""
 
 #: src/tools/login/index.php:45
@@ -233,48 +233,48 @@ msgstr ""
 msgid "Improve your experience on WP login page"
 msgstr ""
 
-#: src/tools/pagination/index.php:45
-msgid "Pagination"
-msgstr ""
-
-#: src/tools/pagination/index.php:49
-msgid "Intelligent pagination for all post-types"
-msgstr ""
-
-#: src/tools/pagination/index.php:75
-msgid "General"
-msgstr ""
-
-#: src/tools/pagination/index.php:88
-msgid "Include taxonomies"
-msgstr ""
-
-#: src/tools/pagination/index.php:90
-msgid "include taxonomies context if appropriate"
-msgstr ""
-
-#: src/tools/pagination/index.php:102
-msgid "Loop"
-msgstr ""
-
-#: src/tools/pagination/index.php:104
-msgid "generate loop navigation"
-msgstr ""
-
-#: src/tools/pagination/index.php:110
-msgid "Integration"
-msgstr ""
-
-#: src/tools/pagination/index.php:114
-msgid "insert this code in your theme templates :"
-msgstr ""
-
 #: src/tools/portfolio/index.php:44
 msgid "Portfolio"
 msgstr ""
 
 #: src/tools/portfolio/index.php:48
-msgid "Create portfolio content type"
+msgid "Create Portfolio content type"
+msgstr ""
+
+#: src/tools/postsnavigation/index.php:40
+msgid "Posts Navigation"
+msgstr ""
+
+#: src/tools/postsnavigation/index.php:44
+msgid "Display 'Previous-Next' single post navigation"
+msgstr ""
+
+#: src/tools/postsnavigation/index.php:70
+msgid "General"
+msgstr ""
+
+#: src/tools/postsnavigation/index.php:83
+msgid "Include taxonomies"
+msgstr ""
+
+#: src/tools/postsnavigation/index.php:85
+msgid "include taxonomies context if appropriate"
+msgstr ""
+
+#: src/tools/postsnavigation/index.php:97
+msgid "Loop"
+msgstr ""
+
+#: src/tools/postsnavigation/index.php:99
+msgid "generate loop navigation"
+msgstr ""
+
+#: src/tools/postsnavigation/index.php:105
+msgid "Integration"
+msgstr ""
+
+#: src/tools/postsnavigation/index.php:109
+msgid "Paste this code into your theme templates :"
 msgstr ""
 
 #: src/tools/wall/index.php:39 src/tools/wall/gutenberg/blocks/wall/build.js:16
@@ -284,7 +284,7 @@ msgid "Wall"
 msgstr ""
 
 #: src/tools/wall/index.php:43
-msgid "Create Gutenberg Block which displays any contents as a gallery"
+msgid "Create Wall Gutenberg Block and display any contents as a gallery"
 msgstr ""
 
 #: template-parts/content-resume.php:22

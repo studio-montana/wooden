@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-05-26T15:49:35+00:00\n"
+"POT-Creation-Date: 2020-06-15T09:16:55+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wooden\n"
@@ -78,7 +78,7 @@ msgid "Breadcrumb"
 msgstr ""
 
 #: src/tools/breadcrumb/index.php:50
-msgid "Display breadcrumb on your website frontend"
+msgid "Display breadcrumb on your website"
 msgstr ""
 
 #: src/tools/event/index.php:44
@@ -88,7 +88,7 @@ msgid "Events"
 msgstr ""
 
 #: src/tools/event/index.php:48
-msgid "Events manager"
+msgid "Create and manage Events"
 msgstr ""
 
 #: src/tools/event/post-types/index.php:29
@@ -108,7 +108,7 @@ msgid "New Event"
 msgstr ""
 
 #: src/tools/event/post-types/index.php:34
-msgid "Look Event"
+msgid "View Event"
 msgstr ""
 
 #: src/tools/event/post-types/index.php:35
@@ -230,7 +230,7 @@ msgid "Fancybox"
 msgstr ""
 
 #: src/tools/fancybox/index.php:48
-msgid "Enable Fancybox support on your website frontend"
+msgid "Enable Fancybox aesthetic jQuery lightbox"
 msgstr ""
 
 #: src/tools/login/index.php:45
@@ -246,7 +246,7 @@ msgid "Portfolio"
 msgstr ""
 
 #: src/tools/portfolio/index.php:48
-msgid "Create portfolio content type"
+msgid "Create Portfolio content type"
 msgstr ""
 
 #: src/tools/postsnavigation/index.php:40
@@ -254,7 +254,7 @@ msgid "Posts Navigation"
 msgstr ""
 
 #: src/tools/postsnavigation/index.php:44
-msgid "Intelligent navigation for all post-types"
+msgid "Display 'Previous-Next' single post navigation"
 msgstr ""
 
 #: src/tools/postsnavigation/index.php:70
@@ -282,7 +282,7 @@ msgid "Integration"
 msgstr ""
 
 #: src/tools/postsnavigation/index.php:109
-msgid "insert this code in your theme templates :"
+msgid "Paste this code into your theme templates :"
 msgstr ""
 
 #: src/tools/wall/index.php:39
@@ -293,7 +293,7 @@ msgid "Wall"
 msgstr ""
 
 #: src/tools/wall/index.php:43
-msgid "Create Gutenberg Block which displays any contents as a gallery"
+msgid "Create Wall Gutenberg Block and display any contents as a gallery"
 msgstr ""
 
 #: template-parts/content-resume.php:22

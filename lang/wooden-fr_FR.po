@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wooden 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wooden\n"
-"POT-Creation-Date: 2020-05-26T15:49:35+00:00\n"
-"PO-Revision-Date: 2020-05-26 17:55+0200\n"
+"POT-Creation-Date: 2020-06-15T09:16:55+00:00\n"
+"PO-Revision-Date: 2020-06-15 11:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -80,7 +80,9 @@ msgid "Breadcrumb"
 msgstr "Fil d’Ariane"
 
 #: src/tools/breadcrumb/index.php:50
-msgid "Display breadcrumb on your website frontend"
+#, fuzzy
+#| msgid "Display breadcrumb on your website frontend"
+msgid "Display breadcrumb on your website"
 msgstr "Affiche un fil d’Ariane sur votre site Web"
 
 #: src/tools/event/index.php:44 src/tools/event/post-types/index.php:28
@@ -89,8 +91,10 @@ msgid "Events"
 msgstr "Évènements"
 
 #: src/tools/event/index.php:48
-msgid "Events manager"
-msgstr "Gestion des évènements"
+#, fuzzy
+#| msgid "Activate menu management"
+msgid "Create and manage Events"
+msgstr "Active la gestion du menu"
 
 #: src/tools/event/post-types/index.php:29
 msgid "Event"
@@ -109,8 +113,10 @@ msgid "New Event"
 msgstr "Nouvel évènement"
 
 #: src/tools/event/post-types/index.php:34
-msgid "Look Event"
-msgstr "Voir un évènement"
+#, fuzzy
+#| msgid "New Event"
+msgid "View Event"
+msgstr "Nouvel évènement"
 
 #: src/tools/event/post-types/index.php:35
 msgid "Search Events"
@@ -222,8 +228,8 @@ msgid "Fancybox"
 msgstr "FancyBox"
 
 #: src/tools/fancybox/index.php:48
-msgid "Enable Fancybox support on your website frontend"
-msgstr "Active Fancybox sur votre site Web"
+msgid "Enable Fancybox aesthetic jQuery lightbox"
+msgstr ""
 
 #: src/tools/login/index.php:45
 msgid "Login"
@@ -238,7 +244,9 @@ msgid "Portfolio"
 msgstr "Portfolio"
 
 #: src/tools/portfolio/index.php:48
-msgid "Create portfolio content type"
+#, fuzzy
+#| msgid "Create portfolio content type"
+msgid "Create Portfolio content type"
 msgstr "Créer un type de portfolio"
 
 #: src/tools/postsnavigation/index.php:40
@@ -246,8 +254,8 @@ msgid "Posts Navigation"
 msgstr "Navigation entre publications"
 
 #: src/tools/postsnavigation/index.php:44
-msgid "Intelligent navigation for all post-types"
-msgstr "Pagination intelligente pour toutes vos publications"
+msgid "Display 'Previous-Next' single post navigation"
+msgstr ""
 
 #: src/tools/postsnavigation/index.php:70
 msgid "General"
@@ -274,7 +282,9 @@ msgid "Integration"
 msgstr "Intégration"
 
 #: src/tools/postsnavigation/index.php:109
-msgid "insert this code in your theme templates :"
+#, fuzzy
+#| msgid "insert this code in your theme templates :"
+msgid "Paste this code into your theme templates :"
 msgstr "insérer ce code dans vos templates :"
 
 #: src/tools/wall/index.php:39 src/tools/wall/gutenberg/blocks/wall/build.js:16
@@ -284,7 +294,9 @@ msgid "Wall"
 msgstr "Mur"
 
 #: src/tools/wall/index.php:43
-msgid "Create Gutenberg Block which displays any contents as a gallery"
+#, fuzzy
+#| msgid "Create Gutenberg Block which displays any contents as a gallery"
+msgid "Create Wall Gutenberg Block and display any contents as a gallery"
 msgstr ""
 "Créer un block Gutenberg qui affiche n’importe quel contenu comme une galerie"
 
@@ -401,6 +413,18 @@ msgstr ""
 #: src/tools/wall/gutenberg/blocks/wall/index.jsx:149
 msgid "Display a wall of elements"
 msgstr "Affiche un mur d’élements"
+
+#~ msgid "Events manager"
+#~ msgstr "Gestion des évènements"
+
+#~ msgid "Look Event"
+#~ msgstr "Voir un évènement"
+
+#~ msgid "Enable Fancybox support on your website frontend"
+#~ msgstr "Active Fancybox sur votre site Web"
+
+#~ msgid "Intelligent navigation for all post-types"
+#~ msgstr "Pagination intelligente pour toutes vos publications"
 
 #~ msgid "Pagination"
 #~ msgstr "Pagination"
@@ -550,9 +574,6 @@ msgstr "Affiche un mur d’élements"
 
 #~ msgid "Breacrumb Options"
 #~ msgstr "Options du fil d’Ariane"
-
-#~ msgid "Activate menu management"
-#~ msgstr "Active la gestion du menu"
 
 #~ msgid ""
 #~ "WP menus will be altered (classes) by this tool. Ex. : add \"active\" "
