@@ -142,6 +142,7 @@ registerBlockType('wkg/wall', {
 				</div>
 			)
 		} else {
+			console.log("props.attributes : ", props.attributes)
 			return (
 				<div className={props.className}>
 					<h3 className="wkg-title">
@@ -547,7 +548,7 @@ class BlockComponent_Base extends Component {
 			if (this.state.maxwidth === 'custom') {
 				render_maxwidth_custom = (
 					<PanelRow className="wkg-ic-panelrow">
-						<TextControl label="Largeur max. personnalisée (px)" type="number" value={this.state.maxwidth_custom} onChange={(maxwidth_custom) => this.onChange({maxwidth_custom})} />
+						<TextControl label="Largeur max. personnalisée (px)" type="number" value={this.state.maxwidth_custom} onChange={(maxwidth_custom) => this.onChange({maxwidth_custom: parseInt(maxwidth_custom)})} />
 					</PanelRow>
 				)
 			}
@@ -568,6 +569,7 @@ class BlockComponent_Base extends Component {
 		return null
 	}
 	render_IC__maxheight () {
+		console.log("maxheight_custom : ", this.state.maxheight_custom)
 		if (this.state.display === 'masonry') {
 			const maxheight_options = [
 				{value: 'auto', label: 'Auto'},
@@ -577,7 +579,7 @@ class BlockComponent_Base extends Component {
 			if (this.state.maxheight === 'custom') {
 				render_maxheight_custom = (
 					<PanelRow className="wkg-ic-panelrow">
-						<TextControl label="Hauteur max. personnalisée (px)" type="number" value={this.state.maxheight_custom} onChange={(maxheight_custom) => this.onChange({maxheight_custom})} />
+						<TextControl label="Hauteur max. personnalisée (px)" type="number" value={this.state.maxheight_custom} onChange={(maxheight_custom) => this.onChange({maxheight_custom: parseInt(maxheight_custom)})} />
 					</PanelRow>
 				)
 			}
