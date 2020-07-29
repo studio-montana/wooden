@@ -228,8 +228,7 @@
 }
 @media (max-width: 600px) {
   .wp-block-wkg-wall.alignfull .wall[class*="columns-"] > li,
-  .wp-block-wkg-wall .wall.masonry[class*="columns-"] > li,
-  .wp-block-wkg-wall .wall.grid[class*="columns-"] > li{
+    .wp-block-wkg-wall .wall.grid[class*="columns-"] > li{
     max-width: 100% !important;
     width: 100% !important;
   }
