@@ -23,8 +23,8 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
 
 *Définition : un block Gutenberg est un élément qui peut s'ajouter dans le contenu*
 
-* Dupliquer le dossier *src/gutenberg/blocks/_blank_* dans le dossier de votre choix sous *src/* (afin de profiter du context Webpack) et renommer ce nouveau dossier avec 'votre_slug' (Important : nommage en snake_case)
-* Dans ce nouveau dossier, faire un rechercher/remplacer global dans ce nouveau dossier sur "_blank_" par 'votre_slug'
+* Dupliquer le dossier *src/gutenberg/blocks/\_blank\_* dans le dossier de votre choix sous *src/* (afin de profiter du context Webpack) et renommer ce nouveau dossier avec 'votre_slug' (Important : nommage en snake_case)
+* Dans ce nouveau dossier, faire un rechercher/remplacer global dans ce nouveau dossier sur "\_blank\_" par 'votre_slug'
 * Faites en sorte d'appeller le fichier présent dans votre nouveau dossier index.php
 * Ouvrir webpack.config.js qui est à la racine du projet et ajouter la référence à votre nouveau block comme ceci :
   * {'entry': 'index.jsx', 'name': 'votre_slug', 'path': 'PATH_TO_YOUR_BLOCK_DIR', 'entry': 'index.jsx'},
@@ -36,8 +36,8 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
 
 *Définition : un plugin Gutenberg est un élément qui s'ajoute à l'interface (sidebar / header / ...)*
 
-* Dupliquer le dossier *src/gutenberg/plugins/_blank_* dans le dossier de votre choix sous *src/* (afin de profiter du context Webpack) et renommer ce nouveau dossier avec 'votre_slug' (Important : nommage en snake_case)
-* Dans ce nouveau dossier, faire un rechercher/remplacer global dans ce nouveau dossier sur "_blank_" par 'votre_slug'
+* Dupliquer le dossier *src/gutenberg/plugins/\_blank\_* dans le dossier de votre choix sous *src/* (afin de profiter du context Webpack) et renommer ce nouveau dossier avec 'votre_slug' (Important : nommage en snake_case)
+* Dans ce nouveau dossier, faire un rechercher/remplacer global dans ce nouveau dossier sur "\_blank\_" par 'votre_slug'
 * Faites en sorte d'appeller le fichier présent dans votre nouveau dossier index.php
 * Ouvrir webpack.config.js qui est à la racine du projet et ajouter la référence à votre nouveau block comme ceci :
   * {'entry': 'index.jsx', 'name': 'votre_slug', 'path': 'PATH_TO_YOUR_PLUGIN_DIR', 'entry': 'index.jsx'},
@@ -49,8 +49,8 @@ La mise à jour se fait comme tous les autres thème, par action manuelle de vot
 
 *Définition : un store permet de gérer les états des blocks/plugins de façon globale*
 
-* Dupliquer le dossier *src/gutenberg/stores/_blank_* dans le dossier de votre choix sous *src/* (afin de profiter du context Webpack) et renommer ce nouveau dossier avec 'votre_slug' (Important : nommage en snake_case)
-* Dans ce nouveau dossier, faire un rechercher/remplacer global dans ce nouveau dossier sur "_blank_" par 'votre_slug'
+* Dupliquer le dossier *src/gutenberg/stores/\_blank\_* dans le dossier de votre choix sous *src/* (afin de profiter du context Webpack) et renommer ce nouveau dossier avec 'votre_slug' (Important : nommage en snake_case)
+* Dans ce nouveau dossier, faire un rechercher/remplacer global dans ce nouveau dossier sur "\_blank\_" par 'votre_slug'
 * Faites en sorte d'appeller le fichier présent dans votre nouveau dossier index.php
 * Ouvrir webpack.config.js qui est à la racine du projet et ajouter la référence à votre nouveau block comme ceci :
   * {'entry': 'index.jsx', 'name': 'votre_slug', 'path': 'PATH_TO_YOUR_STORE_DIR', 'entry': 'index.jsx'},
