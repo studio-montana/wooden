@@ -114,6 +114,6 @@ class WK_Tool_PostsNavigation extends WK_Tool{
 	}
 }
 add_filter("woodkit-register-tool", function($tools){
-	$tools[] = new WK_Tool_PostsNavigation($args);
+	$tools[] = new WK_Tool_PostsNavigation();
 	return $tools;
 });
