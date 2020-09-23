@@ -41,8 +41,11 @@ class WKG_REST_wall extends WKG_REST {
 				)
 		) );
 		register_rest_route( $this->namespace, '/' . $this->rest_base . '/schema', array(
-				'methods'  => WP_REST_Server::READABLE,
-				'callback' => array( $this, 'get_public_item_schema' ),
+				array(
+						'methods'  			  => WP_REST_Server::READABLE,
+						'callback' 			  => array( $this, 'get_public_item_schema' ),
+						'permission_callback' => array( $this, 'get_schema_permissions_check' ),
+				)
 		) );
 	}
 

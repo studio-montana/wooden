@@ -142,7 +142,6 @@ registerBlockType('wkg/wall', {
 				</div>
 			)
 		} else {
-			console.log("props.attributes : ", props.attributes)
 			return (
 				<div className={props.className}>
 					<h3 className="wkg-title">
@@ -569,7 +568,6 @@ class BlockComponent_Base extends Component {
 		return null
 	}
 	render_IC__maxheight () {
-		console.log("maxheight_custom : ", this.state.maxheight_custom)
 		if (this.state.display === 'masonry') {
 			const maxheight_options = [
 				{value: 'auto', label: 'Auto'},
