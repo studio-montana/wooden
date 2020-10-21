@@ -226,11 +226,3 @@ function wooden_get_langs() {
 	}
 	return $langs;
 }
-
-/**
- * Articles excerpt lenght
- */
-function new_excerpt_length($length) {
-	return 40;
-}
-add_filter('excerpt_length', 'new_excerpt_length');
