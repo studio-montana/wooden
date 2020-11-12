@@ -22,21 +22,13 @@ get_header();
 			</header>
 
 			<div class="page-content">
-
-				<div id="listing-filtering" class="listing">
-
-					<?php if ( have_posts() ) {
-						while ( have_posts() ) :
-							the_post();
-							get_template_part( 'template-parts/content-resume', get_post_type());
-						endwhile;
-						the_posts_navigation();
-					} ?>
-					<article class="content-resume-<?php echo get_post_type(); ?> no-result" style="display: none;">
-						<h2>Aucun résultat</h2>
-					</article>
-					
-				</div>
+				<?php if ( have_posts() ) {
+					while ( have_posts() ) :
+						the_post();
+						get_template_part( 'template-parts/content-resume', get_post_type());
+					endwhile;
+					the_posts_navigation();
+				} ?>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
