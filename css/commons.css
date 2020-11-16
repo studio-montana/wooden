@@ -698,41 +698,34 @@ body.wp-admin .fw-modalbox{
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%;
-	-ms-transform: translate(-50%,0);
-    -webkit-transform: translate(-50%,0);
-    transform: translate(-50%,0);
+    left: 0;
+    right: 0;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
     /* flex container */
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
     display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
 }
 .fw-modalbox .fw-modalbox-wrapper .fw-modalbox-content-wrapper{
 	position: relative;
     margin: auto;
     min-width: 200px;
-    min-height: 50px;
+    min-height: 200px;
     padding: 24px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
+    /* flex container */
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
 }
-.fw-modalbox.style-light .fw-modalbox-wrapper .fw-modalbox-content-wrapper{
-    background: #fff;
-	-moz-box-shadow: 0px 0px 5px 0px #777777;
-	-webkit-box-shadow: 0px 0px 5px 0px #777777;
-	-o-box-shadow: 0px 0px 5px 0px #777777;
-	box-shadow: 0px 0px 5px 0px #777777;
-	filter:progid:DXImageTransform.Microsoft.Shadow(color=#777777, Direction=NaN, Strength=5);
-}
-.fw-modalbox.style-dark .fw-modalbox-wrapper .fw-modalbox-content-wrapper{
-    background: #151515;
-}
-.fw-modalbox.fullscreen > .fw-modalbox-wrapper > .fw-modalbox-content-wrapper{
+.fw-modalbox.fullscreen .fw-modalbox-wrapper .fw-modalbox-content-wrapper{
 	position: absolute;
     top: 24px;
     bottom: 24px;
@@ -740,8 +733,11 @@ body.wp-admin .fw-modalbox{
     right: 24px;
     overflow: scroll;
 }
-.fw-modalbox.fullscreen > .fw-modalbox-wrapper > .fw-modalbox-content-wrapper .fw-modalbox-content{
-	height: 100%;
+.fw-modalbox.style-light .fw-modalbox-wrapper .fw-modalbox-content-wrapper{
+    background: #ffffff;
+}
+.fw-modalbox.style-dark .fw-modalbox-wrapper .fw-modalbox-content-wrapper{
+    background: #151515;
 }
 .fw-modalbox .fw-modalbox-wrapper .fw-modalbox-content-wrapper .fw-modalbox-close{
 	position: absolute;
