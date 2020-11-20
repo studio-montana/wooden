@@ -7,7 +7,7 @@
  * @package wooden
  */
 
-define('WOODEN_WEBCACHE_VERSION', '0.0.5');
+define('WOODEN_WEBCACHE_VERSION', '0.0.6');
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
