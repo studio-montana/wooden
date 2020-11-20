@@ -68,7 +68,7 @@ class WKG_Module_Block_openmap extends WKG_Module_Block {
 
 	public function render(array $attributes, $content) {
 		ob_start ();
-		var_export($attributes);
+		// var_export($attributes);
 		$id = isset($attributes['id']) ? $attributes['id'] : uniqid('wkg');
 		$map_height = $attributes['map_height'] ? $attributes['map_height'] : 50;
 		$additionnalClasses = array();
@@ -80,7 +80,6 @@ class WKG_Module_Block_openmap extends WKG_Module_Block {
 		<script type="text/javascript">
 			let attributes = <?php echo json_encode($attributes); ?>;
 			let markers = attributes.markers ? JSON.parse(attributes.markers) : [];
-			console.log('OSM attributes : ', attributes);
 			let config = WKG_OpenStreetMap.getConfig(attributes);
 			let map = L.map(document.getElementById(attributes.id), config.mapConfigs);
 			if (config.mapStyleConfig) {
@@ -91,7 +90,7 @@ class WKG_Module_Block_openmap extends WKG_Module_Block {
 				markers.map((marker, i) => {
 					let mapMarker = L.marker([marker.lat, marker.lng], {title: marker.title, alt: marker.address}).addTo(map);
 					// mapMarker.bindTooltip(marker.title);
-					mapMarker.bindPopup('<h2 class="markerPopupTitle">'+marker.title+'</h2><p class="markerPopupInfo">'+marker.address+'</p>');
+					mapMarker.bindPopup('<h2 class="markerPopupTitle">'+marker.title+'</h2><p class="markerPopupInfo">'+(marker.address ? marker.address : 'aucune adresse')+'</p>');
 				});
 			}
 		</script>
