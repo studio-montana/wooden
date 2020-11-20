@@ -2,7 +2,7 @@ import { __ } from '@wordpress/i18n'
 const { registerBlockType } = wp.blocks
 const { Component, Fragment } = wp.element
 const { InspectorControls, InnerBlocks } = wp.blockEditor
-const { PanelBody, PanelRow, TextControl, SelectControl, RangeControl, CheckboxControl, Button, Notice } = wp.components
+const { PanelBody, PanelRow, TextControl, SelectControl, RangeControl, CheckboxControl, Button, Notice, TextareaControl } = wp.components
 
 registerBlockType('wkg/openmap', {
 	title: 'Open Street Map',
@@ -48,7 +48,7 @@ registerBlockType('wkg/openmap', {
 		}
 	},
 	edit: function (props) {
-		// console.log('attributes : ', props.attributes)
+		console.log('attributes : ', props.attributes)
 		props.attributes.id = 'wkg' + props.clientId
 		props.className += " wkg-editor wkg-item"
 		if (props.isSelected) {
@@ -90,11 +90,30 @@ class BlockComponent extends Component {
 		this.updateMap()
 	}
 	updateMap () {
-		let config = WKG_OpenStreetMap.getConfig(this.state)
+		let config = WKG_OpenStreetMap.getConfig(this.state);
+		console.log('map config : ', config);
 		if (this.map) {
-			this.map.remove()
+			this.map.eachLayer((layer) => {
+				this.map.removeLayer(layer);
+			});
+			this.map.panTo(config.mapConfigs.center);
+			this.map.setZoom(config.mapConfigs.zoom);
+		} else {
+			this.map = L.map(document.getElementById(this.state.id), config.mapConfigs);
+			this.map.on('dragend', (e) => {
+				console.log("new center : ", this.map.getCenter());
+				const newCenter = this.map.getCenter();
+				this.onChange({map_lat: newCenter.lat, map_lng: newCenter.lng});
+			});
+			this.map.on('zoomend', (e) => {
+				console.log("new center : ", this.map.getZoom());
+				const newZoom = this.map.getZoom();
+				if (this.state.map_zoom !== newZoom) {
+					this.onChange({map_zoom: newZoom});
+				}
+			});
+			//
 		}
-		this.map = L.map(document.getElementById(this.state.id), config.mapConfigs)
 		if (config.mapStyleConfig) {
 			this.mapLayer = new L.TileLayer(config.mapStyleConfig.url, config.mapStyleConfig.params)
 			this.map.addLayer(this.mapLayer)
@@ -104,7 +123,7 @@ class BlockComponent extends Component {
 			markers.map((marker, i) => {
 				let mapMarker = L.marker([marker.lat, marker.lng], {title: marker.title, alt: marker.address}).addTo(this.map);
 				// mapMarker.bindTooltip(marker.title);
-				mapMarker.bindPopup('<h2 class="markerPopupTitle">'+marker.title+'</h2><p class="markerPopupInfo">'+marker.address+'</p>');
+				mapMarker.bindPopup('<h2 class="markerPopupTitle">'+marker.title+'</h2><p class="markerPopupInfo">'+(marker.address ? marker.address : "aucune adresse")+'</p>');
 			});
 		}
 	}
@@ -115,8 +134,23 @@ class BlockComponent extends Component {
 		this.onChange({markers: JSON.stringify(markers)});
 		this.setState({addNew: false});
 	}
+	addMarkersFromJson (markersToAdd) {
+		let markers = JSON.parse(this.state.markers);
+		markersToAdd.map((marker, i) => {
+			marker.id = this.getUniqId(markers, marker.id ? marker.id : 0);
+			marker.lat = parseFloat(marker.lat);
+			marker.lng = parseFloat(marker.lng);
+			markers.push(marker);
+		});
+		// markers = [...markers, ...markersToAdd];
+		this.onChange({markers: JSON.stringify(markers)});
+		this.setState({addJson: false});
+	}
 	cancelAddMarker () {
 		this.setState({addNew: false});
+	}
+	cancelAddMarkersFromJson () {
+		this.setState({addJson: false});
 	}
 	updateMarker (marker) {
 		let markers = JSON.parse(this.state.markers);
@@ -141,13 +175,21 @@ class BlockComponent extends Component {
 		const markers = JSON.parse(this.state.markers);
 		return (
 			<div className="markers-manager">
-				{ !this.state.addNew && (
-					<Button className="add-new-btn" isSecondary onClick={() => this.setState({addNew: true})}>Ajouter un nouveau point</Button>
+				{ !this.state.addNew && !this.state.addJson && (
+					<Fragment>
+						<Button className="add-new-btn" isSecondary onClick={() => this.setState({addNew: true})}>Ajouter un nouveau point</Button>
+						<Button className="add-json-btn" isSecondary onClick={() => this.setState({addJson: true})}>Charger un JSON</Button>
+					</Fragment>
 				) }
 				<Button className="close" isSecondary onClick={() => this.setState({showMarkersManager: false})}>Fermer</Button>
 				{ this.state.addNew && (
 					<div className="add-new">
 						<MarkerItemEdit onChange={(markerItem) => this.addMarker(markerItem)} onCancel={() => this.cancelAddMarker()} />
+					</div>
+				) }
+				{ this.state.addJson && (
+					<div className="add-json">
+						<MarkersFromJson onChange={(markers) => this.addMarkersFromJson(markers)} onCancel={() => this.cancelAddMarkersFromJson()} />
 					</div>
 				) }
 				<ul>
@@ -284,8 +326,8 @@ class MarkerItemEdit  extends Component {
 			marker = {...marker, ...{
 				title: this.state.title,
 				address: this.state.address,
-				lat: this.state.lat,
-				lng: this.state.lng
+				lat: parseFloat(this.state.lat),
+				lng: parseFloat(this.state.lng)
 			}};
 			this.props.onChange(marker);
 			this.setState({
@@ -306,9 +348,11 @@ class MarkerItemEdit  extends Component {
 		let errors = [];
 		if (!this.state.title || this.state.title == '') {
 			errors.push("Vous devez saisir un titre");
-		} else if (!this.state.lat || this.state.lat == '') {
+		}
+		if (!this.state.lat || this.state.lat == '') {
 			errors.push("Vous devez saisir une latitude");
-		} else if (!this.state.lng || this.state.lng == '') {
+		}
+		if (!this.state.lng || this.state.lng == '') {
 			errors.push("Vous devez saisir une longitude");
 		}
 		if (errors.length > 0) {
@@ -383,6 +427,84 @@ class MarkerItemEdit  extends Component {
 				) }
 				{ !this.state.isNew && !this.state.editMode && (
 					<Button className="btn-remove" isDestructive onClick={() => this.remove()}>X</Button>
+				) }
+			</div>
+		)
+	}
+}
+
+class MarkersFromJson extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			jsonText: '',
+			notice: false,
+		}
+	}
+
+	save() {
+		// parse JSON
+		let markers = this.state.jsonText.replace(/\r\n/g, '').replace(/\r/g, '').replace(/\n/g, '');
+		try {
+      markers = JSON.parse(markers);
+    } catch(e) {
+			console.log('markers : ', markers);
+      alert("Format JSON invalide : " + e);
+			return false;
+    }
+		// validation
+		const errors = this.validate(markers);
+		if (errors) {
+			this.setState({notice: errors.join(', ')});
+		} else {
+			this.props.onChange(markers);
+			this.setState({
+				notice: false,
+			});
+			// clear fields
+			this.clearFields();
+		}
+	}
+	validate (markers) {
+		let errors = [];
+		markers.map((marker, i) => {
+			if (!marker.title || marker.title == '') {
+				errors.push("Titre manquant");
+			} else if (!marker.lat || marker.lat == '') {
+				errors.push("Latitude manquante");
+			} else if (!marker.lng || marker.lng == '') {
+				errors.push("Longitude manquante");
+			}
+		});
+		if (errors.length > 0) {
+			return errors;
+		}
+		return false;
+	}
+	cancel () {
+		this.clearFields();
+		if (this.props.onCancel) {
+			this.props.onCancel();
+		}
+	}
+	clearFields () {
+		this.setState({jsonText: ''});
+	}
+	render () {
+		return (
+			<div className="markers-from-json">
+				<TextareaControl
+	        label="JSON"
+	        help="Saisissez votre JSON"
+	        value={ this.state.jsonText }
+	        onChange={ ( jsonText ) => this.setState( { jsonText } ) }
+		    />
+				<div className="ctrl">
+					<Button isSecondary onClick={() => this.save()}>Valider</Button>
+					<Button isSecondary onClick={() => this.cancel()}>Annuler</Button>
+				</div>
+				{ this.state.notice && (
+					<Notice status="error" onRemove={ () => this.setState({notice: false}) }>{ this.state.notice }</Notice>
 				) }
 			</div>
 		)
