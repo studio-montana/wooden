@@ -28,7 +28,7 @@ registerBlockType('wkg/openmap', {
 		},
 		map_zoom: {
 			type: 'number',
-			default: 6,
+			default: 1,
 		},
 		map_zoomctrl: {
 			type: 'boolean',
@@ -36,11 +36,11 @@ registerBlockType('wkg/openmap', {
 		},
 		map_lat: {
 			type: 'number',
-			default: 46,
+			default: 1,
 		},
 		map_lng: {
 			type: 'number',
-			default: 2,
+			default: 1,
 		},
 		markers: {
 			type: 'string',
@@ -48,7 +48,7 @@ registerBlockType('wkg/openmap', {
 		}
 	},
 	edit: function (props) {
-		console.log('attributes : ', props.attributes)
+		// console.log('attributes : ', props.attributes)
 		props.attributes.id = 'wkg' + props.clientId
 		props.className += " wkg-editor wkg-item"
 		if (props.isSelected) {
@@ -91,7 +91,6 @@ class BlockComponent extends Component {
 	}
 	updateMap () {
 		let config = WKG_OpenStreetMap.getConfig(this.state);
-		console.log('map config : ', config);
 		if (this.map) {
 			this.map.eachLayer((layer) => {
 				this.map.removeLayer(layer);
@@ -101,18 +100,15 @@ class BlockComponent extends Component {
 		} else {
 			this.map = L.map(document.getElementById(this.state.id), config.mapConfigs);
 			this.map.on('dragend', (e) => {
-				console.log("new center : ", this.map.getCenter());
 				const newCenter = this.map.getCenter();
 				this.onChange({map_lat: newCenter.lat, map_lng: newCenter.lng});
 			});
 			this.map.on('zoomend', (e) => {
-				console.log("new center : ", this.map.getZoom());
 				const newZoom = this.map.getZoom();
 				if (this.state.map_zoom !== newZoom) {
 					this.onChange({map_zoom: newZoom});
 				}
 			});
-			//
 		}
 		if (config.mapStyleConfig) {
 			this.mapLayer = new L.TileLayer(config.mapStyleConfig.url, config.mapStyleConfig.params)
@@ -448,7 +444,6 @@ class MarkersFromJson extends Component {
 		try {
       markers = JSON.parse(markers);
     } catch(e) {
-			console.log('markers : ', markers);
       alert("Format JSON invalide : " + e);
 			return false;
     }
