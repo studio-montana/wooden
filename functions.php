@@ -7,7 +7,7 @@
  * @package wooden
  */
 
-define('WOODEN_WEBCACHE_VERSION', '0.0.3');
+define('WOODEN_WEBCACHE_VERSION', '0.0.4');
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -68,7 +68,7 @@ function wooden_setup() {
 	add_theme_support('disable-custom-gradients');  // disable user custom gradients
 	add_theme_support('responsive-embeds'); // enable auto responsive embed
 	add_theme_support('dark-editor-style'); // enable dark theme intégration
-	add_theme_support('wp-block-styles'); // enable default wp block styles 
+	add_theme_support('wp-block-styles'); // enable default wp block styles
 	add_theme_support( 'editor-color-palette', array(
 	    array(
 	        'name' => __( 'strong magenta', 'wooden' ),
