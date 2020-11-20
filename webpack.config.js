@@ -8,6 +8,7 @@ let gutenberg_modules = [
 	{'entry': 'index.jsx', 'name': 'eventmeta', 'path': 'tools/event/gutenberg/plugins/eventmeta/'}, // event tool's plugin
 	{'entry': 'index.jsx', 'name': 'breadcrumbmeta', 'path': 'tools/breadcrumb/gutenberg/plugins/breadcrumbmeta/'}, // breadcrumb tool's plugin
 	{'entry': 'index.jsx', 'name': 'wall', 'path': 'tools/wall/gutenberg/blocks/wall/'}, // wall tool's block
+	{'entry': 'index.jsx', 'name': 'openmap', 'path': 'tools/map/gutenberg/blocks/openmap/'}, // map tool's block
 ];
 
 /** all configurations */
