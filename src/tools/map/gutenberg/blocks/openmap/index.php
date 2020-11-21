@@ -46,8 +46,12 @@ class WKG_Module_Block_openmap extends WKG_Module_Block {
 		wp_register_style('wkg-openmap-leaflet', $this->uri.$path, array(), filemtime($this->path.$path));
 		$path = 'assets/lib/leaflet/leaflet.js';
 		wp_register_script('wkg-openmap-leaflet', $this->uri.$path, array(), filemtime($this->path.$path));
+		/** geo search (static assets) */
 		$path = 'assets/lib/leaflet-geosearch/bundle.min.js';
 		wp_register_script('wkg-openmap-geocoder', $this->uri.$path, array(), filemtime($this->path.$path));
+		/** geo search (CDN) */
+		/**$path = 'https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js';
+		wp_register_script('wkg-openmap-geocoder', $path, array(), filemtime($this->path.$path));*/
 		$path = 'assets/lib/leaflet-gesture-handling/leaflet-gesture-handling.min.css';
 		wp_register_style('wkg-openmap-gesture_handler', $this->uri.$path, array(), filemtime($this->path.$path));
 		$path = 'assets/lib/leaflet-gesture-handling/leaflet-gesture-handling.min.js';
@@ -79,6 +83,7 @@ class WKG_Module_Block_openmap extends WKG_Module_Block {
 		<div class="<?php echo $this->getFrontClasses($additionnalClasses); ?>" id="<?php echo $id; ?>" style="background-color: #eeeeee; padding-bottom: <?php echo $map_height; ?>%;"></div>
 		<script type="text/javascript">
 			let attributes = <?php echo json_encode($attributes); ?>;
+			console.log("attributes : ", attributes);
 			let markers = attributes.markers ? JSON.parse(attributes.markers) : [];
 			let config = WKG_OpenStreetMap.getConfig(attributes);
 			let map = L.map(document.getElementById(attributes.id), config.mapConfigs);

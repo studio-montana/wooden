@@ -35,14 +35,19 @@
   z-index: 999;
   background: #ffffff;
 }
-.wkg-editor.wp-block-wkg-openmap .markers-manager .add-new-btn{
+.wkg-editor.wp-block-wkg-openmap .markers-manager .add-new-btn,
+.wkg-editor.wp-block-wkg-openmap .markers-manager .add-json-btn{
   position: absolute;
   top: 6px;
   left: 6px;
   z-index: 999;
   background: #ffffff;
 }
-.wkg-editor.wp-block-wkg-openmap .markers-manager .add-new{
+.wkg-editor.wp-block-wkg-openmap .markers-manager .add-json-btn{
+  left: 190px;
+}
+.wkg-editor.wp-block-wkg-openmap .markers-manager .add-new,
+.wkg-editor.wp-block-wkg-openmap .markers-manager .add-json{
   position: absolute;
   top: 0;
   right: 0;
@@ -98,4 +103,22 @@
 .wkg-editor.wp-block-wkg-openmap .markers-manager .marker-item-edit .editForm .ctrl{
   display: flex;
   justify-content: space-between;
+}
+.wkg-editor.wp-block-wkg-openmap .markers-manager .marker-item-edit .editForm .search-results li {
+  background: #ffffff;
+  margin: 2px 0;
+  padding: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.wkg-editor.wp-block-wkg-openmap .markers-manager .marker-item-edit .editForm .search-results li:hover {
+  background: #f4f4f4;
+}
+.wkg-editor.wp-block-wkg-openmap .markers-manager .marker-item-edit .editForm .search-results li svg {
+  width: 24px;
+}
+.wkg-editor.wp-block-wkg-openmap .markers-manager .marker-item-edit .editForm .search-results li .label {
+  display: inline-block;
+  margin-left: 6px;
 }

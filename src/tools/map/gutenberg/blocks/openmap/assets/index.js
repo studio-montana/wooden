@@ -1,17 +1,16 @@
 const WKG_OpenStreetMap = {
 	getConfig: function (attributes) {
-		var style = attributes.map_style || null;
+		var style = attributes.map_style || 'openstreetmap_de';
 		var zoom = attributes.map_zoom || 1;
-		var zoomable = attributes.map_zoomctrl || false;
-		var latitude = attributes.map_lat || 12;
-		var longitude = attributes.map_lng || 15;
+		var gestureHandling = attributes.map_zoomctrl === false ? false : true;
+		var latitude = attributes.map_lat || 1;
+		var longitude = attributes.map_lng || 1;
 		var showAttribution = attributes.map_show_attribution || false;
-
 		var mapConfigs = {
 			center: [latitude, longitude],
 			trackResize: true,
 			zoom: zoom,
-			gestureHandling: zoomable === true || zoomable === 'true',
+			gestureHandling: gestureHandling,
 			attributionControl: false
 		};
 		const tileConfigs = WKG_OpenStreetMap.tileConfigs;
@@ -19,51 +18,17 @@ const WKG_OpenStreetMap = {
 		if (showAttribution === true || showAttribution === 'true') {
 			mapConfigs.attributionControl = true;
 		}
-
 		return {
 			mapConfigs,
 			mapStyleConfig,
 		};
 	},
 	tileConfigs: {
-		wikimedia: {
-			url: 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png',
-			params: {
-				minZoom: 1,
-				maxZoom: 19,
-				attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a> | Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-			}
-		},
 		openstreetmap_de: {
 			url: 'https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
 			params: {
 				maxZoom: 18,
 				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-			}
-		},
-		openmapsg_default: {
-			url: 'https://maps-{s}.onemap.sg/v3/Default/{z}/{x}/{y}.png',
-			params: {
-				minZoom: 11,
-				maxZoom: 18,
-				bounds: [[1.56073, 104.11475], [1.16, 103.502]],
-				attribution: '<img src="https://docs.onemap.sg/maps/images/oneMap64-01.png" style="height:20px;width:20px;"/> New OneMap | Map data &copy; contributors, <a href="http://SLA.gov.sg">Singapore Land Authority</a>'
-			}
-		},
-		openmapsg__night: {
-			url: 'https://maps-{s}.onemap.sg/v3/Night/{z}/{x}/{y}.png',
-			params: {
-				minZoom: 11,
-				maxZoom: 18,
-				bounds: [[1.56073, 104.11475], [1.16, 103.502]],
-				attribution: '<img src="https://docs.onemap.sg/maps/images/oneMap64-01.png" style="height:20px;width:20px;"/> New OneMap | Map data &copy; contributors, <a href="http://SLA.gov.sg">Singapore Land Authority</a>'
-			}
-		},
-		openstreetmap_mapnik: {
-			url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-			params: {
-				maxZoom: 17,
-				attribution: 'Map data: &copy; <a href="http://www.openptmap.org">OpenPtMap</a> contributors'
 			}
 		},
 		cartodb_positron: {

@@ -2,7 +2,9 @@ import { __ } from '@wordpress/i18n'
 const { registerBlockType } = wp.blocks
 const { Component, Fragment } = wp.element
 const { InspectorControls, InnerBlocks } = wp.blockEditor
-const { PanelBody, PanelRow, TextControl, SelectControl, RangeControl, CheckboxControl, Button, Notice, TextareaControl } = wp.components
+const { PanelBody, PanelRow, TextControl, SelectControl, RangeControl, CheckboxControl, Button, Notice, TextareaControl, Icon } = wp.components
+
+const geoSearchProvider = new GeoSearch.OpenStreetMapProvider();
 
 registerBlockType('wkg/openmap', {
 	title: 'Open Street Map',
@@ -20,7 +22,7 @@ registerBlockType('wkg/openmap', {
 		},
 		map_style: {
 			type: 'string',
-			default: 'wikimedia',
+			default: 'openstreetmap_de',
 		},
 		map_height: {
 			type: 'number',
@@ -76,8 +78,8 @@ class BlockComponent extends Component {
 			// block specifics state attributes
 			addNew: false,
 		}}
-		this.map = null
-		this.mapLayer = null
+		this.map = null;
+		this.mapLayer = null;
 	}
 	onChange (obj) {
 		this.setState(obj)
@@ -97,6 +99,11 @@ class BlockComponent extends Component {
 			});
 			this.map.panTo(config.mapConfigs.center);
 			this.map.setZoom(config.mapConfigs.zoom);
+			if (config.mapConfigs.gestureHandling) {
+				this.map.gestureHandling.enable()
+			} else {
+				this.map.gestureHandling.disable()
+			}
 		} else {
 			this.map = L.map(document.getElementById(this.state.id), config.mapConfigs);
 			this.map.on('dragend', (e) => {
@@ -221,10 +228,6 @@ class BlockComponent extends Component {
 								label="Style de carte"
 								value={this.state.map_style}
 								options={[
-									{label: 'Wikimedia', value: 'wikimedia'},
-									{label: 'OpenStreetMap Mapnik', value: 'openstreetmap_mapnik'},
-									{label: 'OpenMapSG Default', value: 'openmapsg_default'},
-									{label: 'OpenMapSG Night', value: 'openmapsg_night'},
 									{label: 'Carto DB Positron', value: 'cartodb_positron'},
 									{label: 'World Imagery', value: 'world_imagery'},
 									{label: 'OpenStreetMap DE', value: 'openstreetmap_de'},
@@ -277,7 +280,6 @@ class BlockComponent extends Component {
 							<TextControl
 								label="Latitude du centre de la carte"
 								value={this.state.map_lat}
-								type="number"
 								onChange={map_lat => this.onChange({map_lat: parseFloat(map_lat)})}
 							/>
 						</PanelRow>
@@ -285,7 +287,6 @@ class BlockComponent extends Component {
 							<TextControl
 								label="Longitude du centre de la carte"
 								value={this.state.map_lng}
-								type="number"
 								onChange={map_lng => this.onChange({map_lng: parseFloat(map_lng)})}
 							/>
 						</PanelRow>
@@ -307,10 +308,26 @@ class MarkerItemEdit  extends Component {
 			address: '',
 			lat: '',
 			lng: '',
+			searchResults: null,
 		}
 	}
 	componentDidMount () {
 		this.loadFields();
+	}
+	search (address) {
+		geoSearchProvider.search({query: address}).then((result) => {
+			this.setState({searchResults: result});
+		}).catch((e) => {
+			console.error('error geo search : ', e);
+		});
+	}
+	onSelectSearchResult (result) {
+		this.setState({
+			address: result.label,
+			lat: result.y,
+			lng: result.x,
+		});
+		this.setState({searchResults: null});
 	}
 	save() {
 		let marker = this.state.isNew ? {} : this.props.marker;
@@ -405,12 +422,29 @@ class MarkerItemEdit  extends Component {
 					<div className="editForm">
 						{ this.state.isNew && (<div className="formTitle">Nouveau point sur la carte</div>) }
 						<div className="fields-group">
-							<TextControl value={this.state.title} placeholder="Titre" onChange={(title) => this.setState({title})} />
 							<TextControl value={this.state.address} placeholder="Adresse" onChange={(address) => this.setState({address})} />
+							<Button isSecondary onClick={() => this.search(this.state.address)}>Rechercher</Button>
 						</div>
+						{ this.state.searchResults !== null && (
+							<ul className="search-results">
+								{ this.state.searchResults.length > 0 && (
+									<Fragment>
+										{ this.state.searchResults.map((result, i) => {
+											return (
+												<li onClick={ () => this.onSelectSearchResult(result) }><Icon icon="arrow-right-alt" /><span className="label">{result.label}</span></li>
+											)
+										}) }
+									</Fragment>
+								) }
+								{ this.state.searchResults.length < 1 && (
+										<li>Aucun résultat</li>
+								) }
+							</ul>
+						) }
 						<div className="fields-group">
-							<TextControl type="number" min="0" max="99" step="0.00000000000001" value={this.state.lat} placeholder="Latitude" onChange={(lat) => this.setState({lat})} />
-							<TextControl type="number" min="0" max="99" step="0.00000000000001" value={this.state.lng} placeholder="Longitude" onChange={(lng) => this.setState({lng})} />
+							<TextControl value={this.state.title} placeholder="Titre" onChange={(title) => this.setState({title})} />
+							<TextControl value={this.state.lat} placeholder="Latitude" onChange={(lat) => this.setState({lat: floatVal(lat)})} />
+							<TextControl value={this.state.lng} placeholder="Longitude" onChange={(lng) => this.setState({lng: floatVal(lng)})} />
 						</div>
 						<div className="ctrl">
 							<Button isSecondary onClick={() => this.save()}>Valider</Button>
@@ -442,11 +476,11 @@ class MarkersFromJson extends Component {
 		// parse JSON
 		let markers = this.state.jsonText.replace(/\r\n/g, '').replace(/\r/g, '').replace(/\n/g, '');
 		try {
-      markers = JSON.parse(markers);
-    } catch(e) {
-      alert("Format JSON invalide : " + e);
-			return false;
-    }
+	      markers = JSON.parse(markers);
+	    } catch(e) {
+	      alert("Format JSON invalide : " + e);
+	      return false;
+	    }
 		// validation
 		const errors = this.validate(markers);
 		if (errors) {
